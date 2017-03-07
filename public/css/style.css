@@ -29,6 +29,69 @@ a {
   color: black;
 }
 
+h1 {
+  font-size: 1.8em;
+}
+
+/*******************************************************
+FORMS
+*******************************************************/
+
+input, textarea {
+  display: block;
+  margin-top: 10px;
+  background-color: transparent;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input.secondary {
+  border-color: grey;
+  color: grey;
+}
+
+textarea {
+  resize: none;
+  min-height: 70px;
+}
+
+/*******************************************************
+COMMON COMPONENTS
+*******************************************************/
+
+.arrow {
+  width: 20px;
+}
+
+.arrow.down {
+  transform: rotate(180deg);
+}
+
+.button {
+  padding: 10px 0;
+  border: 2px solid white;
+  border-radius: 25px;
+  color: white;
+  min-width: 141.09px;
+  display: inline-block;
+}
+
+.button.button-secondary {
+  margin-top: 10px;
+  border-color: #9933ff;
+  color: #9933ff;
+}
+
+/*******************************************************
+HELPERS
+*******************************************************/
+
+.center {
+  text-align: center;
+}
+
 /*******************************************************
 LANDING SECTION
 *******************************************************/
@@ -48,12 +111,12 @@ LANDING SECTION
   flex-direction: column;
   
   overflow: hidden;
+  color: white;
 }
 
 .section.landing {
-  color: white;
   text-align: left;
-  max-height: 567px;
+  height: 567px;
   
   background-image: url('../images/background-landing-estatico.png');
   background-size: cover;
@@ -72,7 +135,7 @@ LANDING SECTION
 
 
 .claim {
-  padding: 80px 50px 0 50px;
+  padding: 110px 50px 0 50px;
   text-align: left;
   font-family: 'Raleway', sans-serif;
 }
@@ -84,10 +147,13 @@ LANDING SECTION
   font-size: 55px;
 }
 
-.claim hr {
-  margin: 0;
+hr {
   border: 1px solid #3c9;
   width: 30px;
+}
+
+.claim hr {
+  margin: 0;
 }
 
 .claim .slogan {
@@ -101,13 +167,17 @@ LANDING SECTION
   left: 20px;
 }
 
+.swipe-down {
+  margin-top: 80px;
+}
+
+.swipe-down img {
+  margin: 0 30px;
+}
+
 /*******************************************************
 OFFERS SECTION
 *******************************************************/
-
-.section.offers {
-
-}
 
 .offer {
   flex: 1 100%;
@@ -117,18 +187,19 @@ OFFERS SECTION
   color: black;
 }
 
-.offer .content {
-  padding: 40px;
+.content {
+  padding: 40px 40px 20px 40px;
 }
 
-.offer .content img {
+.offer .content .icon {
   width: 50%;
   margin: 25px 0;
 }
 
 .offer .content .learn-more {
-  margin-top: 20px;
-  display: inline-block;
+  margin: 40px 0 10px 0;
+  display: block;
+  font-weight: bold;
 }
 
 .offer .action {
@@ -136,11 +207,93 @@ OFFERS SECTION
   padding: 35px;
 }
 
-.offer .action a {
+.offer.custom {
+  margin-top: 70px;
+  background-color: initial;
   color: white;
-  padding: 10px 40px 10px 40px;
-  border: 2px solid white;
-  border-radius: 25px;
+}
+
+/*******************************************************
+CONTACT US SECTION
+*******************************************************/
+
+section.contact-us {
+  display: flex;
+  align-items: center;
+  padding-top: 70px;
+  background: url('../images/background-decoration-purple-light.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-bottom: 40px;
+}
+
+.form-container {
+  width: 80%;
+}
+
+.form {
+  max-width: 310px;
+}
+
+/*******************************************************
+JOIN US SECTION
+*******************************************************/
+
+.section.join-us {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding-bottom: 70px;
+}
+
+.section.join-us h1 {
+  color: #306;
+}
+
+/*******************************************************
+FOOTER
+*******************************************************/
+
+.page-footer {
+  background-color: #306;
+  background: url('../images/background-decoration-purple-light.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  display: flex;
+  padding: 20px 20px;;
+}
+
+.slogan {
+  flex: 1.4;
+  color: #3c9;
+}
+
+.social {
+  flex: 0.6
+}
+
+.slogan p,
+.social p {
+  font-size: 1.5em;
+}
+
+.slogan p {
+  margin-bottom: 10px;
+}
+
+.slogan img {
+  margin-left: 10px;
+}
+
+
+
+footer .social {
+  color: white;
+  text-align: right;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -155,7 +308,7 @@ and (max-device-width : 480px) {
 and (min-width : 321px) {
   /* Styles */
   .section.landing {
-    height: 567px;
+    
   }
 }
 
