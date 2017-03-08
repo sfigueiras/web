@@ -282,6 +282,10 @@ FOOTER
   flex: 0.8;
 }
 
+.social img:not(:last-child) {
+  margin-right: 5px;
+}
+
 .slogan p,
 .social p {
   font-size: 1.5em;
