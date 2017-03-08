@@ -43,6 +43,7 @@ form {
 
 input, textarea {
   display: block;
+  color: white;
   margin-top: 10px;
   background-color: transparent;
   padding: 10px 0 10px 10px;
@@ -52,13 +53,37 @@ input, textarea {
   font-size: 1.1em;
 }
 
-input.secondary {
-  border-color: grey;
-  color: grey;
+.secondary {
+  border-color: #DADADA;
+  color: #DADADA;
+}
+
+input:focus,
+textarea:focus {
+  outline-color: #38E090;
 }
 
 input {
   height: 20px;
+}
+
+.file-input {
+  padding: 10px 0 10px 10px;
+  border: 2px solid #DADADA;
+  border-radius: 5px;
+  color: #DADADA;
+  min-width: 85%;
+  display: inline-block;
+  text-align: left;
+}
+
+input[type="file"] {
+  width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
 }
 
 textarea {
@@ -178,7 +203,7 @@ hr {
 }
 
 .swipe-down {
-  margin-top: 80px;
+  margin-top: 120px;
 }
 
 .swipe-down img {
@@ -213,7 +238,7 @@ OFFERS SECTION
 }
 
 .offer .action {
-  background: #38e090;
+  background: #38E090;
   padding: 35px;
 }
 
@@ -275,11 +300,12 @@ FOOTER
 
 .slogan {
   flex: 1.4;
-  color: #3c9;
+  color: #38E090;
+  margin-right: 25px;
 }
 
 .social {
-  flex: 0.8;
+  flex: 0.9;
 }
 
 .social img:not(:last-child) {
