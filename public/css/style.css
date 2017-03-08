@@ -37,14 +37,19 @@ h1 {
 FORMS
 *******************************************************/
 
+form {
+  padding: 0 5px 0 5px;
+}
+
 input, textarea {
   display: block;
   margin-top: 10px;
   background-color: transparent;
-  padding: 10px;
+  padding: 10px 0 10px 10px;
   border: 1px solid white;
   border-radius: 5px;
-  width: 100%;
+  width: calc(100% - 10px);
+  font-size: 1.1em;
 }
 
 input.secondary {
@@ -52,9 +57,14 @@ input.secondary {
   color: grey;
 }
 
+input {
+  height: 20px;
+}
+
 textarea {
   resize: none;
   min-height: 70px;
+  height: 50px;
 }
 
 /*******************************************************
@@ -220,7 +230,7 @@ CONTACT US SECTION
 section.contact-us {
   display: flex;
   align-items: center;
-  padding-top: 70px;
+  padding: 70px 20px 0 20px;
   background: url('../images/background-decoration-purple-light.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -229,11 +239,7 @@ section.contact-us {
 }
 
 .form-container {
-  width: 80%;
-}
-
-.form {
-  max-width: 310px;
+  width: 90%;
 }
 
 /*******************************************************
@@ -273,7 +279,7 @@ FOOTER
 }
 
 .social {
-  flex: 0.6
+  flex: 0.8;
 }
 
 .slogan p,
@@ -288,8 +294,6 @@ FOOTER
 .slogan img {
   margin-left: 10px;
 }
-
-
 
 footer .social {
   color: white;
