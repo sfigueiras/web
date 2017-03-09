@@ -151,7 +151,7 @@ LANDING SECTION
 
 .section.landing {
   text-align: left;
-  height: 567px;
+  height: 100vh;
   
   background-image: url('../images/background-landing-estatico.png');
   background-size: cover;
