@@ -1,0 +1,129 @@
+@import 'variables/color_variables.scss';
+@import 'components/button.scss';
+@import 'components/parallax.scss';
+
+/*******************************************************
+GENERAL
+*******************************************************/
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: $primary;
+}
+
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  font-family: 'Roboto Slab', serif;
+}
+
+a {
+  text-decoration: none;
+  color: $secondary-text;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+hr {
+  border: 1px solid #3c9;
+  width: 30px;
+}
+
+/*******************************************************
+FORMS
+*******************************************************/
+
+form {
+  padding: 0 5px 0 5px;
+}
+
+input, textarea {
+  display: block;
+  color: $primary-text;
+  margin-top: 10px;
+  background-color: transparent;
+  padding: 10px 0 10px 10px;
+  border: 1px solid $primary-text;
+  border-radius: 5px;
+  width: calc(100% - 10px);
+  font-size: 1.1em;
+}
+
+.secondary {
+  border-color: #DADADA;
+  color: #DADADA;
+}
+
+input:focus,
+textarea:focus {
+  outline-color: $secondary;
+}
+
+input {
+  height: 20px;
+}
+
+.file-input {
+  padding: 10px 0 10px 10px;
+  border: 2px solid #DADADA;
+  border-radius: 5px;
+  color: #DADADA;
+  min-width: 85%;
+  display: inline-block;
+  text-align: left;
+}
+
+input[type="file"] {
+  width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+textarea {
+  resize: none;
+  min-height: 70px;
+  height: 50px;
+}
+
+/*******************************************************
+COMMON COMPONENTS
+*******************************************************/
+
+.arrow {
+  width: 20px;
+  
+  &.down {
+    transform: rotate(180deg);
+  }
+}
+
+.button-secondary {
+  @extend .button;
+  margin-top: 10px;
+  color: $terciary-text;
+  border-color: $terciary-text;
+}
+
+/*******************************************************
+HELPERS
+*******************************************************/
+
+.center {
+  text-align: center;
+}

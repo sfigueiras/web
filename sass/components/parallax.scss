@@ -1,0 +1,7 @@
+
+@mixin parallax-top($background-image, $size, $position) {
+    background-image: url($background-image);
+    background-size: $size;
+    background-repeat: no-repeat;
+    background-position: $position;
+}

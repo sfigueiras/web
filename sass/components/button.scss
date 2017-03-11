@@ -1,0 +1,11 @@
+@import '../variables/color_variables.scss';
+@import '../variables/_variables.scss';
+
+.button {
+  padding: 10px 0;
+  border: 2px solid $primary-text;
+  border-radius: 25px;
+  color: $primary-text;
+  min-width: $button-min-width;
+  display: inline-block;
+}
