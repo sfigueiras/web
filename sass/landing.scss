@@ -4,38 +4,14 @@
 LANDING SECTION
 *******************************************************/
 
-.section {
-  /** flex compat **/
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-
-  /** flex-direction compat **/
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-
-  align-items: center;
-  
-  overflow: hidden;
-  color: $primary-text;
-
-}
-
 .landing {
     @extend .section;
-    @include parallax-top('../images/background-landing-estatico.png', 'cover', 50% 50%);
+    @include parallax('../images/background-landing-estatico.png', 'cover', 50% 50%);
+    @include align-items('center');
     
     text-align: left;
     border: 15px solid $primary;
 
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
 
     -webkit-justify-content: space-around;
     justify-content: flex-start;
@@ -54,20 +30,9 @@ LANDING SECTION
             font-size: 55px;
         }
 
-        hr {
-            margin: 0;
-        }
-
         .slogan {
             font-weight: lighter;
         }
-    }
-    
-    .logo-landing {
-        width: 100px;
-        position: absolute;
-        top: 30px;
-        left: 20px;
     }
 
     .swipe-down {
@@ -127,7 +92,7 @@ CONTACT US SECTION
 
 section.contact-us {
   @extend .section;
-  @include parallax-top('../images/background-decoration-purple-light.png', contain, top);
+  @include parallax('../images/background-decoration-purple-light.png', contain, top);
   padding: 70px 20px 0 20px;
   padding-bottom: 40px;
 }

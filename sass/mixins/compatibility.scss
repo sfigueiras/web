@@ -1,0 +1,19 @@
+@mixin align-items($position) {
+    -webkit-box-align: $position;
+    -webkit-align-items: $position;
+    -ms-flex-align: $position;
+    align-items: $position;
+}
+
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+@mixin display($display) {
+    display: #{$display}-box;
+  display: #{$display}-flex;
+  display: #{$display}-flexbox;
+  display: $display;
+}

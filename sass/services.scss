@@ -1,0 +1,53 @@
+@import 'common.scss';
+@import 'components/parallax.scss';
+@import 'variables/color_variables.scss';
+
+.landing {
+    @extend .section;
+    @include parallax('../images/services-nubes-monotono.jpg', 'cover', 50% 50%);
+
+    padding: 110px 50px 0 50px;
+
+    .get-in-touch {
+        margin: 50px 0 70px;
+        color: $primary-text;
+        font-size: 1.4em;
+    }
+}
+
+.question {
+    flex: 1 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: white;
+    color: $primary;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.offers {
+    @extend .section;
+}
+
+.offer {
+    flex: 1 100%;
+    text-align: center;
+    background-color: $grey;
+
+    .content {
+        padding: 50px;
+
+        .icon {
+            width: 150px;
+        }
+
+        h1 {
+            color: $terciary-text;
+        }
+
+        p {
+            color: black;
+            text-align: left;
+        }
+    }
+}

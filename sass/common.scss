@@ -1,6 +1,7 @@
 @import 'variables/color_variables.scss';
 @import 'components/button.scss';
 @import 'components/parallax.scss';
+@import 'mixins/compatibility.scss';
 
 /*******************************************************
 GENERAL
@@ -40,6 +41,10 @@ h1 {
 hr {
   border: 1px solid #3c9;
   width: 30px;
+
+  &.left {
+    margin: 0;
+  }
 }
 
 /*******************************************************
@@ -119,6 +124,22 @@ COMMON COMPONENTS
   color: $terciary-text;
   border-color: $terciary-text;
 }
+
+.section {
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(center);
+  
+  overflow: hidden;
+  color: $primary-text;
+}
+
+.logo-landing {
+  width: 100px;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  }
 
 /*******************************************************
 HELPERS
