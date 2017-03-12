@@ -148,3 +148,50 @@ HELPERS
 .center {
   text-align: center;
 }
+
+/*******************************************************
+FOOTER
+*******************************************************/
+
+.page-footer {
+  background-color: $primary;
+  background: url('../images/background-decoration-purple-light.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  display: flex;
+  padding: 20px 20px;
+}
+
+.slogan {
+  flex: 1.4;
+  color: $secondary;
+  margin-right: 25px;
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  img {
+    margin-left: 10px;
+  }
+}
+
+.social {
+  flex: 0.9;
+
+  img:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+
+
+.slogan,
+.social {
+  p { font-size: 1.5em; }
+}
+
+footer .social {
+  color: $primary-text;
+  text-align: right;
+}

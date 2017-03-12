@@ -1,5 +1,6 @@
 @import 'common.scss';
 @import 'components/parallax.scss';
+@import 'mixins/compatibility.scss';
 @import 'variables/color_variables.scss';
 
 .landing {
@@ -48,6 +49,69 @@
         p {
             color: black;
             text-align: left;
+        }
+    }
+}
+
+.boxing-offers {
+    @extend .section;
+    @include align-items(center);
+
+    padding-top: 70px;
+    background-color: white;
+    text-align: center;
+
+    h1 {
+        color: $primary;
+    }
+
+    .boxing-offer {
+        background-color: $primary;
+        background: linear-gradient(to top, $primary, transparentize($primary, 0.2));
+        color: white;
+        margin: 0 20px;
+        padding: 20px 30px;
+        min-height: 220px;
+    }
+
+    .price {
+        color: $primary;
+
+        h1, p {
+            margin: 20px 0;
+        }
+    }
+
+    .slider {
+        padding: 20px 0;
+    }
+
+    .circle {
+        fill: $grey;
+        
+        &.selected {
+            fill: $secondary;
+        }
+    }
+}
+
+.they-trust-us {
+    @extend .section;
+    @include parallax('../images/services-fondo-clientes.jpg', cover, top);
+    padding: 70px 0;
+    color: $primary;
+
+    .clients {
+        @include display(flex);
+        flex-wrap: wrap;
+
+        .client {
+            flex: 1 0 50%;
+            background: $grey-darker;
+            color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            min-width: 60px;
         }
     }
 }

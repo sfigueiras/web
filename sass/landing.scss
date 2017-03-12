@@ -23,7 +23,7 @@ LANDING SECTION
         text-align: left;
         font-family: 'Raleway', sans-serif;
     
-        &.title {
+        .title {
             margin-top: 20px;
             margin-bottom: 20px;
             max-width: 80%;
@@ -38,6 +38,7 @@ LANDING SECTION
     .swipe-down {
         margin-top: 120px;
         margin-bottom: 20px;
+        color: $secondary;
         
         img {
             margin: 0 30px;
@@ -116,52 +117,4 @@ JOIN US SECTION
   h1 {
     color: $primary;
   }
-}
-
-
-/*******************************************************
-FOOTER
-*******************************************************/
-
-.page-footer {
-  background-color: $primary;
-  background: url('../images/background-decoration-purple-light.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top;
-  display: flex;
-  padding: 20px 20px;
-}
-
-.slogan {
-  flex: 1.4;
-  color: $secondary;
-  margin-right: 25px;
-
-  p {
-    margin-bottom: 10px;
-  }
-
-  img {
-    margin-left: 10px;
-  }
-}
-
-.social {
-  flex: 0.9;
-
-  img:not(:last-child) {
-    margin-right: 5px;
-  }
-}
-
-
-.slogan,
-.social {
-  p { font-size: 1.5em; }
-}
-
-footer .social {
-  color: $primary-text;
-  text-align: right;
 }
