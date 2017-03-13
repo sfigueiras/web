@@ -60,10 +60,10 @@ input, textarea {
   color: $primary-text;
   margin-top: 10px;
   background-color: transparent;
-  padding: 10px 0 10px 10px;
+  padding: 10px;
   border: 2px solid $primary-text;
   border-radius: 5px;
-  width: calc(100% - 10px);
+  width: calc(100% - 20px);
   font-size: 1.1em;
 }
 
