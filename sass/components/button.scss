@@ -9,3 +9,10 @@
   min-width: $button-min-width;
   display: inline-block;
 }
+
+.button-terciary {
+  @extend .button;
+  background-color: white;
+  color: $terciary-text;
+  font-size: 1.1em;
+}

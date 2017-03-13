@@ -45,14 +45,20 @@ gulp.task('html', function() {
 });
 
 gulp.task('images', function() {
-    gulp.src([ 'images/**'])
+    gulp.src([ './images/**'])
         .pipe(gulp.dest(BUILD_DIR + '/images'));
 });
 
 gulp.task('manifest', function() {
-    gulp.src([ 'manifest/*'])
+    gulp.src([ './manifest/**'])
         .pipe(gulp.dest(BUILD_DIR + '/manifest'));
 });
+
+gulp.task('vendor', function() {
+    gulp.src([ './vendor/**'])
+        .pipe(gulp.dest(BUILD_DIR + '/vendor'));
+});
+
 
 
 gulp.task('default', function(){
@@ -61,6 +67,7 @@ gulp.task('default', function(){
     gulp.run('images');
     gulp.run("js");
     gulp.run("sass");
+    gulp.run("vendor");
 
     // watch me getting Sassy
     gulp.watch("./sass/**/*.scss", function(event){

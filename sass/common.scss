@@ -61,7 +61,7 @@ input, textarea {
   margin-top: 10px;
   background-color: transparent;
   padding: 10px 0 10px 10px;
-  border: 1px solid $primary-text;
+  border: 2px solid $primary-text;
   border-radius: 5px;
   width: calc(100% - 10px);
   font-size: 1.1em;
@@ -73,13 +73,24 @@ input, textarea {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+button:focus {
   outline-color: $secondary;
 }
 
 input {
   height: 20px;
 }
+
+textarea {
+  resize: none;
+  min-height: 70px;
+}
+
+
+/********************************************************
+CUSTOM FILE INPUT
+********************************************************/
 
 .file-input {
   padding: 10px 0 10px 10px;
@@ -89,6 +100,12 @@ input {
   min-width: 85%;
   display: inline-block;
   text-align: left;
+
+  .icon {
+    float: right;
+    font-size: 1.3em;
+    margin-right: 15px;
+  }
 }
 
 input[type="file"] {
@@ -100,10 +117,48 @@ input[type="file"] {
 	z-index: -1;
 }
 
-textarea {
-  resize: none;
-  min-height: 70px;
-  height: 50px;
+/********************************************************
+CUSTOM CHECKBOX INPUT
+********************************************************/
+
+input[type=checkbox].css-checkbox {
+  position: absolute; 
+  z-index: -1000; 
+  left: -1000px; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px;
+  width: 1px; 
+  margin: -1px; 
+  padding: 0;
+  border: 0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+  padding-left: 33px;
+  height: 28px; 
+  display: inline-block;
+  line-height: 28px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size :28px;
+  vertical-align: middle;
+  cursor: pointer;
+
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+  background-position: 0 -28px;
+}
+
+label.css-label {
+  background-image: url(../images/checkbox.png);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /*******************************************************
@@ -112,7 +167,7 @@ COMMON COMPONENTS
 
 .arrow {
   width: 20px;
-  
+
   &.down {
     transform: rotate(180deg);
   }
@@ -129,7 +184,7 @@ COMMON COMPONENTS
   @include display(flex);
   @include flex-direction(column);
   @include align-items(center);
-  
+
   overflow: hidden;
   color: $primary-text;
 }
@@ -139,7 +194,7 @@ COMMON COMPONENTS
   position: absolute;
   top: 30px;
   left: 20px;
-  }
+}
 
 /*******************************************************
 HELPERS
@@ -177,21 +232,17 @@ FOOTER
   }
 }
 
-.social {
-  flex: 0.9;
-
-  img:not(:last-child) {
-    margin-right: 5px;
-  }
-}
-
-
 .slogan,
 .social {
   p { font-size: 1.5em; }
 }
 
 footer .social {
-  color: $primary-text;
+  flex: 0.9;
+  color: $grey;
   text-align: right;
+
+  img:not(:last-child) {
+    margin-right: 5px;
+  }
 }
