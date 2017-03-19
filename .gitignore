@@ -1,3 +1,6 @@
 node_modules/
 public/
 firebase-debug.log
+
+key.pem
+cert.pem

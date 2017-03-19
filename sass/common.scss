@@ -246,7 +246,11 @@ footer .social {
   img:not(:last-child) {
     margin-right: 5px;
   }
+
+  .options { display: none; }
 }
+
+.adresses { display: none; }
 
 /*******************************************************
 TABLET 

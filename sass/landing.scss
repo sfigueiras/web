@@ -75,18 +75,37 @@ OFFERS SECTION
     margin-top: 70px;
     background-color: initial;
     color: $primary-text;
+
+    .content .more-info {
+      display: none;
+    }
   }
+}
+
+
+/*******************************************************
+WORK
+*******************************************************/
+
+.work {
+  display: none;
 }
 
 /*******************************************************
 CONTACT US SECTION
 *******************************************************/
 
-section.contact-us {
+.contact-us {
   @extend .section;
   @include parallax('../images/background-decoration-purple-light.png', contain, top);
   padding: 70px 20px 0 20px;
   padding-bottom: 40px;
+
+  .content {
+    .contact-phrase {
+      display: none;
+    }
+  }
 }
 
 .form-container {
