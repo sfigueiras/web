@@ -10,6 +10,14 @@
   display: inline-block;
 }
 
+.button-secondary {
+  @extend .button;
+  background-color: transparent;
+  margin-top: 10px;
+  color: #9933ff;
+  border-color: #9933ff;
+}
+
 .button-terciary {
   @extend .button;
   background-color: white;

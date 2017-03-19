@@ -1,0 +1,607 @@
+/*******************************************************
+COLORS
+*******************************************************/
+/*******************************************************
+COLORS
+*******************************************************/
+.button, .button-secondary, .button-terciary {
+  padding: 10px 0;
+  border: 2px solid white;
+  border-radius: 25px;
+  color: white;
+  min-width: 140px;
+  display: inline-block;
+}
+
+.button-secondary {
+  background-color: transparent;
+  margin-top: 10px;
+  color: #9933ff;
+  border-color: #9933ff;
+}
+
+.button-terciary {
+  background-color: white;
+  color: #9933ff;
+  font-size: 1.1em;
+}
+
+/*******************************************************
+GENERAL
+*******************************************************/
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: #306;
+}
+
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  font-family: 'Roboto Slab', serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+hr {
+  border: 1px solid #3c9;
+  width: 30px;
+}
+
+hr.left {
+  margin: 0;
+}
+
+/*******************************************************
+FORMS
+*******************************************************/
+form {
+  padding: 0 5px 0 5px;
+}
+
+input, textarea {
+  display: block;
+  color: white;
+  margin-top: 10px;
+  background-color: transparent;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 5px;
+  width: calc(100% - 20px);
+  font-size: 1.1em;
+  -webkit-text-decoration-color: #38E090;
+          text-decoration-color: #38E090;
+}
+
+.secondary {
+  border-color: #DADADA;
+  color: #DADADA;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline-color: #38E090;
+}
+
+input {
+  height: 20px;
+}
+
+textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+/********************************************************
+CUSTOM FILE INPUT
+********************************************************/
+.file-input {
+  padding: 10px 0 10px 10px;
+  border: 2px solid #DADADA;
+  border-radius: 5px;
+  color: #DADADA;
+  min-width: 85%;
+  display: inline-block;
+  text-align: left;
+}
+
+.file-input .icon {
+  float: right;
+  font-size: 1.3em;
+  margin-right: 15px;
+}
+
+input[type="file"] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+/********************************************************
+CUSTOM CHECKBOX INPUT
+********************************************************/
+input[type=checkbox].css-checkbox {
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+  padding-left: 33px;
+  height: 28px;
+  display: inline-block;
+  line-height: 28px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 28px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+  background-position: 0 -28px;
+}
+
+label.css-label {
+  background-image: url(../images/checkbox.png);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*******************************************************
+COMMON COMPONENTS
+*******************************************************/
+.arrow {
+  width: 20px;
+}
+
+.arrow.down {
+  transform: rotate(180deg);
+}
+
+.section, .landing, .offers, .boxing-offers, .they-trust-us {
+  display: flex-box;
+  display: flex-flex;
+  display: flex-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+}
+
+.logo-landing {
+  width: 100px;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}
+
+/*******************************************************
+HELPERS
+*******************************************************/
+.center {
+  text-align: center;
+}
+
+/*******************************************************
+FOOTER
+*******************************************************/
+.page-footer {
+  background-color: #306;
+  background: url("../images/background-decoration-purple-light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  display: flex;
+  align-items: flex-start;
+  padding: 20px 20px;
+}
+
+.slogan {
+  flex: 1.4;
+  color: #38E090;
+  margin-right: 25px;
+}
+
+.slogan p {
+  margin-bottom: 10px;
+}
+
+.slogan img {
+  margin-left: 10px;
+}
+
+.slogan p,
+.social p {
+  font-size: 1.5em;
+}
+
+.social {
+  flex: 0.9;
+  color: #EDEDED;
+  text-align: right;
+  display: block;
+}
+
+.social .options {
+  display: none;
+}
+
+.social img:not(:last-child) {
+  margin-right: 5px;
+}
+
+.adresses {
+  display: none;
+}
+
+/*******************************************************
+LINKS
+*******************************************************/
+.link-primary {
+  color: #306;
+}
+
+.link-primary:hover, .link-primary:active, .link-primary:visited {
+  background: #9933ff;
+}
+
+.link-primary.white {
+  color: white;
+}
+
+/*******************************************************
+TABLET 
+*******************************************************/
+@media (min-width: 641px) {
+  .page-footer {
+    font-size: 1.1em;
+    padding-bottom: 40px;
+  }
+  .countries {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .countries .country {
+    flex: 1 0 45%;
+    margin-right: 15px;
+    color: white;
+  }
+  .countries .country hr {
+    margin-left: 0;
+  }
+  .adresses {
+    color: white;
+    display: block;
+    flex: 1.5;
+  }
+  .adresses .coffee {
+    color: #9933ff;
+  }
+  .adresses p {
+    margin-top: 10px;
+  }
+  .slogan {
+    flex: 0.8;
+    margin: 0;
+  }
+  .slogan p {
+    margin: 0;
+  }
+  .social {
+    text-align: center;
+    font-size: initial;
+    padding-top: 20px;
+  }
+  .social p {
+    font-size: 1em;
+  }
+  .social .options {
+    display: block;
+  }
+  .social .options p {
+    font-family: 'Raleway', sans-serif;
+  }
+  .social .options:first-child {
+    margin-top: 20px;
+  }
+  .social .follow {
+    display: none;
+  }
+}
+
+/*******************************************************
+COLORS
+*******************************************************/
+.landing {
+  background-image: url("../images/services-nubes-monotono.jpg");
+  background-size: "cover";
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  padding: 110px 50px 0 50px;
+}
+
+.landing .get-in-touch {
+  margin: 50px 0 70px;
+  color: white;
+  font-size: 1.4em;
+}
+
+.question {
+  flex: 1 100%;
+  text-align: center;
+  padding: 20px 0;
+  background-color: white;
+  color: #306;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.offer {
+  flex: 1 100%;
+  text-align: center;
+  background-color: #EDEDED;
+}
+
+.offer .overlapped-heading {
+  display: none;
+}
+
+.offer .content {
+  padding: 50px;
+}
+
+.offer .content .icon {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.offer .content .title {
+  color: #9933ff;
+}
+
+.offer .content .title-tablet {
+  display: none;
+}
+
+.offer .content p {
+  color: black;
+  text-align: left;
+}
+
+.boxing-offers {
+  align-items: center;
+  padding-top: 70px;
+  background-color: white;
+  text-align: center;
+}
+
+.boxing-offers h1 {
+  color: #306;
+}
+
+.boxing-offers .boxing-offer {
+  background-color: #306;
+  background: linear-gradient(to top, #306, rgba(51, 0, 102, 0.8));
+  color: white;
+  margin: 0 20px;
+  padding: 20px 30px;
+  min-height: 220px;
+}
+
+.boxing-offers .price {
+  color: #306;
+}
+
+.boxing-offers .price h1, .boxing-offers .price p {
+  margin: 20px 0;
+}
+
+.boxing-offers .slider {
+  padding: 20px 0;
+}
+
+.boxing-offers .circle {
+  fill: #EDEDED;
+}
+
+.boxing-offers .circle.selected {
+  fill: #38E090;
+}
+
+.they-trust-us {
+  background-image: url("../images/services-fondo-clientes.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding: 70px 0;
+  color: #306;
+}
+
+.they-trust-us .clients {
+  display: flex-box;
+  display: flex-flex;
+  display: flex-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.they-trust-us .clients .client {
+  flex: 1 0 50%;
+  background: #BEBEBE;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  min-width: 60px;
+}
+
+.question-tablet {
+  display: none;
+}
+
+/*******************************************************
+TABLET 
+*******************************************************/
+@media (min-width: 641px) {
+  /*******************************************************
+OFFERS 
+*******************************************************/
+  .offers {
+    flex-direction: column;
+    background-color: white;
+  }
+  .offers .question {
+    display: none;
+  }
+  .offers .offer {
+    display: flex;
+    background-color: white;
+    margin: 20px;
+    flex-wrap: wrap;
+  }
+  .offers .offer:active, .offers .offer:visited, .offers .offer:hover {
+    background-color: #EDEDED;
+  }
+  .offers .offer:active .content .heading .title-tablet, .offers .offer:visited .content .heading .title-tablet, .offers .offer:hover .content .heading .title-tablet {
+    opacity: 0;
+  }
+  .offers .offer:active .content .description .question-tablet, .offers .offer:visited .content .description .question-tablet, .offers .offer:hover .content .description .question-tablet {
+    opacity: 0;
+  }
+  .offers .offer:active .overlapped-heading, .offers .offer:visited .overlapped-heading, .offers .offer:hover .overlapped-heading {
+    background-color: #306;
+    color: #38E090;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .offers .offer:active .overlapped-heading h1, .offers .offer:visited .overlapped-heading h1, .offers .offer:hover .overlapped-heading h1 {
+    flex: 0.9;
+  }
+  .offers .offer:active .overlapped-heading a, .offers .offer:visited .overlapped-heading a, .offers .offer:hover .overlapped-heading a {
+    flex: 1;
+    font-size: 1.2em;
+    color: white;
+    text-align: left;
+  }
+  .offers .offer .content {
+    display: flex;
+  }
+  .offers .offer .content .left {
+    display: none;
+  }
+  .offers .offer .content .left.tablet {
+    display: block;
+    margin: 0;
+  }
+  .offers .offer .content .title {
+    display: none;
+  }
+  .offers .offer .content .title-tablet {
+    display: block;
+    opacity: 1;
+    color: #BEBEBE;
+    margin-top: 10px;
+  }
+  .offers .offer .content .icon {
+    flex: 1.5;
+    padding: 0 40px;
+  }
+  .offers .offer .content p {
+    flex: 1.2;
+  }
+  .description {
+    text-align: left;
+  }
+  .description .question-tablet {
+    opacity: 1;
+    color: #306;
+  }
+  .carrousel {
+    display: none;
+  }
+  /*******************************************************
+BOXING OFFERS 
+*******************************************************/
+  .subparagraph {
+    text-align: left;
+    color: #3C3C3B;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 100px;
+  }
+  .subparagraph a {
+    flex: 1 0 100%;
+  }
+  .subparagraph .boxing-offers-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    width: 100%;
+    padding: 50px 20px;
+  }
+  .subparagraph .boxing-offers-tablet .square {
+    color: white;
+    background-color: #306;
+    flex: 1 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+  }
+  .subparagraph .boxing-offers-tablet .square.lighter {
+    background-color: #9933ff;
+  }
+  /*******************************************************
+THEY TRUST US
+*******************************************************/
+  .they-trust-us {
+    padding: 40px 80px;
+  }
+  .they-trust-us .clients {
+    width: 100%;
+  }
+  .they-trust-us .clients .client {
+    flex: 1 0 25%;
+  }
+}

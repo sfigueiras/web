@@ -1,92 +1,111 @@
-@import 'common.scss';
-
 /*******************************************************
 LANDING SECTION
 *******************************************************/
-
 .landing {
-    @extend .section;
-    @include parallax('../images/background-landing-estatico.png', 'cover', 50% 50%);
-    @include align-items('center');
-    
-    text-align: left;
-    border: 15px solid $primary;
+  background-image: url("../images/background-landing-estatico.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  align-items: center;
+  text-align: left;
+  border: 15px solid #306;
+  justify-content: flex-start;
+}
 
-    -webkit-justify-content: space-around;
-    justify-content: flex-start;
-    
-    .claim {
-        padding: 110px 50px 0 50px;
-        text-align: left;
-        font-family: 'Raleway', sans-serif;
-        margin-bottom: auto;
-    
-        .title {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            max-width: 80%;
-            font-size: 55px;
-        }
+.landing .claim {
+  padding: 110px 50px 0 50px;
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: auto;
+}
 
-        .slogan {
-            font-weight: lighter;
-        }
-    }
+.landing .claim .title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 80%;
+  font-size: 55px;
+}
 
-    .swipe-down {
-        margin-bottom: 20px;
-        text-align: center;
-        color: $secondary;
-    }
+.landing .claim .slogan {
+  font-weight: lighter;
+}
+
+.landing .swipe-down {
+  margin-bottom: 20px;
+  color: #38E090;
+  text-align: center;
+}
+
+.landing .swipe-down p {
+  margin-bottom: 5px;
+}
+
+.landing .swipe-down img {
+  margin: 0 30px;
 }
 
 /*******************************************************
 OFFERS SECTION
 *******************************************************/
-
 .offer {
   flex: 1 100%;
   text-align: center;
   margin: 15px;
   background-color: white;
-  color: $secondary-text;
+  color: black;
+}
 
-  .content {
-    padding: 40px 40px 20px 40px;
-    
-    .icon {
-      width: 150px;
-      margin: 25px 0;
-    }
-    
-    .learn-more {
-      margin: 40px 0 10px 0;
-      display: block;
-      font-weight: bold;
-    }
-  }
+.offer .content {
+  padding: 40px 40px 20px 40px;
+}
 
-  .action {
-    background: $secondary;
-    padding: 35px;
-  }
+.offer .content .icon {
+  width: 150px;
+  margin: 25px 0;
+}
 
-  &.custom {
-    margin-top: 70px;
-    background-color: initial;
-    color: $primary-text;
-  }
+.offer .content .learn-more {
+  margin: 40px 0 10px 0;
+  display: block;
+  font-weight: bold;
+}
+
+.offer .action {
+  background: #38E090;
+  padding: 35px;
+}
+
+.offer.custom {
+  margin-top: 70px;
+  background-color: initial;
+  color: white;
+}
+
+.offer.custom .content .more-info {
+  display: none;
+}
+
+/*******************************************************
+WORK
+*******************************************************/
+.work {
+  display: none;
 }
 
 /*******************************************************
 CONTACT US SECTION
 *******************************************************/
-
 section.contact-us {
-  @extend .section;
-  @include parallax('../images/background-decoration-purple-light.png', contain, top);
+  background-image: url("../images/background-decoration-purple-light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
   padding: 70px 20px 0 20px;
   padding-bottom: 40px;
+}
+
+section.contact-us .content .contact-phrase {
+  display: none;
 }
 
 .form-container {
@@ -96,20 +115,21 @@ section.contact-us {
 /*******************************************************
 JOIN US SECTION
 *******************************************************/
-
 .join-us {
-  @extend .section;
   padding-top: 20px;
   background-color: white;
-  color: $secondary-text;
+  color: black;
   text-align: center;
   padding-bottom: 70px;
-  
-  h1 {
-    color: $primary;
-  }
 }
 
+.join-us h1 {
+  color: #306;
+}
+
+/*******************************************************
+TABLET: ;
+*******************************************************/
 @media (min-width: 641px) {
   .landing {
     min-height: 600px;
@@ -151,10 +171,9 @@ JOIN US SECTION
   .work {
     margin-top: 80px;
     display: flex;
-    
-    img {
-      max-width: 100%;
-    }
+  }
+  .work img {
+    max-width: 100%;
   }
   .forms {
     display: flex;
