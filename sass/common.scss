@@ -259,72 +259,74 @@ TABLET
   .page-footer {
     font-size: 1.1em;
     padding-bottom: 40px;
-  }
 
-  .countries {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
-    .country {
-      flex: 1 0 45%;
-      margin-right: 15px;
+    .adresses {
       color: white;
+      display: block;
+      flex: 1.5;
       
-      hr {
-        margin-left: 0;
+      .coffee {
+        color: #9933ff;
+      }
+      
+      p {
+        margin-top: 10px;
+      }
+
+      .countries {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        .country {
+          flex: 1 0 45%;
+          margin-right: 15px;
+          color: white;
+          
+          hr {
+            margin-left: 0;
+          }
+        }
       }
     }
-  }
 
-  .adresses {
-    color: white;
-    display: block;
-    flex: 1.5;
-    
-    .coffee {
-      color: #9933ff;
-    }
-    
-    p {
-      margin-top: 10px;
-    }
-  }
-
-  .slogan {
-    flex: 0.8;
-    margin: 0;
-    
-    p {
+    .slogan {
+      flex: 0.8;
       margin: 0;
+      
+      p {
+        margin: 0;
+      }
     }
-  }
 
-  .social {
-    text-align: center;
-    font-size: initial;
-    padding-top: 20px;
+    .social {
+      text-align: center;
+      font-size: initial;
+      padding-top: 20px;
+      
+      p {
+        font-size: 1em;
+      }
+      
+      .options {
+        display: block !important;
+      }
+      
+      .options p {
+        font-family: 'Raleway', sans-serif;
+      }
     
-    p {
-      font-size: 1em;
+      
+      .options:first-child {
+        margin-top: 20px;
+      }
+
+      
+      .follow {
+        display: none;
+      }
     }
-  }
-  
-  .social .options {
-    display: block;
-  }
-
-  .social .options p {
-    font-family: 'Raleway', sans-serif;
-  }
-
-  .social .options:first-child {
-    margin-top: 20px;
-  }
-  
-  .social .follow {
-    display: none;
   }
 }
