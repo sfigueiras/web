@@ -81,3 +81,74 @@ CONTACT PAGE
         } 
     }
 }
+
+.follow-us { display: none; }
+
+@media (min-width: 641px) {
+    .landing.center {
+        align-items: initial;
+        padding-left: 100px;
+
+        h1 {
+            text-align: left;
+            font-size: 3em;
+            margin-bottom: 0;
+        }
+
+        p { display: none }
+    }
+
+    section {
+        background-color: $terciary-text;
+    }
+
+    .form-section {
+        background-color: transparent;
+    }
+
+    .sections {
+        background: linear-gradient(to bottom, $terciary-text, $primary);
+        display: flex;
+        align-items: baseline;
+        padding: 0 80px 80px 80px;
+
+        section {
+            flex: 1 1 50%;
+        }
+    }
+
+    .follow-us {
+        background-color: rgba($primary, 0.7);
+        color: white;
+        text-align: right;
+        padding-right: 20px;
+        margin-right: 20px;
+        padding-bottom: 60px;
+        display: block;
+
+        hr {
+            float: right;
+        }
+
+        h1 {
+            color: $terciary-text;
+        }
+
+        a { color: $secondary; }
+    }
+
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        color:    white;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color:    white;
+        opacity:  1;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color:    white;
+        opacity:  1;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color:    white;
+    }
+}

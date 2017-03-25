@@ -1,0 +1,25 @@
+@import 'common.scss';
+
+.landing {
+  align-items: center;
+  text-align: center;
+  padding-top: 110px;
+  background: linear-gradient(to top, #306, #5e0bb1);
+  color: white;
+}
+
+.phrase {
+  margin-top: 5px;
+}
+
+.file-input {
+  margin: 50px 0 20px 0;
+  min-width: 250px;
+}
+
+.page-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}

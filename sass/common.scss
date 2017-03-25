@@ -163,6 +163,53 @@ label.css-label {
 }
 
 /*******************************************************
+ICONS
+*******************************************************/
+
+svg {
+  height: 20px;
+  width: 20px;
+  zoom: 3;
+}
+
+path {
+  pointer-events:all;
+}
+
+@keyframes eyebrows {
+  0% { transform: translate(0, 0) }
+  10% { transform: translate(0, -1px) }
+  50% { transform: translate(0, 0) }
+}
+
+.ubykuo-icon {
+  fill: white;
+  transform-origin: 50% 50%;
+  transition: transform .8s ease-in-out;
+
+  &.green {
+    fill: $secondary;
+  }
+
+}
+
+.smile-container {
+   .smile { 
+    .eyebrows {
+      transition: transform 2s ease-in;
+    }
+   }
+  &:hover {
+    .smile {
+      .eyebrows {
+        animation: eyebrows 2s;
+      }
+    }
+
+  }
+}
+
+/*******************************************************
 COMMON COMPONENTS
 *******************************************************/
 
