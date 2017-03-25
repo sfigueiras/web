@@ -6,10 +6,12 @@
   padding-top: 110px;
   background: linear-gradient(to top, #306, #5e0bb1);
   color: white;
+  display: block;
 }
 
 .phrase {
   margin-top: 5px;
+  padding: 0 20vw;
 }
 
 .file-input {
@@ -17,9 +19,34 @@
   min-width: 250px;
 }
 
-.page-footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  overflow: hidden;
+.tablet-form {
+  display: none;
+}
+
+@media (min-width: 641px) {
+  .mobile-form {
+    display: none;
+  }
+
+  .landing {
+    background: url("http://placehold.it/800x500");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tablet-form {
+    display: block;
+    max-width: 40vw;
+    padding: 40px;
+    background-color: rgba($primary, 0.9);
+    text-align: left;
+    margin-left: 20vw;
+    margin-bottom: 40px;
+  }
+
 }
