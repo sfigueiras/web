@@ -9,6 +9,10 @@
 
     padding: 110px 50px 0 50px;
 
+    p {
+      max-width: 70vw;
+    }
+
     .get-in-touch {
         margin: 50px 0 70px;
         color: $primary-text;
@@ -130,85 +134,101 @@
   /*******************************************************
 OFFERS 
 *******************************************************/
-  .offers {
-    flex-direction: column;
+.offers {
+  flex-direction: column;
+  background-color: white;
+  
+  .question {
+      display: none;
+  }
+  
+  .offer {
+    display: flex;
     background-color: white;
+    margin: 20px 0;
+    flex-wrap: wrap;
     
-    .question {
+    // &:active, &:visited, &:hover {
+    //   background-color: #EDEDED;
+
+    //   .content {
+    //     .heading .title-tablet {
+    //       opacity: 0;
+    //     }
+        
+    //     .description .question-tablet, {
+    //       opacity: 0;
+    //     }
+    //   }
+      
+    //   .overlapped-heading {
+    //     background-color: #306;
+    //     color: #38E090;
+    //     position: absolute;
+    //     left: 20px;
+    //     right: 20px;
+    //     display: flex;
+    //     align-items: center;
+        
+    //     h1 {
+    //       flex: 0.9;
+    //     }
+        
+    //     a {
+    //       flex: 1;
+    //       font-size: 1.2em;
+    //       color: white;
+    //       text-align: left;
+    //     }
+    //   }
+    // }
+
+    .content {
+      display: flex;
+      
+      .left {
         display: none;
+        
+        &.tablet {
+          display: block;
+          margin: 0;
+        }
+      }
+      
+      .title {
+        display: none;
+      }
+      .title-tablet {
+        display: block;
+        opacity: 1;
+        color: #BEBEBE;
+        margin-top: 10px;
+      }
+      .icon {
+        flex: 1.5;
+        padding: 0 40px;
+      }
+      p {
+        flex: 1.2;
+      }
     }
     
-    .offer {
-        display: flex;
-        background-color: white;
-        margin: 20px;
-        flex-wrap: wrap;
-    }
   }
-  .offers .offer:active, .offers .offer:visited, .offers .offer:hover {
-    background-color: #EDEDED;
-  }
-  .offers .offer:active .content .heading .title-tablet, .offers .offer:visited .content .heading .title-tablet, .offers .offer:hover .content .heading .title-tablet {
-    opacity: 0;
-  }
-  .offers .offer:active .content .description .question-tablet, .offers .offer:visited .content .description .question-tablet, .offers .offer:hover .content .description .question-tablet {
-    opacity: 0;
-  }
-  .offers .offer:active .overlapped-heading, .offers .offer:visited .overlapped-heading, .offers .offer:hover .overlapped-heading {
-    background-color: #306;
-    color: #38E090;
-    position: absolute;
-    left: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-  }
-  .offers .offer:active .overlapped-heading h1, .offers .offer:visited .overlapped-heading h1, .offers .offer:hover .overlapped-heading h1 {
-    flex: 0.9;
-  }
-  .offers .offer:active .overlapped-heading a, .offers .offer:visited .overlapped-heading a, .offers .offer:hover .overlapped-heading a {
-    flex: 1;
-    font-size: 1.2em;
-    color: white;
-    text-align: left;
-  }
-  .offers .offer .content {
-    display: flex;
-  }
-  .offers .offer .content .left {
-    display: none;
-  }
-  .offers .offer .content .left.tablet {
-    display: block;
-    margin: 0;
-  }
-  .offers .offer .content .title {
-    display: none;
-  }
-  .offers .offer .content .title-tablet {
-    display: block;
-    opacity: 1;
-    color: #BEBEBE;
-    margin-top: 10px;
-  }
-  .offers .offer .content .icon {
-    flex: 1.5;
-    padding: 0 40px;
-  }
-  .offers .offer .content p {
-    flex: 1.2;
-  }
-  .description {
-    text-align: left;
-  }
-  .description .question-tablet {
+}
+
+.description {
+  text-align: left;
+  
+  .question-tablet {
     opacity: 1;
     color: #306;
   }
-  .carrousel {
-    display: none;
-  }
-  /*******************************************************
+}
+.carrousel {
+  display: none;
+}
+
+/*******************************************************
 BOXING OFFERS 
 *******************************************************/
   .boxing-offers .subparagraph {
@@ -218,41 +238,126 @@ BOXING OFFERS
     align-items: center;
     flex-wrap: wrap;
     padding: 30px 100px;
+    
+    a {
+      flex: 1 0 100%;
+    }
+
+    .offer-phrase-tablet {
+      br { display: inline; }
+    }
+    
+    .boxing-offers-tablet {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: stretch;
+      width: 100%;
+      padding: 50px 20px;
+      
+      .square {
+        color: white;
+        background-color: #306;
+        flex: 1 0 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 200px;
+      }
+      
+      .square.lighter {
+        background-color: #9933ff;
+      }
+    }
   }
-  .subparagraph a {
-    flex: 1 0 100%;
-  }
-  .subparagraph .boxing-offers-tablet {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: stretch;
-    width: 100%;
-    padding: 50px 20px;
-  }
-  .subparagraph .boxing-offers-tablet .square {
-    color: white;
-    background-color: #306;
-    flex: 1 0 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 200px;
-  }
-  .subparagraph .boxing-offers-tablet .square.lighter {
-    background-color: #9933ff;
-  }
-  /*******************************************************
+
+/*******************************************************
 THEY TRUST US
 *******************************************************/
   .they-trust-us {
     padding: 40px 80px;
+    .clients {
+      width: 100%;
+      
+      .client {
+        flex: 1 0 25%;
+      }
+    }
   }
-  .they-trust-us .clients {
-    width: 100%;
+}
+
+@media (min-width: 1024px) {
+
+  .offers {
+    align-items: initial;
+    flex-direction: row;
+    padding: 0 10vw;
   }
-  .they-trust-us .clients .client {
-    flex: 1 0 25%;
+
+  .offer {
+    flex: 1 0 20% !important;
+    
+    .overlapped-heading {
+      width: 100%;
+      position: relative !important;
+      left: 0 !important;
+    }
   }
+
+  .content {
+    flex-direction: column;
+    padding: 20px !important;
+  }
+
+
+  .boxing-offers {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: initial;
+    padding-top: 20px;
+    @include parallax('../images/background-decoration-white.png', contain, 0 0);
+
+    h1 {
+      display: none;
+    }
+    
+
+    .subparagraph {
+      width: 100vw;
+      display: flex;
+      padding: 0 10vw 80px 10vw;
+      align-items: flex-start;
+
+      h1 {
+        display: flex;
+      }
+      
+      .offer-phrase-tablet {
+        flex: 0.5 0 20%;
+        margin-right: 0;
+
+        br {
+          display: block;
+        }
+      }
+
+      .boxing-offers-tablet {
+        flex: 1 0 20%;
+        padding-top: 25px
+      }
+    }
+  }
+
+  .client-quote {
+    display: block;
+    margin: 40px 0 100px 0;
+    text-align: center;
+
+    h4 { 
+      font-size: 1.5em; 
+      max-width: 50vw;  
+    }
+  }
+
 }
