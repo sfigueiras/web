@@ -6,8 +6,8 @@ LANDING SECTION
 
 .landing {
     @extend .section;
-    @include parallax('../images/background-landing-estatico.png', 'cover', 50% 50%);
-    @include align-items('center');
+    @include parallax('../images/background-landing-estatico.png', cover, 50% 50%);
+    @include align-items(center);
     
     text-align: left;
     border: 15px solid $primary;
@@ -129,6 +129,10 @@ JOIN US SECTION
   }
 }
 
+/*******************************************************
+TABLET
+*******************************************************/
+
 @media (min-width: 641px) {
   .landing {
     min-height: 600px;
@@ -148,25 +152,29 @@ JOIN US SECTION
     background-repeat: no-repeat;
     background-position: 50% 40%;
   }
+  
   .offer {
     background-color: initial;
     color: white;
+    
+    &.custom .content h1 {
+      color: #38E090;
+    }
+    &.custom .content a:not(.more-info) {
+      display: none;
+    }
+    &.custom .content .more-info {
+      color: white;
+      background-color: #9933ff;
+      padding: 0 10px;
+      display: inline;
+    }
   }
+
   .offer .content {
     padding-top: 0;
   }
-  .offer.custom .content h1 {
-    color: #38E090;
-  }
-  .offer.custom .content a:not(.more-info) {
-    display: none;
-  }
-  .offer.custom .content .more-info {
-    color: white;
-    background-color: #9933ff;
-    padding: 0 10px;
-    display: inline;
-  }
+
   .work {
     margin-top: 80px;
     display: flex;
@@ -175,44 +183,98 @@ JOIN US SECTION
       max-width: 100%;
     }
   }
+
   .forms {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     padding: 60px;
     background: linear-gradient(to top, #306, #5000a0);
+    
+    section {
+      flex: 1 0 auto;
+      align-self: flex-start;
+      padding: 20px;
+      margin: 10px;
+      
+      hr {
+        margin: 0;
+      }
+      
+      &.contact-us {
+        background-color: #306;
+        background-image: none;
+      }
+      &.contact-us .content {
+        text-align: left;
+      }
+      &.contact-us .content .contact-phrase {
+        max-width: 280px;
+      }
+      &.join-us .content {
+        text-align: left;
+      }
+    }
+    
+    .follow {
+      background-color: transparent;
+      align-self: flex-end;
+      color: #38E090;
+    }
   }
-  .forms section {
-    flex: 1 0 auto;
-    align-self: flex-start;
-    padding: 20px;
-    margin: 10px;
-  }
-  .forms section hr {
-    margin: 0;
-  }
-  .forms section.contact-us {
-    background-color: #306;
-    background-image: none;
-  }
-  .forms section.contact-us .content {
-    text-align: left;
-  }
-  .forms section.contact-us .content .contact-phrase {
-    max-width: 280px;
-  }
-  .forms section.join-us .content {
-    text-align: left;
-  }
-  .forms .follow {
-    background-color: transparent;
-    align-self: flex-end;
-    color: #38E090;
-  }
+
   .action, .learn-more {
     display: none !important;
   }
+
   .button-secondary {
     float: right;
+  }
+}
+
+/*******************************************************
+DESKTOP
+*******************************************************/
+
+@media (min-width : 1024px) {
+  .landing {
+    background-position: initial;
+    align-items: initial;
+
+    .claim {
+      padding: 110px 50px 0 50px;
+
+      .title {
+          margin: 80px 0 !important;
+      }
+    }
+  }
+
+  .offers {
+    display: flex;
+    flex-wrap: wrap;
+    background-position: 40% 100%;
+  }
+  
+  .offer {
+    background-color: initial;
+    color: white;
+    flex: 1 0 30%;
+
+    &.custom {
+      margin-top: 0;
+
+      .content {
+        
+        .more-info {
+          flex: 1 1 100%;
+        }
+      }
+    }
+  }
+
+  .work {
+    display: flex;
+    justify-content: center;
   }
 }
