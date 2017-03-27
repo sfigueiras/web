@@ -136,19 +136,4 @@ CONTACT PAGE
 
         a { color: $secondary; }
     }
-
-    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-        color:    white;
-    }
-    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-        color:    white;
-        opacity:  1;
-    }
-    ::-moz-placeholder { /* Mozilla Firefox 19+ */
-        color:    white;
-        opacity:  1;
-    }
-    :-ms-input-placeholder { /* Internet Explorer 10-11 */
-        color:    white;
-    }
 }
