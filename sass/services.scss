@@ -23,7 +23,7 @@
 .question {
     flex: 1 100%;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px 10px;
     background-color: white;
     color: $primary;
     font-weight: bold;
@@ -130,6 +130,15 @@
 
 .question-tablet { display: none; }
 
+.client-quote {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  h4 { text-align: center; }
+ }
+
 @media (min-width: 641px) {
   /*******************************************************
 OFFERS 
@@ -228,6 +237,13 @@ OFFERS
   display: none;
 }
 
+.offer-phrase-tablet {
+  // display: none;
+ 
+
+  p .break { display: none; }
+}
+
 /*******************************************************
 BOXING OFFERS 
 *******************************************************/
@@ -244,7 +260,9 @@ BOXING OFFERS
     }
 
     .offer-phrase-tablet {
-      br { display: inline; }
+       h1 {
+        display: none;
+      }
     }
     
     .boxing-offers-tablet {
@@ -252,7 +270,6 @@ BOXING OFFERS
       flex-wrap: wrap;
       align-content: stretch;
       width: 100%;
-      padding: 50px 20px;
       
       .square {
         color: white;
@@ -277,6 +294,8 @@ THEY TRUST US
 *******************************************************/
   .they-trust-us {
     padding: 40px 80px;
+    background-color: white;
+
     .clients {
       width: 100%;
       
@@ -337,6 +356,8 @@ THEY TRUST US
         flex: 0.5 0 20%;
         margin-right: 0;
 
+        h1 { display: block !important }
+
         br {
           display: block;
         }
@@ -344,7 +365,10 @@ THEY TRUST US
 
       .boxing-offers-tablet {
         flex: 1 0 20%;
-        padding-top: 25px
+        padding-top: 25px;
+
+        h1 { display: block; }
+        p .left { display: inline; }
       }
     }
   }
