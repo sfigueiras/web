@@ -254,11 +254,19 @@ COMMON COMPONENTS
   color: $primary-text;
 }
 
+@keyframes floatingCaret {
+  50% {transform: translateY(5px) }
+}
+
 .logo-landing {
-  width: 140px;
+  left: 2.5px;
+  zoom: 6;
+  top: 0px;
   position: absolute;
-  top: 30px;
-  left: 20px;
+
+  .caret-down {
+    animation: floatingCaret 1s infinite;
+  }
 }
 
 /*******************************************************
@@ -287,7 +295,6 @@ FOOTER
 .slogan {
   flex: 1.4;
   color: $secondary;
-  margin-right: 25px;
 
   p {
     margin-bottom: 10px;
@@ -329,6 +336,7 @@ TABLET
       color: white;
       display: block;
       flex: 1.5;
+      padding-left: 10vw;
       
       .coffee {
         color: #9933ff;

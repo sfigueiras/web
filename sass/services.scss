@@ -5,7 +5,7 @@
 
 .landing {
     @extend .section;
-    @include parallax('../images/services-nubes-monotono.jpg', 'cover', 50% 50%);
+    @include parallax('../images/services-nubes-monotono-compressed.jpg', 'cover', 50% 50%);
 
     padding: 110px 50px 0 50px;
 
