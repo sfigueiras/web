@@ -99,7 +99,7 @@ CONTACT US SECTION
 .contact-us {
   @extend .section;
   @include parallax('../images/background-decoration-purple-light.png', contain, top);
-  padding: 70px 20px 0 20px;
+  padding: 20px 20px 0 20px;
   padding-bottom: 40px;
   .content {
     .contact-phrase {
@@ -118,14 +118,30 @@ JOIN US SECTION
 *******************************************************/
 
 .join-us {
-  @extend .section;
-  padding-top: 20px;
-  background-color: white;
+  // background-color: white;
   color: $secondary-text;
-  text-align: center;
-  padding-bottom: 70px;
+
+  .background {
+  padding-top: 20px;
+    @extend .section;
+    text-align: center;
+    padding-bottom: 70px;
+    background-color: white;
+  }
   h1 {
     color: $primary;
+  }
+
+  .follow {
+    display: none;
+    text-align: right;
+    h1 {
+      color: $secondary;
+    }
+
+    p {
+      color: white;
+    }
   }
 }
 
@@ -166,7 +182,6 @@ TABLET
     }
     &.custom .content .more-info {
       color: white;
-      background-color: #9933ff;
       padding: 0 10px;
       display: inline;
     }
@@ -185,12 +200,12 @@ TABLET
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 60px 10%;
-    background: linear-gradient(to top, #306, #5000a0);
+    padding: 20px 60px 10% 60px;
+    background: linear-gradient(to bottom, #306, #5000a0);
     section {
-      flex: 1 0 auto;
+      flex: 1 1;
       align-self: flex-start;
-      padding: 20px;
+      // padding: 20px;
       margin: 10px;
       hr {
         margin: 0;
@@ -201,9 +216,17 @@ TABLET
         .content {
           .contact-phrase {
             max-width: 280px;
+            display: block;
+            text-align: left;
           }
         }
 
+      }
+      &.join-us {
+        .follow {
+          background-color: transparent;
+          display: block
+        }
       }
       &.join-us, &.contact-us{
         .content h1 {
@@ -214,11 +237,7 @@ TABLET
       } 
         
     }
-    .follow {
-      background-color: transparent;
-      align-self: flex-end;
-      color: #38E090;
-    }
+
   }
   .action,
   .learn-more {
@@ -239,13 +258,18 @@ DESKTOP
     background-position: initial;
     align-items: initial;
     .claim {
-      padding: 110px 50px 0 10vw;
+      padding: 17vw 50px 0 20vw;
+
+      .title {
+        max-width: 25vw;
+      }
     }
   }
   .offers {
     display: flex;
     flex-wrap: wrap;
-    background-position: 40% 100%;
+    background-position: 40% 78%;
+    padding-top: 100px;
   }
   .offer {
     background-color: initial;
@@ -253,7 +277,12 @@ DESKTOP
     flex: 1 0 30%;
     &.custom {
       margin-top: 0;
+      padding-top: 30px;
       .content {
+
+        h1 {
+          max-width: 40vw;
+        }
         .more-info {
           flex: 1 1 100%;
         }
@@ -263,5 +292,9 @@ DESKTOP
   .work {
     display: flex;
     justify-content: center;
+  }
+
+  .forms {
+    padding-top: 100px;
   }
 }

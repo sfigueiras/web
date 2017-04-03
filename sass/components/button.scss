@@ -1,5 +1,6 @@
 @import '../variables/color_variables.scss';
 @import '../variables/_variables.scss';
+@import '../mixins/compatibility.scss';
 
 .button {
   padding: 10px 0;
@@ -15,8 +16,14 @@
   @extend .button;
   background-color: transparent;
   margin-top: 10px;
-  color: #9933ff;
-  border-color: #9933ff;
+  color: $terciary-text;
+  border-color: $terciary-text;
+  @include transition(background-color $button-transition-time linear);
+
+  &:hover, &:focus, &:active {
+    color: white;
+    background-color: $terciary-text;
+  }
 }
 
 .button-terciary {
@@ -24,4 +31,13 @@
   background-color: white;
   color: $terciary-text;
   font-size: 1.1em;
+}
+
+.link-secondary {
+  color: white;
+  @include transition(background-color .2s ease-in);
+
+  &:hover, &:focus, &:active {
+    background-color: $terciary-text;
+  }
 }

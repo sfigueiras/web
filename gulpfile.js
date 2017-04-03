@@ -59,8 +59,6 @@ gulp.task('vendor', function() {
         .pipe(gulp.dest(BUILD_DIR + '/vendor'));
 });
 
-
-
 gulp.task('default', function(){
     gulp.run('html');
     gulp.run('manifest');

@@ -17,3 +17,14 @@
   display: #{$display}-flexbox;
   display: $display;
 }
+
+@mixin zoom($amount) {
+  -moz-transform: scale($amount);
+  transform: scale($amount);
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -ms-transition: $transition;
+  transition: $transition;
+}
