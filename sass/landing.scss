@@ -20,7 +20,7 @@ LANDING SECTION
       margin-top: 20px;
       margin-bottom: 20px;
       max-width: 20vw;
-      font-size: 3.5em;
+      font-size: 15vw;
       font-family: $primary-font !important;
     }
     .slogan {
@@ -145,6 +145,11 @@ JOIN US SECTION
   }
 }
 
+@media (min-width: 460px) {
+  .landing .claim .title {
+    font-size: 3.5em !important;
+  }
+}
 
 /*******************************************************
 TABLET
@@ -158,13 +163,14 @@ TABLET
     padding-left: 0;
   }
   .title {
+    
     margin: 5vh 0 !important;
   }
   /*******************************************************
   OFFERS
   *******************************************************/
   .offers {
-    background-image: url("../images/background-decoration-purple-light.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0,  0.4)) url("../images/background-decoration-purple-light.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 40%;
@@ -189,13 +195,54 @@ TABLET
   .offer .content {
     padding-top: 0;
   }
+
+  /*************************************************
+  WORK
+  *************************************************/
   .work {
     margin-top: 80px;
     display: flex;
     img {
       max-width: 100%;
     }
+
+    .carousel {
+      max-height: 490px;
+      
+      // .control {
+      //   position: absolute;
+      //   color: white;
+      //   max-height: inherit;
+      //   height: 100%;
+      //   display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+      //   padding: 0 10px;
+      //   @include transition(background-color .2s linear);
+
+      //   &.right {
+      //     right: 10vw;
+      //   }
+
+      //   &.left {
+      //     left: 10vw;
+      //   }
+
+      //   &:hover {
+      //     background-color: rgba(0, 0, 0, 0.6);
+      //   }
+      // }
+    }
   }
+
+  .carousel-panel {
+    display: none;
+  }
+
+  .carousel-panel-active {
+    display: block;
+  }
+
   .forms {
     display: flex;
     flex-wrap: wrap;
@@ -296,5 +343,17 @@ DESKTOP
 
   .forms {
     padding-top: 100px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .carousel .control {
+    &.right {
+      right: 15vw !important;
+    }
+
+    &.left {
+      left: 15vw !important;
+    }
   }
 }
