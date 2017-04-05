@@ -156,6 +156,28 @@ TABLET
 *******************************************************/
 
 @media (min-width: 641px) {
+  body {
+    background-color: transparent !important;
+  }
+
+  .parallax-surface {
+    background-color: transparent;
+  }
+  
+  .parallax {
+    background-image: url('../images/Parallax1.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $primary;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 430px;
+    z-index: -1;
+  }
+
   .landing {
     min-height: 600px;
   }
@@ -169,12 +191,18 @@ TABLET
   /*******************************************************
   OFFERS
   *******************************************************/
-  .offers {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0,  0.4)) url("../images/background-decoration-purple-light.png");
+  .wave {
+    background-image: url("../images/background-decoration-purple-light.png");
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 50% 40%;
+    background-position: 50% 100%;
+    padding-top: 200px;
+    height: 600px;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
   }
+  
   .offer {
     background-color: initial;
     color: white;
@@ -194,6 +222,10 @@ TABLET
   }
   .offer .content {
     padding-top: 0;
+
+    .arrow {
+      display: none;
+    }
   }
 
   /*************************************************
@@ -301,6 +333,7 @@ DESKTOP
 *******************************************************/
 
 @media (min-width: 1024px) {
+  
   .landing {
     background-position: initial;
     align-items: initial;
