@@ -77,14 +77,10 @@ gulp.task('vendor', function() {
 gulp.task('templates', function() {
 
     glob('./templates/*.mustache', function(err, files) {
-        console.info(files);
         files.forEach(function(file) {
             if(path.basename(file).startsWith('_')) {
                 return;
             }
-
-            console.log("path.basename(file).startsWith('_')", path.basename(file).startsWith('_'));
-            console.log(file);
 
             var template = file;
             var data = path.dirname(template) + '/' + path.basename(template, '.mustache') + '.json';
