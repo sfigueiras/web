@@ -35,9 +35,10 @@ gulp.task('sass', function (){
             includePaths: ['./sass'],
             outputStyle: 'expanded'
         }))
-        .pipe(prefix(
-            "last 1 version", "> 1%", "ie 8", "ie 7"
-        ))
+        .pipe(prefix({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(gulp.dest(BUILD_DIR + '/css'));
 });
 

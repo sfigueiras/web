@@ -8,10 +8,12 @@ LANDING SECTION
   @extend .section;
   @include parallax('../images/background-landing-estatico-compressed.png', cover, 50% 50%);
   @include align-items(center);
+  @include transition(all ease-in .2s);
   text-align: left;
   border: 15px solid $primary;
   -webkit-justify-content: space-around;
   justify-content: flex-start;
+  
   .claim {
     padding: 110px 50px 0 50px;
     text-align: left;
@@ -120,9 +122,8 @@ JOIN US SECTION
 .join-us {
   // background-color: white;
   color: $secondary-text;
-
   .background {
-  padding-top: 20px;
+    padding-top: 20px;
     @extend .section;
     text-align: center;
     padding-bottom: 70px;
@@ -131,14 +132,12 @@ JOIN US SECTION
   h1 {
     color: $primary;
   }
-
   .follow {
     display: none;
     text-align: right;
     h1 {
       color: $secondary;
     }
-
     p {
       color: white;
     }
@@ -150,6 +149,7 @@ JOIN US SECTION
     font-size: 3.5em !important;
   }
 }
+
 
 /*******************************************************
 TABLET
@@ -163,7 +163,7 @@ TABLET
   .parallax-surface {
     background-color: transparent;
   }
-  
+
   .parallax {
     background-image: url('../images/Parallax1.png');
     background-attachment: fixed;
@@ -174,35 +174,41 @@ TABLET
     height: 100vh;
     width: 100vw;
     position: fixed;
-    top: 430px;
+    top: 460px;
     z-index: -1;
   }
-
   .landing {
     min-height: 600px;
-  }
-  .landing .claim {
-    padding-left: 0;
-  }
-  .title {
     
+    .claim {
+      padding-left: 0;
+    }
+  }
+  
+  .title {
     margin: 5vh 0 !important;
   }
+  
   /*******************************************************
   OFFERS
   *******************************************************/
+  
+  .offers {
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+
   .wave {
     background-image: url("../images/background-decoration-purple-light.png");
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 50% 100%;
     padding-top: 200px;
     height: 600px;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     z-index: -1;
+    left: 0;
   }
-  
   .offer {
     background-color: initial;
     color: white;
@@ -222,12 +228,10 @@ TABLET
   }
   .offer .content {
     padding-top: 0;
-
     .arrow {
       display: none;
     }
   }
-
   /*************************************************
   WORK
   *************************************************/
@@ -237,11 +241,8 @@ TABLET
     img {
       width: 100%;
     }
-
     .carousel {
-      max-height: 490px;
-      
-      // .control {
+      max-height: 490px; // .control {
       //   position: absolute;
       //   color: white;
       //   max-height: inherit;
@@ -251,26 +252,21 @@ TABLET
       //   align-items: center;
       //   padding: 0 10px;
       //   @include transition(background-color .2s linear);
-
       //   &.right {
       //     right: 10vw;
       //   }
-
       //   &.left {
       //     left: 10vw;
       //   }
-
       //   &:hover {
       //     background-color: rgba(0, 0, 0, 0.6);
       //   }
       // }
     }
   }
-
   .carousel-panel {
     display: none;
   }
-
   .carousel-panel-active {
     display: block;
   }
@@ -279,12 +275,12 @@ TABLET
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 20px 60px 10% 60px;
+    padding: 20px 15vw 10% 15vw;
     background: linear-gradient(to bottom, #306, #5000a0);
+
     section {
       flex: 1 1;
-      align-self: flex-start;
-      // padding: 20px;
+      align-self: flex-start; // padding: 20px;
       margin: 10px;
       hr {
         margin: 0;
@@ -299,7 +295,6 @@ TABLET
             text-align: left;
           }
         }
-
       }
       &.join-us {
         .follow {
@@ -307,16 +302,15 @@ TABLET
           display: block
         }
       }
-      &.join-us, &.contact-us{
+      &.join-us,
+      &.contact-us {
         .content h1 {
           text-align: center;
           font-size: 2.5em;
           margin-bottom: 10px;
         }
-      } 
-        
+      }
     }
-
   }
   .action,
   .learn-more {
@@ -333,13 +327,14 @@ DESKTOP
 *******************************************************/
 
 @media (min-width: 1024px) {
-  
+  .wave {
+    background-position: 0 100%;
+  }
   .landing {
     background-position: initial;
     align-items: initial;
     .claim {
       padding: 17vw 50px 0 20vw;
-
       .title {
         max-width: 25vw;
       }
@@ -349,7 +344,7 @@ DESKTOP
     display: flex;
     flex-wrap: wrap;
     background-position: 40% 78%;
-    padding-top: 100px;
+    padding: 100px 7vw 0 7vw;
   }
   .offer {
     background-color: initial;
@@ -359,7 +354,6 @@ DESKTOP
       margin-top: 0;
       padding-top: 30px;
       .content {
-
         h1 {
           max-width: 40vw;
         }
@@ -373,7 +367,6 @@ DESKTOP
     display: flex;
     justify-content: center;
   }
-
   .forms {
     padding-top: 100px;
   }
@@ -384,7 +377,6 @@ DESKTOP
     &.right {
       right: 15vw !important;
     }
-
     &.left {
       left: 15vw !important;
     }

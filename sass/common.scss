@@ -16,7 +16,8 @@ body {
   min-height: 100%;
 }
 
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
   background-color: $primary;
@@ -44,11 +45,11 @@ h1 {
 hr {
   border: 1px solid #3c9;
   width: 30px;
-
   &.left {
     margin: 0;
   }
 }
+
 
 /*******************************************************
 FORMS
@@ -58,7 +59,8 @@ form {
   padding: 0 5px 0 5px;
 }
 
-input, textarea {
+input,
+textarea {
   display: block;
   color: $primary-text;
   margin-top: 10px;
@@ -104,7 +106,6 @@ CUSTOM FILE INPUT
   min-width: 85%;
   display: inline-block;
   text-align: left;
-
   .icon {
     float: right;
     font-size: 1.3em;
@@ -114,44 +115,44 @@ CUSTOM FILE INPUT
 
 input[type="file"] {
   width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
+
 
 /********************************************************
 CUSTOM CHECKBOX INPUT
 ********************************************************/
 
 input[type=checkbox].css-checkbox {
-  position: absolute; 
-  z-index: -1000; 
-  left: -1000px; 
-  overflow: hidden; 
-  clip: rect(0 0 0 0); 
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
   height: 1px;
-  width: 1px; 
-  margin: -1px; 
+  width: 1px;
+  margin: -1px;
   padding: 0;
   border: 0;
 }
 
-input[type=checkbox].css-checkbox + label.css-label {
+input[type=checkbox].css-checkbox+label.css-label {
   padding-left: 33px;
-  height: 28px; 
+  height: 28px;
   display: inline-block;
   line-height: 28px;
   background-repeat: no-repeat;
   background-position: 0 0;
-  font-size :28px;
+  font-size: 28px;
   vertical-align: middle;
   cursor: pointer;
-
 }
 
-input[type=checkbox].css-checkbox:checked + label.css-label {
+input[type=checkbox].css-checkbox:checked+label.css-label {
   background-position: 0 -28px;
 }
 
@@ -165,75 +166,88 @@ label.css-label {
   user-select: none;
 }
 
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    white;
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: white;
 }
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    white;
-    opacity:  1;
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: white;
+  opacity: 1;
 }
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    white;
-    opacity:  1;
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: white;
+  opacity: 1;
 }
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color:    white;
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
 }
+
 
 /*******************************************************
 ICONS
 *******************************************************/
 
-
 path {
-  pointer-events:all;
+  pointer-events: all;
 }
 
 @keyframes eyebrows {
-  0% { transform: translate(0, 0) }
-  10% { transform: translate(0, -1px) }
-  50% { transform: translate(0, 0) }
+  0% {
+    transform: translate(0, 0)
+  }
+  10% {
+    transform: translate(0, -1px)
+  }
+  50% {
+    transform: translate(0, 0)
+  }
 }
 
 .ubykuo-icon {
   fill: white;
   transform-origin: 50% 50%;
-  transition: transform .8s ease-in-out;
-
+  @include transition(transform .8s ease-in-out);
   &.green {
     fill: $secondary;
   }
-
 }
 
-$icon-width: 25px;
-
-.social-icon, .navigation-icon {
+$icon-width: 30px;
+.social-icon,
+.navigation-icon {
   width: $icon-width;
 }
 
 .smile-container {
-   .smile { 
+  .smile {
     .eyebrows {
-      transition: transform 2s ease-in;
+      @include transition(transform 2s ease-in);
     }
-   }
+  }
   &:hover {
     .smile {
       .eyebrows {
         animation: eyebrows 2s;
       }
     }
-
   }
 }
+
 
 /******************************************************
 NAVIGATION
 ******************************************************/
 
 @keyframes floatingCaret {
-  50% {transform: translateY(5px) }
+  50% {
+    transform: translateY(5px)
+  }
 }
 
 .navigation {
@@ -242,7 +256,6 @@ NAVIGATION
   left: 0;
   width: 100%;
   height: 70px;
-  
 }
 
 .logo-landing {
@@ -250,9 +263,18 @@ NAVIGATION
   height: 20px;
   width: 20px;
   @include zoom(6);
-
   .caret-down {
     animation: floatingCaret 1s infinite;
+  }
+}
+
+.item {
+  top: 0;
+  transition: transform linear .2s;
+
+  &:hover:not(.navigation-icon) {
+    transform: scale(1.3);
+    fill: white;
   }
 }
 
@@ -260,11 +282,42 @@ NAVIGATION
   list-style-type: none;
   margin: 0;
   padding: 0;
-
   li {
     display: inline;
   }
-
+  .social-icon {
+    display: none;
+    @include transition(transform .2s linear);
+    .path,
+    g g .path,
+    g g g .path {
+      @include transition(fill .3s ease-out);
+    }
+  }
+  &.purple {
+    .navigation-icon .hamburguer rect {
+      fill: $primary !important;
+    }
+    .social-icon {
+      .path,
+      g g .path,
+      g g g .path {
+        fill: $primary;
+      }
+    }
+  }
+  &.white {
+    .navigation-icon .hamburguer rect {
+      fill: $grey-icon !important;
+    }
+    .social-icon {
+      .path,
+      g g .path,
+      g g g .path {
+        fill: $grey-icon;
+      }
+    }
+  }
   .controls {
     float: right;
     height: 70px;
@@ -273,51 +326,42 @@ NAVIGATION
     align-items: center;
     padding-top: 55px;
     padding-right: 40px;
-
-
+    &.white {
+      .social {
+        * {
+          fill: white;
+        }
+      }
+    }
     .social {
       display: flex;
       flex-direction: column;
       align-self: flex-start;
+      a {
+        cursor: pointer;
+        .navigation-icon {
+          z-index: 1;
+          padding-right: 10px;
+          .top-line {
       
-      .navigation-icon {
-        z-index: 1;
-        padding-right: 10px;
-
-        .top-line {
-          transition: all .5s ease-in-out !important;
+            @include transition(fill .3s ease-out, transform .3s ease-in-out);
+          }
+          .bottom-line {
+            @include transition(fill .3s ease-in, transform .3s ease-in-out .2s);
+          }
         }
-        
-        .bottom-line {
-          transition: all .5s ease-in-out .2s !important;
-        }
-
-        &:hover .hamburguer {
-          
+        &:hover .navigation-icon .hamburguer {
           .top-line {
             transform: scaleX(1.7);
           }
-
           .bottom-line {
             transform: scaleX(1.6);
           }
         }
       }
-
-      .item {
-        top: 0;
-        transition: all .2s linear;
-
-        &:hover:not(.navigation-icon) {
-          transform: scale(1.3);
-          fill: white;
-        }
-      }
-
       .item:not(:last-child) {
         margin-bottom: 5px;
       }
-
       .item:first-child {
         margin-bottom: 20px;
       }
@@ -326,17 +370,133 @@ NAVIGATION
 }
 
 $overlay-border: 20px;
-
-.overlay{
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
-  width: calc(100vw - 40px);
-  height: calc(100vh - 40px);
+  width: 100%;
+  height: 100vh;
   z-index: 10;
-  background-color: rgba($primary, 0.9);
-  border: $overlay-border solid $secondary; /*dim the background*/
+  background-color: rgba($primary, 0.99);
+  border: $overlay-border solid $secondary;
+  box-sizing: border-box;
+  transition: all .3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  font-size: 1.6em;
+  
+  .logo-landing {
+    padding: 10px 0 0 15px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+
+  .links,
+  .social {
+    display: none !important;
+  }
+
+  .links {
+    order: 1 !important;
+    display: flex;
+    flex: 1;
+    font-weight: 700;
+    align-items: center;
+    text-align: right;
+    justify-content: flex-end;
+    padding-right: 40px;
+    align-items: flex-end;
+    
+    ul {
+      list-style: none;
+      li {
+        margin: 10px 0 10px 0;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+  .social {
+    flex: 0.3;    
+    justify-content: center;
+    padding: 10px;
+    order: 2 !important;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    
+    .container {
+      p {
+        color: white;
+        font-size: initial;
+      }
+      hr {
+        margin-bottom: 20px
+      }
+      
+      hr[align=left] {
+        display: none;
+      }
+
+      hr[align=center] {
+        display: block;
+      }
+    }
+    .social-icon {
+      width: 20px;
+      margin-right: 5px;
+      .path,
+      g g .path,
+      g g g .path {
+        fill: $grey-icon;
+      }
+    }
+  }
+  a {
+    cursor: pointer;
+    .close {
+      width: $icon-width;
+      position: absolute;
+      right: 30px;
+      top: 35px;
+      path {
+        transition: transform .2s linear .2s;
+        stroke: $grey-icon;
+        fill: transparent;
+        stroke-linecap: round;
+        stroke-width: 5;
+        transform-origin: 20px;
+      }
+    }
+  }
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  &.visible {
+    .links,
+    .social {
+      display: flex !important;
+    }
+    opacity: 1;
+    visibility: visible;
+    flex-direction: column; // font-size: 0.2em;
+    .links {
+      order: 2;
+    }
+    .social {
+      order: 1;
+    }
+    .close {
+      path {
+        transform: rotate(180deg) scale(1.3);
+      }
+    }
+  }
 }
+
 
 /*******************************************************
 COMMON COMPONENTS
@@ -344,7 +504,6 @@ COMMON COMPONENTS
 
 .arrow {
   width: 20px;
-
   &.down {
     transform: rotate(180deg);
   }
@@ -361,10 +520,10 @@ COMMON COMPONENTS
   @include display(flex);
   @include flex-direction(column);
   @include align-items(center);
-
   overflow: hidden;
   color: $primary-text;
 }
+
 
 /*******************************************************
 HELPERS
@@ -373,6 +532,7 @@ HELPERS
 .center {
   text-align: center;
 }
+
 
 /*******************************************************
 FOOTER
@@ -385,18 +545,15 @@ FOOTER
   background-repeat: no-repeat;
   background-position: top;
   display: flex;
-  padding: 20px 20px;
-  // width: 100%;
+  padding: 20px 20px; // width: 100%;
 }
 
 .slogan {
   flex: 1.4;
   color: $secondary;
-
   p {
     margin-bottom: 10px;
   }
-
   img {
     margin-left: 10px;
   }
@@ -404,82 +561,129 @@ FOOTER
 
 .slogan,
 .social {
-  p { font-size: 1.5em; }
+  p {
+    font-size: 1.5em;
+  }
 }
 
 footer .social {
   flex: 0.9;
   color: $grey;
   text-align: right;
-
   img:not(:last-child) {
     margin-right: 5px;
   }
-
-  .options { display: none; }
+  .options {
+    display: none;
+  }
 }
 
-.adresses { display: none; }
+.adresses {
+  display: none;
+}
+
 
 /*******************************************************
 TABLET 
 *******************************************************/
+
 @media (min-width: 641px) {
+  .overlay {
+    font-size: 2.5em;
+    .visible {
+      flex-direction: row;
+    }
+
+    .links, .social {
+      flex: 1;
+    }
+
+    .links {
+      order: 2 !important;
+      padding-right: 100px;
+      align-items: center;
+    }
+    .social {
+      order: 1 !important;
+      align-items: center;
+      padding: 0 0 40px 50px;
+      justify-content: flex-start;
+      text-align: left;
+      align-items: flex-end;
+
+      .container {
+        
+        p {font-size: 0.5em; }
+        .social-icon {
+          width: 30px;
+          margin-right: 10px;
+        }
+
+        hr[align=left] {
+        display: block;
+      }
+
+      hr[align=center] {
+        display: none;
+      }
+      }
+    }
+
+    &.visible {
+      flex-direction: row;
+    }
+  }
+  .logo-landing {
+    height: 25px;
+    width: 25px;
+  }
+  .nav .social-icon {
+    display: block;
+  }
   .page-footer {
     font-size: 1.1em;
     padding-bottom: 40px;
-
     .adresses {
       color: white;
       display: block;
       flex: 1.5;
       padding-left: 10vw;
-      
       .coffee {
         color: #9933ff;
       }
-      
       p {
         margin-top: 10px;
       }
-
       .countries {
         display: flex;
         flex: 1;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        
         .country {
           flex: 1 0 45%;
           margin-right: 15px;
           color: white;
-          
           hr {
             margin-left: 0;
           }
         }
       }
     }
-
     .slogan {
       flex: 0.8;
       margin: 0;
-      
       p {
         margin: 0;
       }
     }
-
     .social {
       text-align: center;
       font-size: initial;
       padding-top: 20px;
-      
       p {
         font-size: 1em;
       }
-      
       .options {
         display: block !important;
         p {
@@ -487,14 +691,9 @@ TABLET
           font-weight: bold;
         }
       }
-      
-    
-      
       .options:first-child {
         margin-top: 20px;
       }
-
-      
       .follow {
         display: none;
       }

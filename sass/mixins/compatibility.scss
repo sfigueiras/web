@@ -23,7 +23,7 @@
   transform: scale($amount);
 }
 
-@mixin transition($transition) {
+@mixin transition($transition...) {
   -webkit-transition: $transition;
   -ms-transition: $transition;
   transition: $transition;
