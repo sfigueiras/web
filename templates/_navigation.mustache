@@ -28,7 +28,7 @@
 
 <body>
   <div class="overlay hidden">
-    <svg class="logo-landing" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+    <svg id="logo" class="logo-landing" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
       y="0px" width="40px" height="40px" viewBox="0 0 140 50" xml:space="preserve">
       <style type="text/css">
         .st0 {
@@ -54,17 +54,22 @@
       <path id="XMLID_141_" class="st0" d="M114.6,21.2c0,4.1-2.8,7.1-6.8,7.1c-4,0-6.8-3-6.8-7.1c0-4,2.8-7,6.8-7
                     C111.8,14.2,114.6,17.2,114.6,21.2 M111.9,21.2c0-3.1-1.9-4.7-4.1-4.7c-2.2,0-4.1,1.7-4.1,4.7c0,3.1,1.9,4.7,4.1,4.7
                     C110,26,111.9,24.3,111.9,21.2" />
-      <polygon id="XMLID_123_" class="st1 caret-down" points="70.4,43.8 64.8,39.2 66.7,36.8 70.4,39.9 74.1,36.8 76.1,39.2 " />
+      <polygon id="ubykuo-caret" class="st1 caret-down" points="70.4,43.8 64.8,39.2 66.7,36.8 70.4,39.9 74.1,36.8 76.1,39.2 " />
     </svg>
+    
 
     <a onclick="toggleNav()">
       <svg class="close" viewbox="0 0 40 40">
         <path d="M 10,10 L 30,30 M 30,10 L 10,30" />
       </svg>
     </a>
-
+    
     <div class="links">
       <ul>
+        <!-- <svg class="morph" viewBox="-10 -20 80 80">
+          <path id="services-from" class="from" d="M-20,40 H50"></path>
+          <path class="to"  id="services-to" from="to" xmlns="http://www.w3.org/2000/svg" d="M10 4.2l5.8 5.8L10 15.8 4.2 10 10 4.2M10 0L0 10l10 10 10-10L10 0 10 0z"/>
+        </svg> -->
         <hr align="right">
         <li><a href="/services.html">SERVICES</a></li>
         <hr align="right">
@@ -141,8 +146,9 @@
             </svg>
           </a>
 
+          <div class="social-icons">
           {{> _social }}
-
+          </div>
         </div>
       </li>
     </ul>

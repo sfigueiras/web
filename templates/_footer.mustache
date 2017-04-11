@@ -1,104 +1,116 @@
 <footer class="page-footer">
-    <div class="slogan">
-        <p>everytime, everywhere</p>
-        <img class="arrow down" src="images/arrow-green.png" alt="green arrow down">
-    </div>
-    <div class="adresses">
-        <p class="coffee">Wanna have a coffee?</p>
+  <div class="slogan">
+    <p>everytime, everywhere</p>
+    <img class="arrow down" src="images/arrow-green.png" alt="green arrow down">
+  </div>
+  <div class="adresses">
+    <p class="coffee">Wanna have a coffee?</p>
 
-        <div class="countries">
-            <div class="country">
-                ARGENTINA
-                <hr> Camargo 7351 1A <br> Buenos Aires <br> Tel 221 643 2575 <br>
-            </div>
-            <div class="country">
-                ESPAÑA
-                <hr> Camargo 7351 1A <br> Buenos Aires <br> Tel 221 643 2575 <br>
-            </div>
-        </div>
+    <div class="countries">
+      <div class="country">
+        ARGENTINA
+        <hr> Camargo 7351 1A <br> Buenos Aires <br> Tel 221 643 2575 <br>
+      </div>
+      <div class="country">
+        ESPAÑA
+        <hr> Camargo 7351 1A <br> Buenos Aires <br> Tel 221 643 2575 <br>
+      </div>
     </div>
-    <div class="social">
-        <div class="options">
-            <p>START A PROJECT</p>
-            <p>VER EN ESPAÑOL</P>
-        </div>
-        <p class="follow">Follow us</p>
-        <img src="images/facebook-grey.png" alt="facebook logo grey">
-        <img src="images/instagram-grey.png" alt="instagram logo grey">
-        <img src="images/linkedin-grey.png" alt="linkedin logo grey">
+  </div>
+  <div class="social">
+    <div class="options">
+      <p>START A PROJECT</p>
+      <p>VER EN ESPAÑOL</P>
     </div>
+    <p class="follow">Follow us</p>
+    <img src="images/facebook-grey.png" alt="facebook logo grey">
+    <img src="images/instagram-grey.png" alt="instagram logo grey">
+    <img src="images/linkedin-grey.png" alt="linkedin logo grey">
+  </div>
 </footer>
 <script>
-    document.addEventListener("DOMContentLoaded", ready, false);
-    
-    var navigation = document.querySelector('.controls');
-    var navigation = document.querySelector('.nav');
-    var intersector = document.querySelector('#intersection');
+  document.addEventListener("DOMContentLoaded", ready, false);
 
-    var overlay = document.querySelector('.overlay');
-    var body = document.querySelector('body');
+  var mq = window.matchMedia("(min-width: 641px)");
+  var navigation = document.querySelector('.controls');
+  var navigation = document.querySelector('.nav');
+  var intersector = document.querySelector('#intersection');
+  var overlay = document.querySelector('.overlay');
+  var body = document.querySelector('body');
+  var ubykuoCaret = document.getElementById('ubykuo-caret'); 
 
-    function ready() {
-        // var observer = new IntersectionObserver(changeNavColor, {
-        //   threshold: [0, 0.25, 0.50, 0.75, 1]
-        // });
+  function ready() {
+    // var observer = new IntersectionObserver(changeNavColor, {
+    //   threshold: [0, 0.25, 0.50, 0.75, 1]
+    // });
 
-        // observer.observe(intersector);
-        document.addEventListener('scroll', isElementInViewport, true);
-        
+    // observer.observe(intersector);
+    document.addEventListener('scroll', isElementInViewport, true);
+    document.addEventListener('scroll', trackEnd, true);    
+  }
+
+  function trackEnd() {
+    console.log('tracking');
+    console.log((window.innerHeight + window.scrollY) >= document.body.offsetHeight);
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+       ubykuoCaret.classList.add('up');
+    }
+  }
+
+  function toggleNav() {
+    overlay.classList.toggle('visible');
+
+    if (overlay.classList.contains('visible')) {
+      body.style.overflowY = 'scroll';
+      body.style.position = 'fixed';
+      return;
     }
 
-    function toggleNav() {
-        overlay.classList.toggle('visible');
+    body.style.overflowY = 'auto';
+    body.style.position = 'static';
+  }
 
-        if (overlay.classList.contains('visible')) {
-            body.style.overflowY = 'auto';
-            body.style.position = 'static';
-            return;
-        }
+  var intersectionPassed = false;
+  var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-        body.style.overflowY = 'scroll';
-        body.style.position = 'fixed';
+  function isElementInViewport() {
+    var el = intersector;
+    var rect = el.getBoundingClientRect();
+
+    var st = window.pageYOffset || document.documentElement.scrollTop;
+
+    var downClass, upClass;
+
+    if (_isElementInViewport(rect)) {
+      if (mq.matches) {
+        upClass = el.dataset.tabletUpClass;
+        downClass = el.dataset.tabletDownClass;
+      } else {
+        downClass = el.dataset.mobileDownClass;
+        upClass = el.dataset.mobileUpClass;
+      }
+
+      if (st > lastScrollTop) {
+        navigation.classList.remove(upClass);
+        navigation.classList.add(downClass);
+      } else {
+        navigation.classList.remove(downClass);
+        navigation.classList.add(upClass);
+      }
+      lastScrollTop = st;
+
+      return;
     }
+  }
 
-    // function changeNavColor(entries, observer) {
-    //     console.info('offers reached', navigation);
-    //     navigation.style.fill = '#fff';
-    // }
-
-    var intersectionPassed = false;
-    var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    function isElementInViewport() {
-        var el = intersector;
-        var rect = el.getBoundingClientRect();
-
-        var st = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (_isElementInViewport(rect)) {
-            if (st > lastScrollTop) {
-                navigation.classList.remove(el.dataset.targetUpClass);
-                navigation.classList.add(el.dataset.targetDownClass);
-            } else {
-                navigation.classList.remove(el.dataset.targetDownClass);
-                navigation.classList.add(el.dataset.targetUpClass);
-            }
-            lastScrollTop = st;
-
-            return;
-        }
-
-    }
-
-    function _isElementInViewport(rect) {
-        return rect.top >= 0 && rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth);
-    }
+  function _isElementInViewport(rect) {
+    return rect.top >= 0 && rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+  }
 
 </script>
-<script src="js/intersectionobserver-polyfill.js"></script>
-<script src="../node_modules/carousel-js/dist/carousel-min.js"></script>
+
 <script src="js/main.js"></script>
 
 </body>

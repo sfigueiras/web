@@ -15,66 +15,32 @@
     </div>
   </div>
 
+
   <div class="parallax-surface">
-    <div id="intersection" data-target-down-class="white" data-target-up-class="purple"></div>
+    <div id="intersection" data-mobile-down="purple" data-mobile-up="purple" data-tablet-down-class="white" data-tablet-up-class="purple"></div>
     <div id="parallax" class="parallax"></div>
     <!-- Offers -->
     <section class="offers">
-      <!-- Mockup offer -->
-      <article class="offer">
-        <div class="content">
-          <img class="icon" src="images/mockup-icon.png" alt="mockup offer logo">
-          <h1>MOCK UP</h1>
-          <hr class="left">
-          <p>Graphic representation of the initial idea that does not include dynamic content. <br> The best possible model
-            of your product, to provide at least part of the functionality of a system and enable testing on users.
-          </p>
-          <a class="learn-more" href="services.html">+Learn more</a>
-          <img class="arrow" src="images/arrow-dark-purple.png" alt="show less arrow">
-        </div>
+      {{#offers}}
+      
+        <article class="offer">
+          <div class="content">
+            <img class="icon" src="{{icon}}" alt="mvp offer logo">
+            <h1>{{name}}</h1>
+            <hr class="left">
+            <p>{{description}}
 
-        <footer class="action">
-          <a class="button" href="index.html">I want it</a>
-        </footer>
-      </article>
+            </p>
+            <a class="learn-more" href="services.html">+Learn more</a>
+            <img class="arrow" src="images/arrow-dark-purple.png" alt="show less arrow">
+          </div>
 
-      <!-- First prototype offer-->
-      <article class="offer">
-        <div class="content">
-          <img class="icon" src="images/fprototype-icon.png" alt="prototype offer logo">
-          <h1>F. PROTOTYPE</h1>
-          <hr class="left">
-          <p>Basic and fundamental behavior of the project, excluding generation of dynamic content and server-side/cloud storage.
-            <br> The basic and most efficient model of the system that would give life to your product.
+          <footer class="action">
+            <a class="button" href="index.html">I want it</a>
+          </footer>
+        </article>
 
-          </p>
-          <a class="learn-more" href="services.html">+Learn more</a>
-          <img class="arrow" src="images/arrow-dark-purple.png" alt="show less arrow">
-        </div>
-
-        <footer class="action">
-          <a class="button" href="index.html#">I want it</a>
-        </footer>
-      </article>
-
-      <!-- MVP offer -->
-      <article class="offer">
-        <div class="content">
-          <img class="icon" src="images/mvp-icon.png" alt="mvp offer logo">
-          <h1>MVP</h1>
-          <hr class="left">
-          <p>Minimum product that allows to represent in a clear and fluid form, the product or service that you offer. <br>            It´s a well-built and scalable digital product or service; the first prototype for your business to be anywhere,
-            anytime.
-
-          </p>
-          <a class="learn-more" href="services.html">+Learn more</a>
-          <img class="arrow" src="images/arrow-dark-purple.png" alt="show less arrow">
-        </div>
-
-        <footer class="action">
-          <a class="button" href="index.html">I want it</a>
-        </footer>
-      </article>
+    {{/offers}}
 
       <article class="offer custom">
         <div class="content">

@@ -1,5 +1,22 @@
 {
     "title": "Reach the top",
     "claim": "WE CAN HELP YOU MAKE IT HAPPEN",
-    "stylesheet": "landing"
+    "stylesheet": "landing",
+    "offers": [
+        {
+            "name": "MOCK UP",
+            "icon": "images/mockup-icon.png",
+            "description": "Graphic representation of the initial idea that does not include dynamic content. The best possible model of your product, to provide at least part of the functionality of a system and enable testing on users."
+        },
+        {
+            "name": "F. PROTOTYPE",
+            "icon": "images/fprototype-icon.png",
+            "description": "Basic and fundamental behavior of the project, excluding generation of dynamic content and server-side/cloud storage. The basic and most efficient model of the system that would give life to your product."
+        },
+        {
+            "name": "MVP",
+            "icon": "images/mvp-icon.png",
+            "description": "Minimum product that allows to represent in a clear and fluid form, the product or service that you offer. It´s a well-built and scalable digital product or service; the first prototype for your business to be anywhere, anytime."
+        }
+    ]
 }

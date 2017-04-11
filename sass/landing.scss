@@ -18,6 +18,8 @@ LANDING SECTION
     padding: 110px 50px 0 50px;
     text-align: left;
     margin-bottom: auto;
+    animation: .5s ease-out 0s 1 slideInFromTop;
+
     .title {
       margin-top: 20px;
       margin-bottom: 20px;
@@ -32,10 +34,37 @@ LANDING SECTION
       font-family: $primary-font !important;
     }
   }
+  
   .swipe-down {
     margin-bottom: 20px;
     text-align: center;
     color: $secondary;
+    
+    img {
+      animation: .5s swipeDown .8s infinite;
+    }
+  }
+}
+
+@keyframes swipeDown {
+  0% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(180deg);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -50,8 +79,10 @@ OFFERS SECTION
   margin: 15px;
   background-color: white;
   color: $secondary-text;
+  
   .content {
     padding: 40px 40px 20px 40px;
+    
     .icon {
       width: 150px;
       margin-top: 25px;
@@ -334,7 +365,7 @@ DESKTOP
     background-position: initial;
     align-items: initial;
     .claim {
-      padding: 17vw 50px 0 20vw;
+      padding: 30vh 50px 0 20vw;
       .title {
         max-width: 25vw;
       }
@@ -349,7 +380,7 @@ DESKTOP
   .offer {
     background-color: initial;
     color: white;
-    flex: 1 0 30%;
+    flex: 1 0 28%;
     &.custom {
       margin-top: 0;
       padding-top: 30px;
