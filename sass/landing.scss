@@ -79,20 +79,49 @@ OFFERS SECTION
   margin: 15px;
   background-color: white;
   color: $secondary-text;
+  transition: all .3s linear;
+
+  &.extended {
+    .content {
+      .text-container {
+        max-height: 600px;
+      }
+
+      .arrow {
+        margin-top: 0;
+        transform: rotate(0);
+      }
+    }
+  }
   
   .content {
     padding: 40px 40px 20px 40px;
+    max-height: 600px;
+
+    .text-container {
+      max-height: 75px;
+      overflow: hidden;
+      transition: max-height .5s;
+    }
     
     .icon {
       width: 150px;
       margin-top: 25px;
     }
+
     .learn-more {
-      margin: 40px 0 10px 0;
+      margin: 20px 0 10px 0;
       display: block;
       font-weight: bold;
     }
+
+    .arrow {
+      margin-top: 15px;
+      transition: transform .6s;
+      transform: rotate(180deg);
+    }
   }
+  
   .action {
     background: $secondary;
     padding: 35px;

@@ -1,10 +1,3 @@
-
-@keyframes floatingCaret {
-  50% {
-    transform: translateY(5px)
-  }
-}
-
 .navigation {
   position: fixed;
   top: 0;
@@ -18,12 +11,15 @@
   height: 20px;
   width: 20px;
   @include zoom(6);
+
+  &.up {
+    .caret-down {
+      animation: floatingCaretUp 1s infinite;
+    }
+  }
+
   .caret-down {
     animation: floatingCaret 1s infinite;
-
-    &.up {
-      transform: rotate(180deg);
-    }
 
     &.down {
       transform: rotate(0);
@@ -149,19 +145,6 @@
   }
 }
 
-@keyframes slideInRightBounce{
-    0% {
-      transform: translateX(100px);
-    }
-
-    90% {
-      transform: translate(-10px);
-    }
-
-    100% {
-      transform: translate(0);
-    }
-  }
 
 .ubykuo-icon {
   fill: white;
@@ -180,11 +163,11 @@
 
 $overlay-border: 20px;
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 10;
   background-color: rgba($primary, 0.99);
   border: $overlay-border solid $secondary;
@@ -338,6 +321,27 @@ $overlay-border: 20px;
   }
 }
 
+
+@keyframes floatingCaret {
+  50% {
+    transform: translateY(5px)
+  }
+}
+
+@keyframes slideInRightBounce{
+    0% {
+      transform: translateX(100px);
+    }
+
+    90% {
+      transform: translate(-10px);
+    }
+
+    100% {
+      transform: translate(0);
+    }
+  }
+
 @keyframes reduceAndHide {
   0% {
     transform: scaleX(0.4);
@@ -351,6 +355,16 @@ $overlay-border: 20px;
 @keyframes showAndScale {
   50% {
     transform: scale(1.3);
+  }
+}
+
+@keyframes floatingCaretUp {
+  0% {
+    transform: rotate(0deg) translate(5px);
+  }
+
+  50% {
+    transform: translateY(0);
   }
 }
 

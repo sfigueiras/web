@@ -37,7 +37,7 @@
   var intersector = document.querySelector('#intersection');
   var overlay = document.querySelector('.overlay');
   var body = document.querySelector('body');
-  var ubykuoCaret = document.getElementById('ubykuo-caret'); 
+  var ubykuoCaret = document.getElementById('logo'); 
 
   function ready() {
     // var observer = new IntersectionObserver(changeNavColor, {
@@ -50,10 +50,10 @@
   }
 
   function trackEnd() {
-    console.log('tracking');
     console.log((window.innerHeight + window.scrollY) >= document.body.offsetHeight);
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-       ubykuoCaret.classList.add('up');
+      console.info(ubykuoCaret.style.animationName);
+       ubykuoCaret.style.animationName = 'floatingCaretUp';
     }
   }
 
@@ -61,13 +61,13 @@
     overlay.classList.toggle('visible');
 
     if (overlay.classList.contains('visible')) {
-      body.style.overflowY = 'scroll';
-      body.style.position = 'fixed';
-      return;
+      // body.style.overflowY = 'scroll';
+      // body.style.position = 'fixed';
+      // return;
     }
 
-    body.style.overflowY = 'auto';
-    body.style.position = 'static';
+    // body.style.overflowY = 'auto';
+    // body.style.position = 'static';
   }
 
   var intersectionPassed = false;

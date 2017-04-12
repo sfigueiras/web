@@ -28,11 +28,11 @@
             <img class="icon" src="{{icon}}" alt="mvp offer logo">
             <h1>{{name}}</h1>
             <hr class="left">
-            <p>{{description}}
-
-            </p>
+            <div class="text-container">
+              <p>{{description}}</p>
+            </div>
+            <img  onclick="toggleOfferDescription(this)" class="arrow" src="images/arrow-dark-purple.png" alt="show less arrow">
             <a class="learn-more" href="services.html">+Learn more</a>
-            <img class="arrow" src="images/arrow-dark-purple.png" alt="show less arrow">
           </div>
 
           <footer class="action">
@@ -153,6 +153,10 @@
         el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
       }
 
+    } else {
+      function toggleOfferDescription(element) {
+        element.parentElement.parentElement.classList.toggle('extended')
+      }
     }
 
   </script>
