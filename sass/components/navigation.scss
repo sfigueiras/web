@@ -1,9 +1,35 @@
 .navigation {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 70px;
+}
+
+.navigation-mobile {
+  @extend .navigation;
+  background-color: rgba($primary, 0.99);
+  height: 60px;
+  position: fixed;
+  width: 100vw;
+  top: -100px;
+  transition: all .3s;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+    top: 0;
+  }
+
+  .nav .controls {
+    padding-top: 23px;
+    padding-right: 35px;
+  }
+
+  li a .logo-landing {
+    padding-top: 7px;
+    padding-left: 15px;
+  }
 }
 
 .logo-landing {
@@ -47,6 +73,7 @@
   .social-icon {
     display: none;
     @include transition(transform .2s linear);
+
     .path,
     g g .path,
     g g g .path {
@@ -106,7 +133,8 @@
       }
 
       .social-icons {
-        padding-top: 10px;
+        position: fixed;        
+        padding-top: 30px;
         transform: translateX(100px);
         transition: transform .3s ease-in-out;
       }
@@ -398,7 +426,16 @@ $overlay-border: 20px;
 }
 
 @media (min-width: 641px) {
-    .controls {
+
+  .navigation {
+    position: fixed;
+  }
+
+  .navigation-mobile {
+    display: none;
+  }
+  
+  .controls {
     padding-right: 40px;    
   }
 

@@ -278,6 +278,7 @@ FOOTER
   background-position: top;
   display: flex;
   padding: 20px 20px; // width: 100%;
+  * { fill: $grey-icon; }
 }
 
 .slogan {

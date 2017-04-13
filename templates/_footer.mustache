@@ -23,58 +23,93 @@
       <p>VER EN ESPAÑOL</P>
     </div>
     <p class="follow">Follow us</p>
-    <img src="images/facebook-grey.png" alt="facebook logo grey">
-    <img src="images/instagram-grey.png" alt="instagram logo grey">
-    <img src="images/linkedin-grey.png" alt="linkedin logo grey">
+    
+    {{> _social }}
   </div>
 </footer>
 <script>
   document.addEventListener("DOMContentLoaded", ready, false);
 
+  // Media query for tablet
   var mq = window.matchMedia("(min-width: 641px)");
-  var navigation = document.querySelector('.controls');
+  
+  // var navigation = document.querySelector('.controls');
   var navigation = document.querySelector('.nav');
+  
+  if (!mq.matches) {
+    var mobileNav = document.getElementById('nav-mobile');
+  }
+  
+  
   var intersector = document.querySelector('#intersection');
   var overlay = document.querySelector('.overlay');
   var body = document.querySelector('body');
   var ubykuoCaret = document.getElementById('logo'); 
 
-  function ready() {
-    // var observer = new IntersectionObserver(changeNavColor, {
-    //   threshold: [0, 0.25, 0.50, 0.75, 1]
-    // });
+  var lastScrollTop;
 
-    // observer.observe(intersector);
-    document.addEventListener('scroll', isElementInViewport, true);
-    document.addEventListener('scroll', trackEnd, true);    
+  function ready() {
+    lastScrollTop = scrollTop();
+    
+    // Bind events for all devices
+    document.addEventListener('scroll', trackEnd, false);
+
+    // Bind events for tablet
+    if (mq.matches) {
+      document.addEventListener('scroll', isElementInViewport, true);
+      return;
+    }
+
+    // Bind events for mobile
+    document.addEventListener('scroll', navDisplayer, false);    
   }
 
   function trackEnd() {
-    console.log((window.innerHeight + window.scrollY) >= document.body.offsetHeight);
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-      console.info(ubykuoCaret.style.animationName);
        ubykuoCaret.style.animationName = 'floatingCaretUp';
     }
+  } 
+  
+  var mobileNavVisible = false;
+
+  function navDisplayer() {
+    var st = scrollTop();
+
+    if (st < lastScrollTop) {    
+      if (!mobileNavVisible) {
+        mobileNav.classList.add('show');
+        mobileNavVisible = true;
+      }
+
+      var navIntersector = document.getElementById('mobile-nav-hide');
+      if (_isElementInViewport(navIntersector.getBoundingClientRect())) {
+        if (mobileNavVisible) {
+          mobileNav.classList.remove('show');
+        }
+      }
+      
+    } else {
+      if (mobileNavVisible) {
+        mobileNav.classList.remove('show');
+        mobileNavVisible = false;
+      }
+    }
+
+    lastScrollTop = st;
+  }
+
+  function scrollTop() {
+    return window.pageYOffset || document.documentElement.scrollTop;
   }
 
   function toggleNav() {
     overlay.classList.toggle('visible');
-
-    if (overlay.classList.contains('visible')) {
-      // body.style.overflowY = 'scroll';
-      // body.style.position = 'fixed';
-      // return;
-    }
-
-    // body.style.overflowY = 'auto';
-    // body.style.position = 'static';
   }
 
   var intersectionPassed = false;
-  var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-  function isElementInViewport() {
-    var el = intersector;
+  function isElementInViewport(el) {
+    var el = el === undefined ? intersector : el;
     var rect = el.getBoundingClientRect();
 
     var st = window.pageYOffset || document.documentElement.scrollTop;

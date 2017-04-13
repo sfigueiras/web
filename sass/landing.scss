@@ -39,20 +39,18 @@ LANDING SECTION
     margin-bottom: 20px;
     text-align: center;
     color: $secondary;
-    
-    img {
-      animation: .5s swipeDown .8s infinite;
-    }
+    animation: .8s swipeDown 1s infinite;
+    p { margin-bottom: 5px; }
   }
 }
 
 @keyframes swipeDown {
   0% {
-    transform: translateY(-20px) rotate(180deg);
+    transform: translateY(-20px);
   }
 
   100% {
-    transform: translateY(0) rotate(180deg);
+    transform: translateY(0);
   }
 }
 
@@ -95,7 +93,7 @@ OFFERS SECTION
   }
   
   .content {
-    padding: 40px 40px 20px 40px;
+    padding: 40px;
     max-height: 600px;
 
     .text-container {
@@ -106,7 +104,6 @@ OFFERS SECTION
     
     .icon {
       width: 150px;
-      margin-top: 25px;
     }
 
     .learn-more {
@@ -127,7 +124,8 @@ OFFERS SECTION
     padding: 35px;
   }
   &.custom {
-    margin-top: 70px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     background-color: initial;
     color: $primary-text;
     display: flex;
@@ -262,7 +260,7 @@ TABLET
     background-image: url("../images/background-decoration-purple-light.png");
     background-size: contain;
     background-repeat: no-repeat;
-    padding-top: 200px;
+    padding-top: 100px;
     height: 600px;
     width: 100%;
     position: absolute;
@@ -272,10 +270,12 @@ TABLET
   .offer {
     background-color: initial;
     color: white;
-    &.custom .content h1 {
-      color: #38E090;
-      font-size: 40px;
-      max-width: 50vw;
+    &.custom .content {
+      h1 {
+        color: #38E090;
+        font-size: 40px;
+        max-width: 50vw;
+      }
     }
     &.custom .content a:not(.more-info) {
       display: none;
@@ -286,8 +286,13 @@ TABLET
       display: inline;
     }
   }
+
   .offer .content {
-    padding-top: 0;
+    padding: 10px;
+    .text-container {
+      max-height: inherit;
+    }
+    
     .arrow {
       display: none;
     }
@@ -367,7 +372,7 @@ TABLET
         .content h1 {
           text-align: center;
           font-size: 2.5em;
-          margin-bottom: 10px;
+          margin-bottom: 30px;
         }
       }
     }
@@ -404,14 +409,14 @@ DESKTOP
     display: flex;
     flex-wrap: wrap;
     background-position: 40% 78%;
-    padding: 100px 7vw 0 7vw;
+    padding: 0 7vw 0 7vw;
   }
   .offer {
     background-color: initial;
     color: white;
     flex: 1 0 28%;
     &.custom {
-      margin-top: 0;
+      margin-top: 50px;
       padding-top: 30px;
       .content {
         h1 {
