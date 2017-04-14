@@ -55,7 +55,7 @@
 
     // Bind events for tablet
     if (mq.matches) {
-      // document.addEventListener('scroll', isElementInViewport, true);
+      document.addEventListener('scroll', changeBurguerColor, true);
       return;
     }
 
@@ -120,11 +120,13 @@
 
   var intersectionPassed = false;
 
+  changeBurguerColor();
+
   /***************************************
   TRACK WITH END
   ***************************************/
-  function isElementInViewport(el) {
-    var el = el === undefined ? intersector : el;
+  function changeBurguerColor() {
+    var el = intersector;
     var rect = el.getBoundingClientRect();
 
     var st = window.pageYOffset || document.documentElement.scrollTop;
