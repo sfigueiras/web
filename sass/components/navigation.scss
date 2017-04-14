@@ -36,6 +36,7 @@
   padding: 15px 0 0 20px;
   height: 20px;
   width: 20px;
+  z-index: 10;
   @include zoom(6);
 
   &.up {

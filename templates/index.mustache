@@ -57,11 +57,18 @@
 
     <!-- Etiam -->
     <section class="work">
-      <div class="carousel">
-        <div>
-          <img draggable="true" src="images/etiam-1.webp" onerror="this.onerror=null; this.src='images/etiam-1.jpg'" alt="etiam picture">
-        </div>
-      </div>
+      <div id="scrolling">
+        <ul>
+          <li>
+            <img src="images/etiam-1.webp" onerror="this.onerror=null; this.src='images/etiam-1.jpg'" alt="etiam picture">
+          </li>
+          <li>
+            <img src="images/etiam-2.webp" onerror="this.onerror=null; this.src='images/etiam-1.jpg'" alt="etiam picture">
+          </li>
+          <li>
+            <img src="images/etiam-3.webp" onerror="this.onerror=null; this.src='images/etiam-1.jpg'" alt="etiam picture">
+          </li>
+      </ul>
     </section>
 
     <div class="forms">
@@ -125,15 +132,22 @@
     </div>
   </div>
 
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+  <script id="carousel-dep" src="vendor/itemslide/itemslide.min.js"></script>
   <script>
     var mq = window.matchMedia( "(min-width: 641px)" );
     
+    // If is not mobile
     if (mq.matches) {
       document.addEventListener("DOMContentLoaded", scrollLoop, false);
+      document.addEventListener("DOMContentLoaded", initializeCarousel, false);
       
-      /**
-      * PARALLAX CONFIGURATION
-      */
+      /***************************************
+      PARALLAX
+      ***************************************/
       var xScrollPosition;
       var yScrollPosition;
 
@@ -154,6 +168,26 @@
         el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
       }
 
+      /***************************************
+      CAROUSEL
+      ***************************************/
+
+      function initializeCarousel() {
+        var carousel = $('#scrolling ul');
+        
+        var config = {
+          one_item: true,
+          start: 0
+        }
+        
+        if (window.matchMedia( "(min-width: 1024px)" ).matches) {
+          config.start = 1;
+        }
+        
+        carousel.itemslide(config);
+      }
+
+      
     } else {
       function toggleOfferDescription(element) {
         element.parentElement.parentElement.classList.toggle('extended')
@@ -161,5 +195,6 @@
     }
 
   </script>
+
 </main>
 {{> _footer }}

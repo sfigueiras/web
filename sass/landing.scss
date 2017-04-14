@@ -13,13 +13,11 @@ LANDING SECTION
   border: 15px solid $primary;
   -webkit-justify-content: space-around;
   justify-content: flex-start;
-  
   .claim {
     padding: 110px 50px 0 50px;
     text-align: left;
     margin-bottom: auto;
     animation: .5s ease-out 0s 1 slideInFromTop;
-
     .title {
       margin-top: 20px;
       margin-bottom: 20px;
@@ -34,13 +32,14 @@ LANDING SECTION
       font-family: $primary-font !important;
     }
   }
-  
   .swipe-down {
     margin-bottom: 20px;
     text-align: center;
     color: $secondary;
     animation: .8s swipeDown 1s infinite;
-    p { margin-bottom: 5px; }
+    p {
+      margin-bottom: 5px;
+    }
   }
 }
 
@@ -48,7 +47,6 @@ LANDING SECTION
   0% {
     transform: translateY(-20px);
   }
-
   100% {
     transform: translateY(0);
   }
@@ -59,7 +57,6 @@ LANDING SECTION
     transform: translateY(-40px);
     opacity: 0;
   }
-
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -78,47 +75,39 @@ OFFERS SECTION
   background-color: white;
   color: $secondary-text;
   transition: all .3s linear;
-
   &.extended {
     .content {
       .text-container {
         max-height: 600px;
       }
-
       .arrow {
         margin-top: 0;
         transform: rotate(0);
       }
     }
   }
-  
   .content {
     padding: 40px;
     max-height: 600px;
-
     .text-container {
       max-height: 75px;
       overflow: hidden;
       transition: max-height .5s;
     }
-    
     .icon {
       width: 150px;
     }
-
     .learn-more {
       margin: 20px 0 10px 0;
       display: block;
       font-weight: bold;
     }
-
     .arrow {
       margin-top: 15px;
       transition: transform .6s;
       transform: rotate(180deg);
     }
   }
-  
   .action {
     background: $secondary;
     padding: 35px;
@@ -217,11 +206,12 @@ TABLET
   body {
     background-color: transparent !important;
   }
-
+  /*******************************************************
+  PARALLAX
+  *******************************************************/
   .parallax-surface {
     background-color: transparent;
   }
-
   .parallax {
     background-image: url('../images/Parallax1.png');
     background-attachment: fixed;
@@ -235,27 +225,25 @@ TABLET
     top: 460px;
     z-index: -1;
   }
+  /*******************************************************
+  LANDING
+  *******************************************************/
   .landing {
     min-height: 600px;
-    
     .claim {
       padding-left: 0;
     }
   }
-  
   .title {
     margin: 5vh 0 !important;
   }
-  
   /*******************************************************
   OFFERS
   *******************************************************/
-  
   .offers {
     padding-left: 15vw;
     padding-right: 15vw;
   }
-
   .wave {
     background-image: url("../images/background-decoration-purple-light.png");
     background-size: contain;
@@ -286,13 +274,11 @@ TABLET
       display: inline;
     }
   }
-
   .offer .content {
     padding: 10px;
     .text-container {
       max-height: inherit;
     }
-    
     .arrow {
       display: none;
     }
@@ -303,46 +289,34 @@ TABLET
   .work {
     margin-top: 80px;
     display: flex;
+    height: 600px;
     img {
-      width: 100%;
+      height: 450px;
     }
-    .carousel {
-      max-height: 490px; // .control {
-      //   position: absolute;
-      //   color: white;
-      //   max-height: inherit;
-      //   height: 100%;
-      //   display: flex;
-      //   justify-content: center;
-      //   align-items: center;
-      //   padding: 0 10px;
-      //   @include transition(background-color .2s linear);
-      //   &.right {
-      //     right: 10vw;
-      //   }
-      //   &.left {
-      //     left: 10vw;
-      //   }
-      //   &:hover {
-      //     background-color: rgba(0, 0, 0, 0.6);
-      //   }
-      // }
+    #scrolling {
+      /* Carousel Frame */
+      overflow: hidden;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      position: absolute;
+      -webkit-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+    }
+    
+    li {
+      float: left;
     }
   }
-  .carousel-panel {
-    display: none;
-  }
-  .carousel-panel-active {
-    display: block;
-  }
-
   .forms {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     padding: 20px 15vw 10% 15vw;
     background: linear-gradient(to bottom, #306, #5000a0);
-
     section {
       flex: 1 1;
       align-self: flex-start; // padding: 20px;

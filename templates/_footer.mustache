@@ -40,7 +40,6 @@
     var mobileNav = document.getElementById('nav-mobile');
   }
   
-  
   var intersector = document.querySelector('#intersection');
   var overlay = document.querySelector('.overlay');
   var body = document.querySelector('body');
@@ -56,13 +55,17 @@
 
     // Bind events for tablet
     if (mq.matches) {
-      document.addEventListener('scroll', isElementInViewport, true);
+      // document.addEventListener('scroll', isElementInViewport, true);
       return;
     }
 
     // Bind events for mobile
     document.addEventListener('scroll', navDisplayer, false);    
   }
+
+  /***************************************
+  TRACK WITH END
+  ***************************************/
 
   function trackEnd() {
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
@@ -72,6 +75,9 @@
   
   var mobileNavVisible = false;
 
+  /***************************************
+  SHOW THE NAV
+  ***************************************/
   function navDisplayer() {
     var st = scrollTop();
 
@@ -98,16 +104,25 @@
     lastScrollTop = st;
   }
 
+  /***************************************
+  GET THE SCROLL TOP POSITION 
+  ***************************************/
   function scrollTop() {
     return window.pageYOffset || document.documentElement.scrollTop;
   }
 
+  /***************************************
+  DISPLAY THE NAVIGATION OVERLAY
+  ***************************************/
   function toggleNav() {
     overlay.classList.toggle('visible');
   }
 
   var intersectionPassed = false;
 
+  /***************************************
+  TRACK WITH END
+  ***************************************/
   function isElementInViewport(el) {
     var el = el === undefined ? intersector : el;
     var rect = el.getBoundingClientRect();
@@ -145,7 +160,6 @@
   }
 
 </script>
-
 <script src="js/main.js"></script>
 
 </body>
