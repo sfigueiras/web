@@ -138,12 +138,12 @@
   crossorigin="anonymous"></script>
   <script id="carousel-dep" src="vendor/itemslide/itemslide.min.js"></script>
   <script>
-    var mq = window.matchMedia( "(min-width: 641px)" );
+    var tabletAndHigher = window.matchMedia( "(min-width: 641px)" );
+    var desktopOnly = window.matchMedia( "(min-width: 1024px)" );
     
     // If is not mobile
-    if (mq.matches) {
+    if (tabletAndHigher.matches) {
       document.addEventListener("DOMContentLoaded", scrollLoop, false);
-      document.addEventListener("DOMContentLoaded", initializeCarousel, false);
       
       /***************************************
       PARALLAX
@@ -167,6 +167,16 @@
       function setTranslate(xPos, yPos, el) {
         el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
       }
+      
+    } else {
+      function toggleOfferDescription(element) {
+        element.parentElement.parentElement.classList.toggle('extended')
+      }
+    }
+
+    if (desktopOnly.matches) {
+      document.addEventListener("DOMContentLoaded", initializeCarousel, false);
+
 
       /***************************************
       CAROUSEL
@@ -185,12 +195,6 @@
         }
         
         carousel.itemslide(config);
-      }
-
-      
-    } else {
-      function toggleOfferDescription(element) {
-        element.parentElement.parentElement.classList.toggle('extended')
       }
     }
 
