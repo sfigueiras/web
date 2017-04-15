@@ -3,9 +3,13 @@
 @import 'mixins/compatibility.scss';
 @import 'variables/color_variables.scss';
 
+body, html {
+  background-color: transparent;
+}
+
 .landing {
     @extend .section;
-    @include parallax('../images/services-nubes.webp', 'cover', 50% 50%);
+    @include parallax('../images/services-nubes-monotono-compressed.jpg', cover, 50% 50%);
 
     padding: 110px 50px 0 50px;
 
@@ -67,8 +71,7 @@
     @extend .section;
     @include align-items(center);
 
-    padding-top: 70px;
-    background-color: white;
+    background-color: transparent;
     text-align: center;
 
     h1 {
@@ -116,14 +119,46 @@
     .clients {
         @include display(flex);
         flex-wrap: wrap;
+        float: left;
+        clear: left;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-align: baseline;
+        -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline;
+        -webkit-align-content: flex-start;
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 auto;
+        -ms-flex: 0 auto;
+        flex: 0 auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
 
         .client {
-            flex: 1 0 50%;
-            background: $grey-darker;
-            color: white;
-            padding: 10px;
-            margin-bottom: 10px;
-            min-width: 60px;
+            padding: 5px;
+
+            img {
+              max-height: 75px;
+              max-width: 170px;
+              min-width: 80px;
+              opacity: 0.80;
+              width: 100px;
+            }
         }
     }
 }
@@ -139,13 +174,60 @@
   h4 { text-align: center; }
  }
 
+.parallax-services {
+  @extend .parallax;
+  background-color: white;
+  top: initial;
+    background-image: url('../images/Parallax2.png');
+}
+
 @media (min-width: 641px) {
-  /*******************************************************
+
+
+.clients {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+  clear: both;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  text-align: center;
+}
+
+/*******************************************************
+NAV COLOR CHANGE BREAKPOINT
+*******************************************************/
+
+#intersection {
+  position: absolute;
+  top: 500px;
+  width: 100%;
+}
+
+/*******************************************************
 OFFERS 
 *******************************************************/
 .offers {
   flex-direction: column;
-  background-color: white;
+  background-color: transparent;
+  padding: 0 40px;
   
   .question {
       display: none;
@@ -153,7 +235,7 @@ OFFERS
   
   .offer {
     display: flex;
-    background-color: white;
+    background-color: transparent;
     margin: 20px 0;
     flex-wrap: wrap;
     
@@ -297,8 +379,6 @@ THEY TRUST US
     background-color: white;
 
     .clients {
-      width: 100%;
-      
       .client {
         flex: 1 0 25%;
       }
@@ -307,6 +387,14 @@ THEY TRUST US
 }
 
 @media (min-width: 1024px) {
+
+/*******************************************************
+NAV COLOR CHANGE BREAKPOINT
+*******************************************************/
+
+#intersection {
+  top: 800px;
+}
 
   .offers {
     align-items: initial;
@@ -377,7 +465,7 @@ THEY TRUST US
 
   .client-quote {
     display: block;
-    margin: 40px 0 100px 0;
+    margin: 40px 0 60px 0;
     text-align: center;
 
     h4 { 

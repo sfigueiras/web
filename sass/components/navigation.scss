@@ -18,7 +18,7 @@
 
   &.show {
     visibility: visible;
-    top: 0;
+    top: -1px;
   }
 
   .nav .controls {

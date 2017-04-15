@@ -207,25 +207,6 @@ TABLET
     background-color: transparent !important;
   }
   /*******************************************************
-  PARALLAX
-  *******************************************************/
-  .parallax-surface {
-    background-color: transparent;
-  }
-  .parallax {
-    background-image: url('../images/Parallax1.png');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: $primary;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    top: 460px;
-    z-index: -1;
-  }
-  /*******************************************************
   LANDING
   *******************************************************/
   .landing {

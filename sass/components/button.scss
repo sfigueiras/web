@@ -10,6 +10,7 @@
   min-width: $button-min-width;
   display: inline-block;
   text-align: center;
+  cursor: pointer;
 }
 
 .button-secondary {
@@ -33,11 +34,17 @@
   font-size: 1.1em;
 }
 
-.link-secondary {
-  color: white;
+.link {
   @include transition(background-color .2s ease-in);
-
+  
   &:hover, &:focus, &:active {
     background-color: $terciary-text;
+    color: white;
   }
+}
+
+.link-secondary {
+  @extend .link;
+  color: white;
+  cursor: pointer;
 }
