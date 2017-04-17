@@ -1,13 +1,11 @@
 {{> _navigation }}
 <div class="landing">
-
-    <!--<img src="images/smile-circle-grey.png" alt="grey smile icon">-->
-    <!--<svg viewBox="0 0 60px 60px">
-            <g class="ubykuo-icon">
-                <path d="M10 4.2l5.8 5.8L10 15.8 4.2 10 10 4.2M10 0L0 10l10 10 10-10L10 0 10 0z"/>
-            </g>    
-        </svg>-->
-
+    <div class="video-overlay"></div>
+    <video class="background-video" poster="" id="bgvid" playsinline autoplay muted loop>
+        <source src="videos/LandingVideo.webm" type="video/webm">
+        <source src="videos/LandingVideo.mp4" type="video/mp4">
+        <source src="videos/LandingVideo.ogv" type="video/ogg">
+    </video>
     <div class="mobile-form">
         <svg viewBox="80 80 20 20" class="smile-container">
             <g class="ubykuo-icon smile" fill="white">
@@ -65,4 +63,9 @@
 
 <div class="landing-tablet"></div>
 
+
 {{> _footer }}
+
+<script>
+    changeNavColor('white');
+</script>

@@ -146,18 +146,19 @@
         .navigation-icon {
           z-index: 1;
           padding-right: 10px;
+          
           .top-line {
-      
             @include transition(fill .3s ease-out, transform .3s ease-in-out);
           }
+          
           .bottom-line {
             @include transition(fill .3s ease-in, transform .3s ease-in-out .2s);
           }
         }
+
         &:hover {
 
           .navigation-icon .hamburguer {
-
             .top-line {
               transform: scaleX(1.7);
             }
@@ -197,7 +198,7 @@ $overlay-border: 20px;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 10;
+  z-index: 100;
   background-color: rgba($primary, 0.99);
   border: $overlay-border solid $secondary;
   box-sizing: border-box;

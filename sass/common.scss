@@ -257,6 +257,11 @@ NAVIGATION
 COMMON COMPONENTS
 *******************************************************/
 
+.background-video {
+  position: absolute;
+  width: 100vw;
+}
+
 .arrow {
   width: 20px;
   &.down {
@@ -327,7 +332,7 @@ FOOTER
 }
 
 footer .social {
-  flex: 0.9;
+  flex: 1.1;
   color: $grey;
   text-align: right;
   img:not(:last-child) {

@@ -83,10 +83,10 @@
         </div>
 
         <div class="form-container">
-          <form class="form">
-            <input type="text" name="company_name" placeholder="Your company name">
-            <input type="email" name="contact_email" placeholder="Your email adress">
-            <textarea name="description" placeholder="What can we do for you?"></textarea>
+          <form class="form" action="/webformmailer.php" method="post">
+            <input type="text" name="company_name" placeholder="Your company name" required>
+            <input type="email" name="contact_email" placeholder="Your email adress" required>
+            <textarea name="description" placeholder="What can we do for you?" required></textarea>
 
             <br>
 
@@ -108,7 +108,7 @@
           </div>
 
           <div class="form-container">
-            <form class="form">
+            <form class="form" action="/webformmailer.php" method="post">
               <div class="custom-file-input">
                 <input type="file" name="file" id="file">
                 <div class="wrapper">
@@ -133,13 +133,13 @@
     </div>
   </div>
 
-  <script  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
     crossorigin="anonymous"></script>
   
   <script src="vendor/itemslide/itemslide.min.js"></script>
   <script src="js/Parallax.js"></script>
   
-  <script src=js/landing.js""></script>
+  <script src="js/landing.js"></script>
 </main>
 {{> _footer }}

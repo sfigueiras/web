@@ -79,6 +79,10 @@ document.addEventListener("DOMContentLoaded", ready, false);
     lastScrollTop = st;
   }
 
+  changeNavColor = function(color) {
+    document.querySelector('#nav').classList.add(color);
+  }
+
   /***************************************
   GET THE SCROLL TOP POSITION 
   ***************************************/
@@ -102,6 +106,11 @@ document.addEventListener("DOMContentLoaded", ready, false);
   ***************************************/
   function changeBurguerColor() {
     var el = intersector;
+
+    if (!el) {
+      return; 
+    }
+    
     var rect = el.getBoundingClientRect();
 
     var st = window.pageYOffset || document.documentElement.scrollTop;

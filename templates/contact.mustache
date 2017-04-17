@@ -9,9 +9,9 @@
     <div class="sections">
         <section class="form-section">
             <div class="form-container">
-                <form class="form">
-                    <input type="text" name="name" placeholder="Name">
-                    <input type="email" name="email" placeholder="Email adress">
+                <form class="form" action="/webformmailer.php" method="post">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email adress" required>
 
                     <p class="question">What can we do four you?</p>
 
@@ -43,7 +43,7 @@
                     <textarea class="message" name="message" placeholder="Message"></textarea>
                 </form>
 
-                <div class="offers-table">
+                <!--<div class="offers-table">
                     <table>
                         <thead>
                             <tr>
@@ -65,10 +65,10 @@
                         </tbody>
                     </table>
 
-                </div>
+                </div>-->
 
                 <div class="center">
-                    <button class="button-terciary">Send</button>
+                    <button type="submit" class="button-terciary">Send</button>
                 </div>
             </div>
         </section>

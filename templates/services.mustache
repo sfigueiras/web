@@ -5,7 +5,6 @@
         <h1>{{ title }}</h1>
         <p>{{ description }}
         </p>
-
         <a href="contact.html" class="get-in-touch link-secondary white">+get in touch!</a>
     </section>
     
@@ -44,7 +43,6 @@
             {{/offers}}
             <div id="intersection" data-mobile-down="purple" data-mobile-up="purple" data-tablet-down-class="purple" data-tablet-up-class="white"></div>
         </section>
-
         <section class="boxing-offers">
             <h1>{{ boxing.title }}</h1>
 
@@ -122,16 +120,15 @@
     <script src="js/Parallax.js"></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var tabletAndHigher = window.matchMedia( "(min-width: 641px)" );
+        
+        var tabletAndHigher = window.matchMedia( "(min-width: 641px)" );
 
-            if (tabletAndHigher.matches) {
-                var nav = document.querySelector('#nav');
+        if (tabletAndHigher.matches) {
+            var nav = document.querySelector('#nav');
 
-                nav.classList.add('white');
-            }
-        });
-
+            nav.classList.add('white');
+        }
+        
         var parallax = new Parallax([
             {
                 offset: -0.4,

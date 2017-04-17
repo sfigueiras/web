@@ -11,6 +11,7 @@
   display: inline-block;
   text-align: center;
   cursor: pointer;
+  @include transition(background-color $button-transition-time linear);
 }
 
 .button-secondary {
@@ -19,7 +20,6 @@
   margin-top: 10px;
   color: $terciary-text;
   border-color: $terciary-text;
-  @include transition(background-color $button-transition-time linear);
 
   &:hover, &:focus, &:active {
     color: white;
@@ -29,9 +29,14 @@
 
 .button-terciary {
   @extend .button;
-  background-color: white;
-  color: $terciary-text;
   font-size: 1.1em;
+  background-color: transparent;
+
+  &:hover, &:focus, &:active {
+    color: $terciary-text;
+    background-color: white;
+  }
+  
 }
 
 .link {

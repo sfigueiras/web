@@ -10,6 +10,7 @@ var prefix = require('gulp-autoprefixer');
 var minifycss = require('gulp-minify-css');
 
 var rename = require("gulp-rename");
+var del = require("del");
 
 // JavaScript
 var uglify = require('gulp-uglify');
@@ -26,7 +27,14 @@ var fs = require( 'fs' );
 var path = require( 'path' );
 var glob = require('glob');
 
+
 var BUILD_DIR = './public';
+
+gulp.task('clean', function () {
+  return del([ BUILD_DIR + '/*' ], {dryRun: true}).then(function(paths) {
+    console.log('Files and folders that would be deleted:\n', paths.join('\n'));
+  });
+});
 
 // compile all your Sass
 gulp.task('sass', function (){
@@ -57,6 +65,11 @@ gulp.task('images', function() {
     gulp.src([ './images/**'])
         // .pipe(imagemin())
         .pipe(gulp.dest(BUILD_DIR + '/images'));
+});
+
+gulp.task('videos', function() {
+  gulp.src('./videos/*.{mp4,ogv,webm}')
+    .pipe(gulp.dest(BUILD_DIR + '/videos'));
 });
 
 gulp.task('webp', function() {
@@ -98,9 +111,11 @@ gulp.task('templates', function() {
 });
 
 gulp.task('default', function(){
+    gulp.run('clean');
     gulp.run('html');
     gulp.run('manifest');
     gulp.run('images');
+    gulp.run('videos');
     gulp.run('webp');
     gulp.run("js");
     gulp.run("sass");

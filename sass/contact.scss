@@ -5,6 +5,10 @@
 CONTACT PAGE
 *******************************************************/
 
+.navigation {
+  position: absolute;
+}
+
 .landing {
     @extend .section;
 
@@ -23,6 +27,7 @@ CONTACT PAGE
         
         .message {
             margin-top: 20px;
+            margin-bottom: 5%;
         }
     }
 }
@@ -136,4 +141,10 @@ CONTACT PAGE
 
         a { color: $secondary; }
     }
+}
+
+@media (min-width: 1024px) {
+  .landing, .sections {
+    padding: 0 200px !important;
+  }
 }
