@@ -1,29 +1,37 @@
 {{> _navigation}}
     <div id="landing" class="landing">
 
-        <h1>It's time we meet</h1>
+        <h1>{{ title }}</h1>
     </div>
 
     <div class="members">
-        <div class="core-member">
-            <img class="member-picture" src="images/santi-figueiras-circular.png" alt="santiago figueiras picture">
+        {{#core}}
+            <div class="core-member">
+                <img class="member-picture" src="{{ picture }}" alt="santiago figueiras picture">
 
-            <h1>SANTI FIGUEIRAS</h1>
-            <hr>
-            <h5>COFOUNDER | DEVELOPMENT DIRECTOR</h5>
+                <h1>{{ name }}</h1>
+                <hr>
+                <h5>{{ role }}</h5>
 
-            <p><b>Specialist in developing sustainable, scalable and quality solutions.</b><br> Always in search of opportunities
-                to innovate incorporating new technologies.
-            </p>
+                <p><b>{{ bio.rest }}</b>{{ bio.bold }}
+                </p>
 
-            <div class="social-icons">
-                <img src="images/facebook-grey.png" alt="facebook logo grey">
-                <img src="images/instagram-grey.png" alt="instagram logo grey">
-                <img src="images/linkedin-grey.png" alt="linkedin logo grey">
+                <div class="social-icons">
+                    <a href=src="{{ social.facebook }}">
+                        <img src="images/social/facebook-icon-gris1.svg" alt="facebook logo grey">
+                    </a>
+                    <a href="{{ social.instagram }}">
+                        <img src="images/social/instagram-icon-gris1.svg" alt="instagram logo grey">
+                    </a>
+                    <a href="{{ social.linkedin }}">
+                        <img src="images/social/linkedin-icon-gris1.svg" alt="linkedin logo grey">
+                    </a>
+                </div>
             </div>
-        </div>
+        {{/core}}
+        
 
-        <div class="core-member">
+        <!--<div class="core-member">
             <img class="member-picture" src="images/juanjo-figueiras-circular.png" alt="juanjo figueiras picture">
 
             <h1>JUANJO FIGUEIRAS</h1>
@@ -39,7 +47,8 @@
                 <img src="images/instagram-grey.png" alt="instagram logo grey">
                 <img src="images/linkedin-grey.png" alt="linkedin logo grey">
             </div>
-        </div>
+        </div>-->
+        
     </div>
 
     <div class="advisory-board">
@@ -90,7 +99,7 @@
 
     <section class="how-we-work">
         <h1>How we work</h1>
-
+        
         <div class="values">
             <div class="value">
                 <img src="images/square-green.png" alt="green square">
@@ -125,5 +134,8 @@
         <h1 class="phrase">Más de 10 años de experiencia construyendo productos y servicios.</h1>
         <img class="transparentize" src="images/background-landing-estatico-compressed.png" alt="purple clode image">
     </section>
-
 {{> _footer }}
+
+<script>
+    changeNavColor('white');
+</script>

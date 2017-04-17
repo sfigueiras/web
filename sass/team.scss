@@ -31,32 +31,41 @@ TEAM PAGE
 .member-picture {
   width: 150px;
   margin-top: -70px;
+  border: 3px solid $secondary;
+  border-radius: 100%;
 }
 
 .core-member, .board-member {
   background: #EDEDED;
   text-align: center;
   padding: 0 20px;
-}
-
-.core-member h1, .board-member h1 {
-  color: #306;
-  font-size: 1.4em;
-  margin-bottom: 10px;
-}
-
-.core-member h5, .board-member h5 {
-  margin-top: 10px;
-  color: #9933ff;
-  font-size: 1.01em;
-}
-
-.core-member p, .board-member p {
-  margin: 20px 0;
+  margin-bottom: 100px;
+  
+  h1 {
+    color: #306;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+  
+  h5 {
+    margin-top: 10px;
+    color: #9933ff;
+    font-size: 1.01em;
+  }
+  
+  p {
+    margin: 20px 0;
+  }
 }
 
 .core-member .social-icons, .board-member .social-icons {
-  margin-bottom: 20px;
+  margin: 20px 90px;  
+  display: flex;
+  justify-content: space-between;
+
+  a img {
+    width: 30px;
+  }
 }
 
 .advisory-board {
@@ -115,9 +124,6 @@ TABLET
     margin-left: 7.5px;
   }
 
-  .members .core-member, .members .board-member, .members .board-member, .advisory-board .core-member, .advisory-board .board-member, .advisory-board .board-member {
-    margin-bottom: 15px;
-  }
 }
 
 @media (min-width: 641px) {
@@ -128,7 +134,7 @@ TABLET
     
     h1 {
         display: block;
-        margin-bottom: 100px;
+        margin-bottom: 115px;
         font-size: 2em;
     }
   }
@@ -136,7 +142,7 @@ TABLET
   .members, .advisory-board {
     align-items: stretch;
     justify-content: space-between;
-    padding: 0 20vw;
+    padding: 0 25vw;
   }
 
   .core-member, .board-member {

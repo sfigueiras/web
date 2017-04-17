@@ -1,3 +1,45 @@
 {
-    "stylesheet": "team"
+    "stylesheet": "team",
+    "title": "It's time we meet",
+    "core": [
+        {
+            "name": "SEBASTIAN GALLARDO",
+            "role": "BACKEND ERUDITE",
+            "bio": {
+                "bold": "Expert in higly scalable object oriented design and cloud oriented solutions"
+            },
+            "picture": "images/team/seba-cropped.jpg",
+            "social": {
+                "facebook": "",
+                "instagram": "",
+                "linkedin": ""
+            }
+        },
+        {
+            "name": "SANTIAGO FIGUEIRAS",
+            "role": "COFOUNDER | DEVELOPMENT DIRECTOR",
+            "bio": {
+                "bold": "Specialist in developing sustainable, scalable and quality solutions."
+            },
+            "picture": "images/team/santi.jpg", 
+            "social": {
+                "facebook": "",
+                "instagram": "",
+                "linkedin": ""
+            }
+        },
+        {
+            "name": "VALENTIN MARI",
+            "role": "ONE MAN ARMY",
+            "bio": {
+                "bold": "Give him a problem he'll give you the solution, backend, frontend, devops, you name it."
+            },
+            "picture": "images/team/valen.jpg",
+            "social": {
+                "facebook": "",
+                "instagram": "",
+                "linkedin": ""
+            }
+        }
+    ]
 }
