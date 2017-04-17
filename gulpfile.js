@@ -65,6 +65,8 @@ gulp.task('images', function() {
     gulp.src([ './images/**'])
         // .pipe(imagemin())
         .pipe(gulp.dest(BUILD_DIR + '/images'));
+    gulp.src([ './favicon.ico'])
+        .pipe(gulp.dest(BUILD_DIR + '/favicon.ico'));
 });
 
 gulp.task('videos', function() {

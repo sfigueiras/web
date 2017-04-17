@@ -9,4 +9,4 @@ ffmpeg -i $IN -f webm -vcodec libvpx -acodec libvorbis -ab 128000 -crf 22 -s 102
 ffmpeg -i $IN -acodec aac -strict experimental -ac 2 -ab 128k -vcodec libx264 -vpre slow -f mp4 -crf 22 -s 1024x550 $OUT.mp4
 
 # ogg (if you want to support older Firefox)
-ffmpeg2theora $IN -o $OUT.ogv -x 1024 -y 500 --videoquality 5 --audioquality 0  --frontend
+ffmpeg $IN -o $OUT.ogv -x 1024 -y 500 --videoquality 5 --audioquality 0  --frontend

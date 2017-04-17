@@ -6,13 +6,28 @@ LANDING SECTION
 
 .landing {
   @extend .section;
-  @include parallax('../images/background-landing-estatico-compressed.png', cover, 50% 50%);
+  //@include parallax('../images/background-landing-estatico-compressed.png', cover, 50% 50%);
   @include align-items(center);
   @include transition(all ease-in .2s);
   text-align: left;
   border: 15px solid $primary;
   -webkit-justify-content: space-around;
   justify-content: flex-start;
+  position: relative;
+  > video {
+    position: absolute;
+    transition: 1s opacity;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    z-index: -9;
+  }
   .claim {
     padding: 110px 50px 0 50px;
     text-align: left;
@@ -62,7 +77,6 @@ LANDING SECTION
     opacity: 1;
   }
 }
-
 
 /*******************************************************
 OFFERS SECTION
@@ -131,7 +145,6 @@ OFFERS SECTION
   }
 }
 
-
 /*******************************************************
 WORK
 *******************************************************/
@@ -139,7 +152,6 @@ WORK
 .work {
   display: none;
 }
-
 
 /*******************************************************
 CONTACT US SECTION
@@ -160,7 +172,6 @@ CONTACT US SECTION
 .form-container {
   width: 90%;
 }
-
 
 /*******************************************************
 JOIN US SECTION
@@ -196,7 +207,6 @@ JOIN US SECTION
     font-size: 3.5em !important;
   }
 }
-
 
 /*******************************************************
 TABLET
@@ -264,7 +274,7 @@ TABLET
       display: none;
     }
   }
- 
+
   .forms {
     display: flex;
     flex-wrap: wrap;
@@ -319,9 +329,9 @@ DESKTOP
 *******************************************************/
 
 @media (min-width: 1024px) {
-   /*************************************************
-  WORK
-  *************************************************/
+  /*************************************************
+ WORK
+ *************************************************/
   .work {
     margin-top: 80px;
     display: flex;
@@ -344,12 +354,12 @@ DESKTOP
       transform-style: preserve-3d;
       transition: opacity .3s linear;
     }
-    
+
     li {
       float: left;
     }
   }
-  
+
   .wave {
     background-position: 0 100%;
   }
