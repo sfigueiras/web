@@ -6,13 +6,13 @@
 TEAM PAGE
 *******************************************************/
 .landing {
-  padding-top: 160px;
+  padding-top: 190px;
 }
 
 .landing h1 {
   display: none;
   -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 .members {
@@ -21,7 +21,6 @@ TEAM PAGE
   align-items: center;
   background-color: white;
   flex-wrap: wrap;
-  padding: 0 20px 0 20px;
 }
 
 .members .core-member:not(:first-child), .members .board-member:not(:first-child) {
@@ -38,8 +37,7 @@ TEAM PAGE
 .core-member, .board-member {
   background: #EDEDED;
   text-align: center;
-  padding: 0 20px;
-  margin-bottom: 100px;
+  
   
   h1 {
     color: #306;
@@ -54,15 +52,20 @@ TEAM PAGE
   }
   
   p {
-    margin: 20px 0;
+    margin: 20px 40px;
+    height: 70px;
   }
 }
 
-.core-member .social-icons, .board-member .social-icons {
-  margin: 20px 90px;  
+.core-member .social-icons {
+  margin: 20px;  
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
+  a:not(:last-child) {
+    margin-right: 7px;
+  }
+  
   a img {
     width: 30px;
   }
@@ -70,6 +73,11 @@ TEAM PAGE
 
 .advisory-board {
   display: none;
+
+  .title {
+    color: $primary;
+    flex: 1 1 100%;
+  }
 }
 
 .board-member {
@@ -96,17 +104,17 @@ TEAM PAGE
   .value {
     text-align: center;
     margin-bottom: 40px;
+    
+    img {
+      width: 30px;
+    }
+    
+    h3 {
+      margin-top: 10px;
+    }
   }
 
-  .value img {
-    width: 30px;
-  }
-
-  .value h3 {
-   margin-top: 10px;
-  }
 }
-
 
 .experience {
     display: none;
@@ -117,16 +125,25 @@ TABLET
 *******************************************************/
 @media (min-width: 641px) and (max-width: 1024px) {
   .members .core-member:nth-child(odd), .members .board-member:nth-child(odd), .advisory-board .core-member:nth-child(odd), .advisory-board .board-member:nth-child(odd) {
-    margin-right: 7.5px;
+    // margin-right: 7.5px;
   }
 
   .members .core-member:nth-child(even), .members .board-member:nth-child(even), .advisory-board .core-member:nth-child(even), .advisory-board .board-member:nth-child(even) {
-    margin-left: 7.5px;
+    // margin-left: 7.5px;
   }
-
 }
 
 @media (min-width: 641px) {
+  .members {
+    padding: 0 20px 0 20px;
+  }
+
+  .core-member, .board-member {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+  
   .landing {
     padding-top: 60px;
     text-align: center;
@@ -148,7 +165,8 @@ TABLET
   .core-member, .board-member {
     margin-top: 0 !important;
     flex: 1 0 40%;
-    padding: 0 20px;
+    
+    margin-bottom: 60px;    
   }
   
   .member-picture.board {
@@ -167,11 +185,14 @@ TABLET
   }
   .advisory-board .board-member .name {
     color: white;
+    margin: 10px 20px;
+    min-height: 52px;
   }
 
   .advisory-board .board-member .profile {
     color: #9933ff;
     margin-top: 40px;
+    min-height: 38px;
   }
 
   .values {
@@ -229,13 +250,9 @@ TABLET
     padding: 0 10vw;
   }
 
-  .members {
-  }
-
   
   .core-member, .board-member {
     flex: 1 0 10%;
-    margin-right: 20px;
 
     &:last-child {
       margin-right: 0;
@@ -244,7 +261,7 @@ TABLET
 
   .advisory-board {
     padding-top: 20px;
-    @include parallax("../images/background-decoration-green.png", contain, 0 -150px);
+    @include parallax("../images/background-decoration-green.png", contain, 0 0);
   }
 
   .how-we-work {

@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", ready, false);
       }
 
       var navIntersector = document.getElementById('mobile-nav-hide');
-      if (_isElementInViewport(navIntersector.getBoundingClientRect())) {
+      if (navIntersector && _isElementInViewport(navIntersector.getBoundingClientRect())) {
         if (mobileNavVisible) {
           mobileNav.classList.remove('show');
         }
