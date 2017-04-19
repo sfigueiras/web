@@ -4,9 +4,14 @@
 LANDING SECTION
 *******************************************************/
 
+@media (max-width: 641px) {
+  .landing {
+    @include parallax('../images/background-landing-estatico-compressed.png', cover, 50% 50%);
+  }
+}
+
 .landing {
   @extend .section;
-  //@include parallax('../images/background-landing-estatico-compressed.png', cover, 50% 50%);
   @include align-items(center);
   @include transition(all ease-in .2s);
   text-align: left;

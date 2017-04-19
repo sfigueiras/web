@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", ready, false);
     if (!el) {
       return; 
     }
-    
+
     var rect = el.getBoundingClientRect();
 
     var st = window.pageYOffset || document.documentElement.scrollTop;
@@ -118,6 +118,7 @@ document.addEventListener("DOMContentLoaded", ready, false);
     var downClass, upClass;
 
     if (_isElementInViewport(rect)) {
+      console.info('on viewport');
       if (mq.matches) {
         upClass = el.dataset.tabletUpClass;
         downClass = el.dataset.tabletDownClass;
