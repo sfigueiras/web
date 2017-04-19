@@ -41,10 +41,11 @@
 
 .link {
   @include transition(background-color .2s ease-in);
+  font-weight: bold;
   
   &:hover, &:focus, &:active {
     background-color: $terciary-text;
-    color: white;
+    color: $primary;
   }
 }
 

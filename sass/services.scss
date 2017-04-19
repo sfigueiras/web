@@ -178,7 +178,7 @@ body, html {
   @extend .parallax;
   background-color: white;
   top: initial;
-    background-image: url('../images/Parallax2.png');
+  background-image: url('../images/Parallax2.png');
 }
 
 @media (min-width: 641px) {
@@ -315,58 +315,121 @@ OFFERS
     color: #306;
   }
 }
+
 .carrousel {
   display: none;
 }
 
-.offer-phrase-tablet {
-  // display: none;
- 
+.square {
+  transition: all .4s;
 
-  p .break { display: none; }
+  h3 {
+    margin-top: 5px;
+  }
+  
+  a {
+    font-weight: bold; 
+    color: $terciary-text;
+  }
+  
+  .description {
+    transition: all .3s ease-in-out;
+    text-align: center;
+    height: 0;
+    opacity: 0;
+
+    a {
+      pointer-events: none;
+      cursor: default;
+      display: none;
+    }
+
+    p {
+      font-size: 0.6em;
+      margin: 10px 10px;
+    }
+  }
+
+  &.lighter {
+    a { color: $primary; }
+  }
+  
+  &:hover, &:active, &.active {
+    
+    .arrow {
+      transform: rotate(0);
+    }
+    
+    .description {
+      height: auto;
+      opacity: 1;
+      a {
+        pointer-events: auto;
+        cursor: pointer;
+        display: block;
+      }
+    }
+  }
+}
+
+.offer-phrase-tablet {
+
+  p {
+    background-color: rgba(255,255,255, 0.4);
+    .break { display: none; }
+  }
 }
 
 /*******************************************************
 BOXING OFFERS 
 *******************************************************/
-  .boxing-offers .subparagraph {
-    text-align: left;
-    color: #3C3C3B;
-    display: block;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 30px 100px;
+  .boxing-offers {
+    padding: 0 80px;
     
-    a {
-      flex: 1 0 100%;
-    }
-
-    .offer-phrase-tablet {
-       h1 {
-        display: none;
-      }
-    }
-    
-    .boxing-offers-tablet {
-      display: flex;
+    .subparagraph {
+      text-align: left;
+      color: #3C3C3B;
+      display: block;
+      align-items: center;
       flex-wrap: wrap;
-      align-content: stretch;
-      width: 100%;
+      padding: 30px 100px;
       
-      .square {
-        color: white;
-        background-color: #306;
-        flex: 1 0 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        height: 200px;
+      // a {
+      //   flex: 1 0 100%;
+      // }
+
+      .offer-phrase-tablet {
+        h1 {
+          display: none;
+        }
+
+        p a {
+          margin-bottom: 20px;
+          display: inline-block;
+        }
       }
       
-      .square.lighter {
-        background-color: #9933ff;
+      .boxing-offers-tablet {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: stretch;
+        width: 100%;
+        
+        .square {
+          color: white;
+          background-color: $primary;
+          flex: 1 0 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 200px;
+          height: 200px;
+        }
+        
+        .square.lighter {
+          background-color: $terciary-text;
+        }
       }
     }
   }

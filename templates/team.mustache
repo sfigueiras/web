@@ -11,11 +11,11 @@
     <div class="core-member">
         <img class="member-picture" src="{{ picture }}" alt="santiago figueiras picture">
 
-        <h1>{{ name }}</h1>
+        <h1 class="name">{{ name }}</h1>
         <hr>
-        <h5>{{ role }}</h5>
+        <h5 class="role">{{ role }}</h5>
 
-        <p><b>{{ bio.rest }}</b>{{ bio.bold }}
+        <p class="bio"><b>{{ bio.rest }}</b>{{ bio.bold }}
         </p>
 
         <div class="social-icons">
@@ -32,32 +32,13 @@
     </div>
     {{/core}}
 
-
-    <!--<div class="core-member">
-            <img class="member-picture" src="images/juanjo-figueiras-circular.png" alt="juanjo figueiras picture">
-
-            <h1>JUANJO FIGUEIRAS</h1>
-            <hr>
-            <h5>COFOUNDER | STRATEGY & INNOVATION</h5>
-
-            <p><b>More than 20 years developing Business and Technologies</b> based on Services in several countries. He has
-                been Director of verticals .com and Mentor of entrepreneurs of La Plata HUB and the NAVES program of IAE.
-            </p>
-
-            <div class="social-icons">
-                <img src="images/facebook-grey.png" alt="facebook logo grey">
-                <img src="images/instagram-grey.png" alt="instagram logo grey">
-                <img src="images/linkedin-grey.png" alt="linkedin logo grey">
-            </div>
-        </div>-->
-
 </div>
 
 <div class="advisory-board">
     <h1 class="title">Advisory board</h1>
     {{#advisors}}
     <div class="board-member">
-        <img class="member-picture board" src="images/santi-figueiras-circular.png" alt="santiago figueiras picture">
+        <img class="member-picture board" src="{{ picture }}" alt="santiago figueiras picture">
         <h1 class="name">{{name}}</h1>
 
         <img class="arrow" src="images/arrow-green.png" alt="arrow green pointing up">
@@ -74,39 +55,6 @@
             </a>
         </div>
     </div>
-
-    <!--<div class="board-member">
-        <img class="member-picture board" src="images/santi-figueiras-circular.png" alt="santiago figueiras picture">
-        <h1 class="name">Santiago Figueiras</h1>
-
-        <img class="arrow" src="images/arrow-green.png" alt="arrow green pointing up">
-        <h4 class="profile">JAVA DEVELOPER</h4>
-        <img src="images/facebook-grey.png" alt="facebook logo grey">
-        <img src="images/instagram-grey.png" alt="instagram logo grey">
-        <img src="images/linkedin-grey.png" alt="linkedin logo grey">
-    </div>
-
-    <div class="board-member">
-        <img class="member-picture board" src="images/santi-figueiras-circular.png" alt="santiago figueiras picture">
-        <h1 class="name">Santiago Figueiras</h1>
-
-        <img class="arrow" src="images/arrow-green.png" alt="arrow green pointing up">
-        <h4 class="profile">JAVA DEVELOPER</h4>
-        <img src="images/facebook-grey.png" alt="facebook logo grey">
-        <img src="images/instagram-grey.png" alt="instagram logo grey">
-        <img src="images/linkedin-grey.png" alt="linkedin logo grey">
-    </div>
-
-    <div class="board-member">
-        <img class="member-picture board" src="images/santi-figueiras-circular.png" alt="santiago figueiras picture">
-        <h1 class="name">Santiago Figueiras</h1>
-
-        <img class="arrow" src="images/arrow-green.png" alt="arrow green pointing up">
-        <h4 class="profile">JAVA DEVELOPER</h4>
-        <img src="images/facebook-grey.png" alt="facebook logo grey">
-        <img src="images/instagram-grey.png" alt="instagram logo grey">
-        <img src="images/linkedin-grey.png" alt="linkedin logo grey">
-    </div>-->
     {{/advisors}}
 </div>
 

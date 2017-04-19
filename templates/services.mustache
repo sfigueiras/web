@@ -56,15 +56,21 @@
                         <br> {{ boxing.claim }}
                         <br>
                         <br>
-                        <a href="services.html" class="link">+ Get in touch!</a>
+                        <a href="/contact.html" class="link">+ Get in touch!</a>
                     </p>
                 </div>
 
                 <div class="boxing-offers-tablet">
                     {{# boxing.offers }}
-                        <div class="{{ class }}">
-                            <img class="arrow down" src="images/arrow-grey.png" alt="green arrow pointing down" />
+                        <div class="{{ class }}" onclick="toggleBoxingOffer(this)">
+                            <img class="arrow down" src="images/arrow-grey.png" 
+                                alt="green arrow pointing down" />
                             <h3>{{ name }}</h3>
+                            
+                            <div class="description">
+                                <a href="/contact.html">+ I want it!</a>
+                                <p>{{ description }}</p>
+                            </div>
                         </div>
                     {{ /boxing.offers }}
                 </div>
@@ -122,13 +128,15 @@
     <script src="js/Parallax.js"></script>
 
     <script>
-        
         var tabletAndHigher = window.matchMedia( "(min-width: 641px)" );
 
         if (tabletAndHigher.matches) {
-            var nav = document.querySelector('#nav');
+            // var nav = document.querySelector('#nav');
 
-            nav.classList.add('white');
+            // nav.classList.add('white');
+            function toggleBoxingOffer(element) {
+                element.classList.toggle('active');
+            }
         }
         
         var parallax = new Parallax([
@@ -139,6 +147,7 @@
         ]);
 
         document.addEventListener('DOMContentLoaded', parallax.onScroll.bind(parallax), true);
+        
         
     </script>
     {{> _footer }}

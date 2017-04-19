@@ -36,19 +36,23 @@
          "offers": [
             {
                 "name": "MOCK UP",
-                "class": "square"
+                "class": "square",
+                "description": "HTML5 with CSS3 responsive to visualize idea and general theme both in web and mobile."
             },
             {
                 "name": "F. PROTOTYPE",
-                "class": "square lighter"
+                "class": "square lighter",
+                "description": "Web in HTML5 with CSS3 responsive and Javascript to test the concept both web and mobile."
             },
             {
                 "name": "MVP LITE",
-                "class": "square lighter"
+                "class": "square lighter",
+                "description": "Manage systems that include discharge, drops and modifications.Standard functionalities in this type of applications and transactional interfaces.Backend + Mobile Android or Web."
             },
             {
                 "name": "MVP ADVANCED",
-                "class": "square"
+                "class": "square",
+                "description": "Real-time applications. State-of-the-art technology and/or experience  (ex VR, IoT, Web, Bluetooth)  Contributions of R&D of ubykuo labs. Integration with existing services. Public APIs development."
             }
         ]
      },

@@ -11,6 +11,7 @@ CONTACT PAGE
 
 .landing {
     @extend .section;
+    background-color: transparent;
 
     padding: 110px 50px 0 50px;
 }
@@ -111,11 +112,17 @@ CONTACT PAGE
         background-color: transparent;
     }
 
+    .all {
+      background: linear-gradient(to bottom, $terciary-text, $primary);
+      background-image: url('../images/Parallax3.png');
+      background-image: url('../images/Parallax3.png') , linear-gradient(to bottom, $terciary-text, $primary);
+      background-size: cover;
+    }
+
     .sections {
-        background: linear-gradient(to bottom, $terciary-text, $primary);
         display: flex;
         align-items: baseline;
-        padding: 0 80px 80px 80px;
+        padding: 0 40px 40px 40px;
 
         section {
             flex: 1 1 50%;
@@ -145,6 +152,6 @@ CONTACT PAGE
 
 @media (min-width: 1024px) {
   .landing, .sections {
-    padding: 0 200px !important;
+    padding: 0 20vw !important;
   }
 }

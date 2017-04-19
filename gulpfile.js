@@ -27,6 +27,7 @@ var fs = require( 'fs' );
 var path = require( 'path' );
 var glob = require('glob');
 
+var webserver = require('gulp-webserver');
 
 var BUILD_DIR = './public';
 
@@ -34,6 +35,15 @@ gulp.task('clean', function () {
   return del([ BUILD_DIR + '/*' ], {dryRun: true}).then(function(paths) {
     console.log('Files and folders that would be deleted:\n', paths.join('\n'));
   });
+});
+
+gulp.task('webserver', function() {
+  gulp.src(BUILD_DIR)
+    .pipe(webserver({
+      livereload: true,
+      // directoryListing: true,
+      open: true
+    }));
 });
 
 // compile all your Sass
@@ -91,12 +101,11 @@ gulp.task('vendor', function() {
 });
 
 gulp.task('templates', function() {
-
     glob('./templates/*.mustache', function(err, files) {
         files.forEach(function(file) {
-            if(path.basename(file).startsWith('_')) {
-                return;
-            }
+            // if(path.basename(file).startsWith('_')) {
+            //     return;
+            // }
 
             var template = file;
             var data = path.dirname(template) + '/' + path.basename(template, '.mustache') + '.json';
@@ -109,11 +118,10 @@ gulp.task('templates', function() {
                 .pipe(gulp.dest(BUILD_DIR));
         });
     });
-    
 });
 
-gulp.task('default', function(){
-    gulp.run('clean');
+gulp.task('build', function() {
+  gulp.run('clean');
     gulp.run('html');
     gulp.run('manifest');
     gulp.run('images');
@@ -141,4 +149,9 @@ gulp.task('default', function(){
     gulp.watch("./js/**/*.js", function(event){
         gulp.run('js');
     });
+})
+
+gulp.task('default', function(){
+    gulp.run('build');
+    gulp.run('webserver');
 });

@@ -1,88 +1,95 @@
 {{> _navigation}}
-    <section class="landing center">
+    <div class="all">
+        <section class="landing center">
 
-        <h1>Get in touch!</h1>
-        <p>Write us to info@ubykuo.com <br>Or tell us just a little more.</br>
-        </p>
-    </section>
+            <h1>Get in touch!</h1>
+            <p>Write us to info@ubykuo.com <br>Or tell us just a little more.</br>
+            </p>
+        </section>
 
-    <div class="sections">
-        <section class="form-section">
-            <div class="form-container">
-                <form class="form" action="/webformmailer.php" method="post">
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="email" name="email" placeholder="Email adress" required>
+        <div class="sections">
+            <section class="form-section">
+                <div class="form-container">
+                    <form class="form" action="/webformmailer.php" method="post">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email adress" required>
 
-                    <p class="question">What can we do four you?</p>
+                        <p class="question">What can we do four you?</p>
 
-                    <div class="options">
+                        <div class="options">
 
-                        <div class="option">
-                            <input id="mockup" name="mockup" type="checkbox" class="css-checkbox">
-                            <label for="mockup" class="css-label"><span>Mockup</span></label>
+                            <div class="option">
+                                <input id="mockup" name="mockup" type="checkbox" class="css-checkbox">
+                                <label for="mockup" class="css-label"><span>Mockup</span></label>
+                            </div>
+
+                            <div class="option">
+                                <input id="prototype" name="prototype" type="checkbox" class="css-checkbox">
+                                <label for="prototype" class="css-label"><span>F. Prototype</span></label>
+                            </div>
+                            <div class="option">
+                                <input id="mvp" name="mvp" type="checkbox" class="css-checkbox">
+                                <label for="mvp" class="css-label"><span>MVP</span></label>
+                            </div>
+                            <div class="option">
+                                <input id="custom" name="custom" type="checkbox" class="css-checkbox">
+                                <label for="custom" class="css-label"><span>Custom Plan</span></label>
+                            </div>
+                            <div class="option">
+                                <input id="other" name="other" type="checkbox" class="css-checkbox">
+                                <label for="other" class="css-label"><span>Other</span></label>
+                            </div>
                         </div>
 
-                        <div class="option">
-                            <input id="prototype" name="prototype" type="checkbox" class="css-checkbox">
-                            <label for="prototype" class="css-label"><span>F. Prototype</span></label>
-                        </div>
-                        <div class="option">
-                            <input id="mvp" name="mvp" type="checkbox" class="css-checkbox">
-                            <label for="mvp" class="css-label"><span>MVP</span></label>
-                        </div>
-                        <div class="option">
-                            <input id="custom" name="custom" type="checkbox" class="css-checkbox">
-                            <label for="custom" class="css-label"><span>Custom Plan</span></label>
-                        </div>
-                        <div class="option">
-                            <input id="other" name="other" type="checkbox" class="css-checkbox">
-                            <label for="other" class="css-label"><span>Other</span></label>
-                        </div>
+                        <textarea class="message" name="message" placeholder="Message"></textarea>
+                    </form>
+
+                    <!--<div class="offers-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>BOXING OFFERS</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <ol>
+                                            <li><b>WEB LAYOUT</b> 3800 USD</li>
+                                            <li><b>F. PROTOTYPE</b> 3800 USD</li>
+                                            <li><b>MVP LITE</b> 3800 USD</li>
+                                            <li><b>MVP ADVANCED</b> 3800 USD</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>-->
+
+                    <div class="center">
+                        <button type="submit" class="button-terciary">Send</button>
                     </div>
-
-                    <textarea class="message" name="message" placeholder="Message"></textarea>
-                </form>
-
-                <!--<div class="offers-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>BOXING OFFERS</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <ol>
-                                        <li><b>WEB LAYOUT</b> 3800 USD</li>
-                                        <li><b>F. PROTOTYPE</b> 3800 USD</li>
-                                        <li><b>MVP LITE</b> 3800 USD</li>
-                                        <li><b>MVP ADVANCED</b> 3800 USD</li>
-                                    </ol>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                </div>-->
-
-                <div class="center">
-                    <button type="submit" class="button-terciary">Send</button>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="follow-us">
-            <p>Write to us to <a href="mailto: info@ubykuo.com">info@ubykuo.com</a></p>
-            <p>and</p>
+            <section class="follow-us">
+                <p>Write to us to <a href="mailto: info@ubykuo.com">info@ubykuo.com</a></p>
+                <p>and</p>
 
-            <hr>
-            <br>
+                <hr>
+                <br>
 
-            <h1>FOLLOW US</h1>
-            <p>We promise not to share cat videos...</p>
-        </section>
+                <h1>FOLLOW US</h1>
+                <p>We promise not to share cat videos...</p>
+            </section>
+        </div>
+
     </div>
 
 {{> _footer }}
+
+<script>
+    changeNavColor('white');
+</script>
