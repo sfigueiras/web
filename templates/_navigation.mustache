@@ -58,7 +58,6 @@
         <path d="M 10,10 L 30,30 M 30,10 L 10,30" />
       </svg>
     </a>
-    
     <div class="links">
       <ul>
         <!-- <svg class="morph" viewBox="-10 -20 80 80">
@@ -66,13 +65,13 @@
           <path class="to"  id="services-to" from="to" xmlns="http://www.w3.org/2000/svg" d="M10 4.2l5.8 5.8L10 15.8 4.2 10 10 4.2M10 0L0 10l10 10 10-10L10 0 10 0z"/>
         </svg> -->
         <hr align="right">
-        <li><a href="/services.html">SERVICES</a></li>
+        <li><a href="/services.html">{{ services }}</a></li>
         <hr align="right">
-        <li><a href="/team.html">THE TEAM</a></li>
+        <li><a href="/team.html">{{ team }}</a></li>
         <hr align="right">
-        <li><a href="/contact.html">CONTACT US</a></li>
+        <li><a href="/contact.html">{{ contact }}</a></li>
         <hr align="right">
-        <li><a href="/join.html">JOIN</a></li>
+        <li><a href="/join.html">{{ join }}</a></li>
       </ul>
     </div>
 
@@ -122,8 +121,8 @@
       </li>
 
       <li class="controls">
-        <div class="social">
-          <a onclick="toggleNav()">
+        <div class="social" onclick="toggleNav()">
+          <a>
             <svg class="item navigation-icon " version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
               x="0px" y="0px" viewBox="0 0 40 18" style="enable-background:new 0 0 40 18;" xml:space="preserve">
               <style type="text/css">

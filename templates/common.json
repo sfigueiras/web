@@ -1,0 +1,10 @@
+{
+    "services": "SERVICES",
+    "team": "THE TEAM",
+    "contact": "CONTACT US",
+    "join": "JOIN",
+    "languageLink": "/index-es.html",
+    "languageLinkContent": "VER EN ESPAÑOL",
+    "newProjectLinkContent": "START A PROJECT",
+    "newProjectLink": "/contact.html"
+}

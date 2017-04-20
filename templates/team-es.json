@@ -1,0 +1,78 @@
+{
+    "stylesheet": "team",
+    "title": "It's time we meet",
+    "core": [
+        {
+            "name": "SANTIAGO FIGUEIRAS",
+            "role": "COFOUNDER | DEVELOPMENT DIRECTOR",
+            "bio": {
+                "bold": "Specialist in developing sustainable, scalable and quality solutions."
+            },
+            "picture": "images/team/santi.jpg", 
+            "social": {
+                "facebook": "",
+                "instagram": "",
+                "linkedin": ""
+            }
+        },
+        {
+            "name": "SEBASTIAN GALLARDO",
+            "role": "BACKEND ERUDITE",
+            "bio": {
+                "bold": "Expert in higly scalable object oriented design and cloud oriented solutions"
+            },
+            "picture": "images/team/seba-cropped.jpg",
+            "social": {
+                "facebook": "",
+                "instagram": "",
+                "linkedin": ""
+            }
+        },
+        {
+            "name": "VALENTIN MARI",
+            "role": "ONE MAN ARMY",
+            "bio": {
+                "bold": "Give him a problem he'll give you the solution, backend, frontend, devops, you name it."
+            },
+            "picture": "images/team/valen.jpg",
+            "social": {
+                "facebook": "",
+                "instagram": "",
+                "linkedin": ""
+            }
+        }
+    ],
+    "advisors": [
+        {
+            "name": "Juan José Figueiras",
+            "profile": "INNOVATION MENTOR",
+            "bio": "",
+            "picture": "images/team/juanjo.jpg"
+        },
+        {
+            "name": "Adrián Mastronardi",
+            "profile": "DIGITAL BUSINESS",
+            "bio": "Digital Business Director and Mentor (Argentina)",
+            "picture": "images/team/adrian.jpg"
+        },
+        {
+            "name": "Emilio Panighetti",
+            "profile": "TECHNICAL ADVISOR",
+            "bio": "Techinal Guru. Senior Sofware Engineer (USA)",
+            "picture": "images/team/emilio.jpg"
+        },
+        {
+            "name": "Juan Gasca",
+            "profile": "DESIGN & INNOVATION",
+            "bio": "Business Innovation Guru. Business Advisor. Mentor (SPAIN)",
+            "picture": "images/team/juan.jpg"
+        },
+        {
+            "name": "Pascual Aparicio",
+            "profile": "EUROPE BUSINESS DEVELOPER",
+            "bio": "Madrid International LAB Manager. Greater New York City Area (SPAIN)",
+            "picture": "images/team/pascual.jpg"
+        }
+    ]
+}
+

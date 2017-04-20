@@ -34,5 +34,8 @@
     "gulp-uglify": "^2.0.1",
     "gulp-webp": "^2.3.0",
     "gulp-webserver": "^0.9.1"
+  },
+  "dependencies": {
+    "load-json-file": "^2.0.0"
   }
 }

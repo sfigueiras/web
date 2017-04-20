@@ -340,6 +340,13 @@ footer .social {
   }
   .options {
     display: none;
+
+    a {
+      color: $grey;
+      font-weight: bold;
+      display: block;
+      margin: 10px;
+    }
   }
 }
 
