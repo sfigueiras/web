@@ -100,11 +100,55 @@ TEAM PAGE
     color: $primary;
     flex: 1 1 100%;
   }
+
+  .arrow {
+    transition: transform .4s ease-in;
+  }
 }
 
 .board-member {
   background-color: #306;
   color: white;
+
+  .bio {
+    max-width: 60%;
+    text-align: center;
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  .extra-info {
+    transition: all .2s;
+    max-height: 0;
+    opacity: 0;
+  }
+
+  .country {
+    margin: 0;
+    color: $secondary;
+  }
+
+  .member-picture {
+    transition: all .3s;
+    max-height: 150px;
+  }
+
+  &:hover, &:active {
+    .extra-info {
+      max-height: initial;
+      opacity: 1;
+    }
+
+    .member-picture {
+      max-height: 0;
+      width: 0;
+      border: 0;
+    }
+
+    .arrow {
+      transform: rotate(180deg);
+    }
+  }
 }
 
 .how-we-work {

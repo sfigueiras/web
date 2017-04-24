@@ -46,31 +46,36 @@
         {
             "name": "Juan José Figueiras",
             "profile": "INNOVATION MENTOR",
-            "bio": "",
+            "bio": "Developing customer amazing relationship and memorable stories, driving to scale",
+            "country": "ARGENTINA",
             "picture": "images/team/juanjo.jpg"
         },
         {
             "name": "Adrián Mastronardi",
             "profile": "DIGITAL BUSINESS",
-            "bio": "Digital Business Director and Mentor (Argentina)",
+            "bio": "Digital Business Director and Mentor",
+            "country": "ARGENTINA",
             "picture": "images/team/adrian.jpg"
         },
         {
             "name": "Emilio Panighetti",
             "profile": "TECHNICAL ADVISOR",
-            "bio": "Techinal Guru. Senior Sofware Engineer (USA)",
+            "bio": "Techinal Guru. Senior Sofware Engineer",
+            "country": "USA",
             "picture": "images/team/emilio.jpg"
         },
         {
             "name": "Juan Gasca",
             "profile": "DESIGN & INNOVATION",
-            "bio": "Business Innovation Guru. Business Advisor. Mentor (SPAIN)",
+            "bio": "Business Innovation Guru. Business Advisor. Mentor",
+            "country": "SPAIN",
             "picture": "images/team/juan.jpg"
         },
         {
             "name": "Pascual Aparicio",
             "profile": "EUROPE BUSINESS DEVELOPER",
-            "bio": "Madrid International LAB Manager. Greater New York City Area (SPAIN)",
+            "bio": "Madrid International LAB Manager. Greater New York City Area",
+            "country": "SPAIN",
             "picture": "images/team/pascual.jpg"
         }
     ]
