@@ -1,9 +1,15 @@
 {
-     "stylesheet": "services",
-     "title": "Plan to suit your project needs",
-     "description": "Cool and cross browser web apps. Shiny and efficient Android and IOS apps. Elegant and minimal wearable apps. Build and operate your IT solutions in an agile and simple way. Lets bring your projects to life, our team will help you develop or improve your product in the most effective way.",
-     "offers": [
-         {
+    "stylesheet": "services",
+    "stylesheets": [{
+            "href": "vendor/unslider-master/dist/css/unslider.css"
+        },
+        {
+            "href": "vendor/unslider-master/dist/css/unslider-dots.css"
+        }
+    ],
+    "title": "Plan to suit your project needs",
+    "description": "Cool and cross browser web apps. Shiny and efficient Android and IOS apps. Elegant and minimal wearable apps. Build and operate your IT solutions in an agile and simple way. Lets bring your projects to life, our team will help you develop or improve your product in the most effective way.",
+    "offers": [{
             "name": "MOCK UP",
             "question": "Do you want to show your idea?",
             "icon": "images/mockup-icon.png",
@@ -28,47 +34,49 @@
             "description": "Minimum product that allows to represent in a clear and fluid form, the product or service that you offer. ",
             "descriptionCont": "Our team love to build top-notch products, relying on science and technology, continuously improving the technology content of products delivererd, for customers and companies to create a higher market value."
         }
-     ],
-     "boxing": {
-         "title": "Boxing offers",
-         "description": "Perhaps you already know what you are looking for your project. ",
-         "claim": "Pick one and reach the top!",
-         "offers": [
-            {
+    ],
+    "boxing": {
+        "title": "Boxing offers",
+        "description": "Perhaps you already know what you are looking for your project. ",
+        "claim": "Pick one and reach the top!",
+        "offers": [{
                 "name": "MOCK UP",
                 "class": "square",
-                "description": "HTML5 with CSS3 responsive to visualize idea and general theme both in web and mobile."
+                "description": "HTML5 with CSS3 responsive to visualize idea and general theme both in web and mobile.",
+                "time": "1 month"
             },
             {
                 "name": "F. PROTOTYPE",
                 "class": "square lighter",
-                "description": "Web in HTML5 with CSS3 responsive and Javascript to test the concept both web and mobile."
+                "description": "Web in HTML5 with CSS3 responsive and Javascript to test the concept both web and mobile.",
+                "time": "3 months"
             },
             {
                 "name": "MVP LITE",
                 "class": "square lighter",
-                "description": "Manage systems that include discharge, drops and modifications.Standard functionalities in this type of applications and transactional interfaces.Backend + Mobile Android or Web."
+                "description": "Manage systems that include discharge, drops and modifications.Standard functionalities in this type of applications and transactional interfaces.Backend + Mobile Android or Web.",
+                "time": "6 months"
             },
             {
                 "name": "MVP ADVANCED",
                 "class": "square",
-                "description": "Real-time applications. State-of-the-art technology and/or experience  (ex VR, IoT, Web, Bluetooth)  Contributions of R&D of ubykuo labs. Integration with existing services. Public APIs development."
+                "description": "State-of-the-art technology and/or experience  (ex VR, IoT, PWA's, Real Time)  Contributions of R&D of ubykuo labs. Integration with existing services.",
+                "time": "6 months"
             }
         ]
-     },
-     "trust": {
-         "title": "They trust us",
-         "quote": "Acá va a ir alguna cita respecto a la experiencia de trabajo de algún cliente",
-         "client": "Cliente Roberto Planta"
-     },
-    "clients": [
-        { 
+    },
+    "trust": {
+        "title": "They trust us",
+        "quote": "Acá va a ir alguna cita respecto a la experiencia de trabajo de algún cliente",
+        "client": "Cliente Roberto Planta"
+    },
+    "clients": [{
             "icon": "images/clients/thinkers-logo-bgger.png",
-            "alt": "thinkers logo" 
+            "alt": "thinkers logo"
         },
-        { 
+        {
             "icon": "images/clients/synerq-logo.png",
-            "alt": "synerq logo" 
+            "alt": "synerq logo"
         }
     ]
 }

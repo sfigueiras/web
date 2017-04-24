@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", ready, false);
     lastScrollTop = scrollTop();
     
     // Bind events for all devices
-    document.addEventListener('scroll', trackEnd, false);
+    // document.addEventListener('scroll', trackEnd, false);
 
     // Bind events for tablet
     if (mq.matches) {

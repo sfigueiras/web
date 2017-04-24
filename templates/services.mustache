@@ -1,154 +1,199 @@
+ {{> _navigation}} 
+<section class="landing center">
 
-    {{> _navigation}}
-    <section class="landing center">
+    <h1>{{ title }}</h1>
+    <p>{{ description }}
+    </p>
+    <a href="contact.html" class="get-in-touch link-secondary white">+get in touch!</a>
+</section>
 
-        <h1>{{ title }}</h1>
-        <p>{{ description }}
-        </p>
-        <a href="contact.html" class="get-in-touch link-secondary white">+get in touch!</a>
-    </section>
+<div id="mobile-nav-hide"></div>
 
-    <div id="mobile-nav-hide"></div>
-    
-    <div class="parallax-surface">
-        <div id="parallax" class="parallax-services"></div>
-        
-        <section class="offers">
-            {{#offers}}
-            <div class="offer">
-                <div class="question">{{ question }}</div>
+<div class="parallax-surface">
+    <div id="parallax" class="parallax-services"></div>
 
-                <div class="overlapped-heading">
+    <section class="offers">
+        {{#offers}}
+        <div class="offer">
+            <div class="question">{{ question }}</div>
+
+            <div class="overlapped-heading">
+                <h1 class="title-tablet">{{ name }}</h1>
+                <a href="/contact.html">+ Yes I do!</a>
+            </div>
+
+            <div class="content">
+                <div class="heading">
                     <h1 class="title-tablet">{{ name }}</h1>
-                    <a href="/contact.html">+ Yes I do!</a>
+                    <hr class="left tablet">
+                    <img class="icon" src="{{ icon }}" alt="{{ icon-alt }}">
                 </div>
 
-                <div class="content">
-                    <div class="heading">
-                        <h1 class="title-tablet">{{ name }}</h1>
-                        <hr class="left tablet">
-                        <img class="icon" src="{{ icon }}" alt="{{ icon-alt }}">
-                    </div>
+                <h1 class="title">{{ name }}</h1>
 
-                    <h1 class="title">{{ name }}</h1>
+                <hr class="left">
 
-                    <hr class="left">
+                <div class="description">
+                    <h4 class="question-tablet">{{ question }}</h4>
+
+                    <p><b>{{ description }}</b>{{ descriptionCont }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {{/offers}}
+        <div id="intersection" data-mobile-down="purple" data-mobile-up="purple" data-tablet-down-class="purple" data-tablet-up-class="white"></div>
+    </section>
+    <section class="boxing-offers">
+        <h1>{{ boxing.title }}</h1>
+
+        <div class="subparagraph">
+            <div class="offer-phrase-tablet">
+                <h1>{{ boxing.title }}</h1>
+                <p>
+                    {{ boxing.description }}<br class="break"><br class="break"> Here we show different offers of digital
+                    products and services. <br class="break"><br class="break"> Every offer can be changed in order your
+                    needs and goals.<br class="break">
+                    <br> {{ boxing.claim }}
+                    <br>
+                    <br>
+                    <a href="/contact.html" class="link">+ Get in touch!</a>
+                </p>
+            </div>
+
+            <div class="boxing-offers-tablet">
+                {{# boxing.offers }}
+                <div class="{{ class }}" onclick="toggleBoxingOffer(this)">
+                    <img class="arrow down" src="images/arrow-grey.png" alt="green arrow pointing down" />
+                    <h3>{{ name }}</h3>
 
                     <div class="description">
-                        <h4 class="question-tablet">{{ question }}</h4>
-
-                        <p><b>{{ description }}</b>{{ descriptionCont }}
-                        </p>
+                        <a href="/contact.html">+ I want it!</a>
+                        <p>{{ description }}</p>
                     </div>
                 </div>
+                {{ /boxing.offers }}
             </div>
-            {{/offers}}
-            <div id="intersection" data-mobile-down="purple" data-mobile-up="purple" data-tablet-down-class="purple" data-tablet-up-class="white"></div>
-        </section>
-        <section class="boxing-offers">
-            <h1>{{ boxing.title }}</h1>
+        </div>
 
-            <div class="subparagraph">
-                <div class="offer-phrase-tablet">
-                    <h1>{{ boxing.title }}</h1>
-                    <p>
-                        {{ boxing.description }}<br class="break"><br class="break">                    Here we show different offers of digital products and services. <br class="break"><br class="break">                    Every offer can be changed in order your needs and goals.<br class="break">
-                        <br> {{ boxing.claim }}
-                        <br>
-                        <br>
-                        <a href="/contact.html" class="link">+ Get in touch!</a>
-                    </p>
-                </div>
+        <div id="scrolling" class="carrousel">
+            <ul>
+                {{# boxing.offers }}
+                <li class="boxing-offer">
+                    <div class="body">
+                        <h2>{{ name }}</h2>
 
-                <div class="boxing-offers-tablet">
-                    {{# boxing.offers }}
-                        <div class="{{ class }}" onclick="toggleBoxingOffer(this)">
-                            <img class="arrow down" src="images/arrow-grey.png" 
-                                alt="green arrow pointing down" />
-                            <h3>{{ name }}</h3>
-                            
-                            <div class="description">
-                                <a href="/contact.html">+ I want it!</a>
-                                <p>{{ description }}</p>
-                            </div>
-                        </div>
-                    {{ /boxing.offers }}
-                </div>
+                        <p> {{ description }}
+                        </p>
+                    </div>
+                    <div class="time">
+                        <h1>{{ time }}</h1>
+                    </div>
+                </li>
+                {{/ boxing.offers }}
+            </ul>
+
+        </div>
+    </section>
+
+    <section class="they-trust-us">
+        <h1>{{ trust.title }}</h1>
+
+        <div class="client-quote">
+            <h4>“{{ trust.quote }}”</h4>
+            <p>{{ trust.client }}</p>
+        </div>
+
+        <div class="clients">
+            {{#clients}}
+            <div class="client">
+                <img src="{{icon}}" alt="{{alt}}" />
             </div>
+            {{/clients}}
 
-            <div class="carrousel">
-                <div class="boxing-offer">
-                    <h2>Web layout</h2>
+        </div>
+    </section>
 
-                    <p> Prototype Web in HTML5 with CSS3 responsive and Javascript to test the concept both web and mobile.
-                    </p>
-                </div>
-                <div class="price">
-                    <h1>USD 4800</h1>
-                    <p>1 month</p>
-                </div>
+</div>
 
-                <div class="slider">
-                    <svg width="40" height="30" class="circle selected">
-                        <circle cx="15" cy="15" r="12.5" />
-                    </svg>
-                    <svg width="40" height="30" class="circle">
-                        <circle cx="15" cy="15" r="12.5" />
-                    </svg>
-                    <svg width="40" height="30" class="circle">
-                        <circle cx="15" cy="15" r="12.5" />
-                    </svg>
-                    <svg width="40" height="30" class="circle">
-                        <circle cx="15" cy="15" r="12.5" />
-                    </svg>
-                </div>
-            </div>
-        </section>
+<script async src="js/Parallax.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<!--script src="vendor/itemslide/itemslide.min.js"></script-->
+<script src="vendor/unslider-master/dist/js/unslider-min.js"></script>
+<script src="http://stephband.info/jquery.event.move/js/jquery.event.move.js"></script>
+<script src="http://stephband.info/jquery.event.swipe/js/jquery.event.swipe.js"></script>
 
-        <section class="they-trust-us">
-            <h1>{{ trust.title }}</h1>
+<script>
+    var tabletAndHigher = window.matchMedia("(min-width: 641px)");
 
-            <div class="client-quote">
-                <h4>“{{ trust.quote }}”</h4>
-                <p>{{ trust.client }}</p>
-            </div>
-
-            <div class="clients">
-                {{#clients}}
-                    <div class="client">
-                        <img src="{{icon}}" alt="{{alt}}" />
-                    </div> 
-                {{/clients}}
-                
-            </div>
-        </section>
-
-    </div>
-    
-    <script src="js/Parallax.js"></script>
-
-    <script>
-        var tabletAndHigher = window.matchMedia( "(min-width: 641px)" );
-
-        if (tabletAndHigher.matches) {
-            function toggleBoxingOffer(element) {
-                element.classList.toggle('active');
-            }
+    if (tabletAndHigher.matches) {
+        function toggleBoxingOffer(element) {
+            element.classList.toggle('active');
         }
-        
-        var parallax = new Parallax([
-            {
-                offset: -0.4,
-                selector: '#parallax'
-            }
-        ]);
+
+        var parallax = new Parallax([{
+            offset: -0.4,
+            selector: '#parallax'
+        }]);
 
         document.addEventListener('DOMContentLoaded', parallax.onScroll.bind(parallax), true);
-        
-        
-    </script>
-    {{> _footer }}
+    } else {
+        var carousel, currentItem;
+
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     carousel = $("#scrolling ul");
+        //     carousel.itemslide({
+        //         parent_width: true,
+        //         disable_clicktoslide: true,
+        //         one_item: true
+        //     });
+            
+        //     currentItem = getItemByIndex(carousel.getActiveIndex());
+        //     // currentItem.classList.toggle('selected');
+
+        //     carousel.css({ opacity: 1 });
+
+        //     carousel.on('changeActiveIndex', function(e) {
+                
+        //         if (carousel.getActiveIndex() !== parseInt(currentItem.dataset.index)) {
+        //             currentItem.classList.toggle('selected');
+        //             currentItem = getItemByIndex(carousel.getActiveIndex());
+        //             currentItem.classList.toggle('selected');            
+        //         } 
+
+
+        //     });
+
+        //     function getItemByIndex(index) {
+        //         return document.getElementById('index-' + index);
+        //     }
+        // }, false);
+
+        jQuery(document).ready(function($) {
+			var slider = $('#scrolling').unslider({
+                speed: 200,
+                delay: 4000,
+                autoplay: true,
+                arrows: false
+            });
+
+            slider.on('unslider.change', function(event, index, slide) {
+            });
+		});
+
+
+        /**
+         * Go to the carousel item with the given index.
+         */
+        function goTo(index) {
+            carousel.gotoSlide(index);
+        }
+    }
+
+</script>
+{{> _footer }}
 
 <script>
     changeNavColor('white');
+
 </script>

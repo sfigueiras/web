@@ -13,14 +13,12 @@ if (mq.matches) {
   ]);
 
   document.addEventListener("DOMContentLoaded", parallax.onScroll.bind(parallax), false);
+  document.addEventListener("DOMContentLoaded", function() {
+    var carousel = $("#scrolling ul");
+    carousel.itemslide();
 
-  var carousel = $("#scrolling ul");
-  carousel.itemslide({
-    start: 1,
-  });
-
-  carousel.css({ opacity: 1 });
-  
+    carousel.css({ opacity: 1 });
+  }, false);
 } else {
   function toggleOfferDescription(element) {
     element.parentElement.parentElement.classList.toggle('extended')

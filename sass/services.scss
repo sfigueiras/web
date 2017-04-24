@@ -68,8 +68,11 @@ body, html {
 }
 
 .boxing-offers {
+    $carousel-height: 320px;
+    
     @extend .section;
     @include align-items(center);
+    height: $carousel-height + 200px;
 
     background-color: transparent;
     text-align: center;
@@ -81,23 +84,52 @@ body, html {
     .subparagraph { display: none; }
 
     .boxing-offer {
+      .body {
         background-color: $primary;
         background: linear-gradient(to top, $primary, transparentize($primary, 0.2));
         color: white;
         margin: 0 20px;
         padding: 20px 30px;
-        min-height: 220px;
+        height: 250px;
+      }
+      
+      .time {
+          color: $primary;
+
+          h1, p {
+              margin: 20px 0;
+          }
+      }
     }
 
-    .price {
-        color: $primary;
 
-        h1, p {
-            margin: 20px 0;
-        }
-    }
+    // #scrolling { /* Carousel Frame */
+    //   overflow: hidden;
+    //   height: 240px;
+    //   width: 90%;
+      
+    //   ul {
+    //     opacity: 0;
+    //     transition: opacity .3s;
+    //     margin: 0;
+    //     padding: 0;
+    //     width: 90vw;
+    //     list-style-type: none;
+    //     position: absolute;
+    //     -webkit-transform-style: preserve-3d;
+    //     -ms-transform-style: preserve-3d;
+    //     transform-style: preserve-3d;
+    //     height: $carousel-height;
+
+    //     li {
+    //         float: left;
+    //     }
+    //   }
+    // }
+
 
     .slider {
+        margin-top: 100px; 
         padding: 20px 0;
     }
 
@@ -107,6 +139,23 @@ body, html {
         &.selected {
             fill: $secondary;
         }
+    }
+}
+
+.unslider-arrow {
+  display: none;
+}
+
+.unslider-nav ol li {
+    background-color: $grey-darker;
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    border-radius: 100%;
+    border: none;
+
+    &.unslider-active {
+      background-color: $secondary;
     }
 }
 
