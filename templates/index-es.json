@@ -1,7 +1,12 @@
 {
-    "title": "Llega a la cima",
-    "claim": "WE CAN HELP YOU MAKE IT HAPPEN",
     "stylesheet": "landing",
+    "title": "Llega a la cima",
+    "claim": "TE AYUDAMOS A HACERLO REALIDAD",
+    "custom": "Planifiquemos para ajustarnos a tus necesidades",
+    "want": "Quiero esto",
+    "swipe": "Desliza abajo!",
+    "moreInfo": "Más info!",
+    "learn": "Aprendé más",
     "offers": [
         {
             "name": "MOCK UP",

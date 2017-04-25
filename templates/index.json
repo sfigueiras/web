@@ -1,7 +1,12 @@
 {
+    "stylesheet": "landing",
     "title": "Reach the top",
     "claim": "WE CAN HELP YOU MAKE IT HAPPEN",
-    "stylesheet": "landing",
+    "custom": "Let's plan to suite tour project's needs",
+    "want": "I want it",
+    "swipe": "Swipe down!",
+    "moreInfo": "More info!",
+    "learn": "Learn more",
     "offers": [
         {
             "name": "MOCK UP",

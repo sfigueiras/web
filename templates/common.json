@@ -1,10 +1,32 @@
 {
-    "services": "SERVICES",
-    "team": "THE TEAM",
-    "contact": "CONTACT US",
-    "join": "JOIN",
+    "meta": {
+        "keywords": "SOFTWARE, SOFTWARE DEVELOPMENT, DIGITAL, TECHNOLOGY",
+        "description": "Your smart business, everytime, everywhere.",
+        "lang": "en"
+    },
+    "home": "/",
+    "services": {
+        "content": "SERVICES",
+        "link": "/services.html"
+    },
+    "team": {
+        "content": "THE TEAM",
+        "link": "/team.html"
+    },
+    "contact": {
+        "content": "CONTACT US",
+        "header": "Contactanos",
+        "link": "/contact.html"
+    },
+    "join": {
+        "content": "JOIN",
+        "header": "Sumate",
+        "link": "/join.html"
+    },
+    "send": "Send",
     "languageLink": "/index-es.html",
     "languageLinkContent": "VER EN ESPAÑOL",
     "newProjectLinkContent": "START A PROJECT",
-    "newProjectLink": "/contact.html"
+    "newProjectLink": "/contact.html",
+    "social": "Get social with us"
 }

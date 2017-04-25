@@ -56,19 +56,9 @@ LANDING SECTION
     margin-bottom: 20px;
     text-align: center;
     color: $secondary;
-    animation: .8s swipeDown 1s infinite;
     p {
       margin-bottom: 5px;
     }
-  }
-}
-
-@keyframes swipeDown {
-  0% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0);
   }
 }
 
@@ -146,6 +136,7 @@ OFFERS SECTION
     }
     .content .more-info {
       display: none;
+      font-size: 1.5em;
     }
   }
 }

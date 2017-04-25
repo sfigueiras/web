@@ -105,6 +105,7 @@ CUSTOM FILE INPUT
 .file-input {
   padding: 10px 0 10px 10px;
   border: 2px solid #DADADA;
+  cursor: pointer;
   border-radius: 5px;
   color: #DADADA;
   min-width: 85%;
@@ -335,6 +336,11 @@ footer .social {
   flex: 1.1;
   color: $grey;
   text-align: center;
+
+  .follow {
+    margin-bottom: 5px;    
+  }
+
   img:not(:last-child) {
     margin-right: 5px;
   }

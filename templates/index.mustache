@@ -16,7 +16,7 @@
     </div>
 
     <div class="swipe-down">
-      <p>Swipe down!</p>
+      <p>{{ swipe }}</p>
       <img class="arrow down" src="images/arrow-green.png" alt="swipe down arrow">
     </div>
   </div>
@@ -26,13 +26,14 @@
   <div class="parallax-surface">
     <div id="intersection" data-mobile-down="purple" data-mobile-up="purple" data-tablet-down-class="white" data-tablet-up-class="purple"></div>
     <div id="parallax" class="parallax"></div>
+    
     <!-- Offers -->
     
     <article class="offer custom">
       <div class="content">
-        <h1>Let's plan to suite your projects need </h1>
-        <a class="button-secondary" href="/contact.html">I want it</a>
-        <a class="more-info link-secondary" href="services.html">+ more info!</a>
+        <h1>{{ custom }} </h1>
+        <a class="button-secondary" href="/contact.html">{{ want }}</a>
+        <a class="more-info link-secondary" href="services.html">+ {{ moreInfo }}</a>
       </div>
     </article>
 
@@ -48,11 +49,11 @@
               <p>{{description}}</p>
             </div>
             <img  onclick="toggleOfferDescription(this)" class="arrow" src="images/arrow-dark-purple.png" alt="show less arrow">
-            <a class="learn-more" href="services.html">+Learn more</a>
+            <a class="learn-more" href="services.html">+{{ learn }}</a>
           </div>
 
           <footer class="action">
-            <a class="button" href="/contact.html">I want it</a>
+            <a class="button" href="/contact.html">{{ want }}</a>
           </footer>
         </article>
 
@@ -82,7 +83,7 @@
       <section class="contact-us">
         <hr>
         <div class="content">
-          <h1>Contact us</h1>
+          <h1>{{ contact.header }}</h1>
           <p class="contact-phrase">We are waiting for your nice words :) <br><br> Don't doubt, just ask whatever you have in mind
           </p>
         </div>
@@ -96,7 +97,7 @@
             <br>
 
             <div class="center">
-              <a class="button-secondary" href="index.html">Send</a>
+              <a class="button-secondary" href="index.html">{{ send }}</a>
             </div>
           </form>
         </div>
@@ -108,7 +109,7 @@
         <div class="background">
           <hr>
           <div class="content">
-            <h1>Join us</h1>
+            <h1>{{ join.header }}</h1>
             <p>Let's build cool stuff together</p>
           </div>
 
@@ -123,7 +124,7 @@
 
               <br>
               <div class="center">
-                <a class="button-secondary" href="index.html">Send</a>
+                <a class="button-secondary" href="index.html">{{ send }}</a>
               </div>
             </form>
           </div>

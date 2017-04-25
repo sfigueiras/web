@@ -208,8 +208,6 @@
   width: $icon-width;
 }
 
-
-
 .overlay {
   position: fixed;
   top: 0;
@@ -336,6 +334,10 @@
       }
     }
   }
+}
+
+.link-divider {
+  border-width: 2px;
 }
 
 .morph {
@@ -498,12 +500,12 @@
         }
 
         hr[align=left] {
-        display: block;
-      }
+          display: block;
+        }
 
-      hr[align=center] {
-        display: none;
-      }
+        hr[align=center] {
+          display: none;
+        }
       }
     }
 

@@ -1,10 +1,31 @@
 {
-    "services": "SERVICIOS",
-    "team": "EQUIPO",
-    "contact": "CONTACTANOS",
-    "join": "SUMATE",
+    "meta": {
+        "description": "Tu negocio inteligente, en cualquier lugar, cualquier momento.",
+        "lang": "es"
+    },
+    "home": "/index-es.html",
+    "services": {
+        "content": "SERVICIOS",
+        "link": "/services-es.html"
+    },
+    "team": {
+        "content": "EQUIPO",
+        "link": "/team-es.html"
+    },
+    "contact": {
+        "content": "CONTACTANOS",
+        "header": "Contactanos",
+        "link": "/contact-es.html"
+    },
+    "join": {
+        "content": "SUMATE",
+        "header": "Sumate",
+        "link": "/join-es.html"
+    },
+    "send": "Enviar",
     "languageLink": "/",
     "languageLinkContent": "SEE IN ENGLISH",
     "newProjectLinkContent": "EMPEZÁ UN PROYECTO",
-    "newProjectLink": "/contact-es.html"
+    "newProjectLink": "/contact-es.html",
+    "social": "Seguinos"
 }
