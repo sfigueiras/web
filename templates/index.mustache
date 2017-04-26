@@ -89,15 +89,15 @@
         </div>
 
         <div class="form-container">
-          <form class="form" action="/webformmailer.php" method="post">
+          <form class="form" action="/web/contact.php" method="post">
             <input type="text" name="company_name" placeholder="Your company name" required>
-            <input type="email" name="contact_email" placeholder="Your email adress" required>
-            <textarea name="description" placeholder="What can we do for you?" required></textarea>
+            <input type="email" name="email_address" placeholder="Your email adress" required>
+            <textarea name="message" placeholder="What can we do for you?" required></textarea>
 
             <br>
 
             <div class="center">
-              <a class="button-secondary" href="index.html">{{ send }}</a>
+              <button type="submit" class="button-secondary">{{ send }}</button>
             </div>
           </form>
         </div>
