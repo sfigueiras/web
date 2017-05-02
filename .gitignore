@@ -1,7 +1,9 @@
 node_modules/
 public/
 vendor/
+.idea/
 firebase-debug.log
+composer.lock
 src/config.php
 key.pem
 cert.pem
