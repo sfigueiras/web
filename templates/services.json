@@ -9,6 +9,7 @@
     ],
     "title": "Let's plan to suit your project needs",
     "description": "Cool and cross browser web apps. Shiny and efficient Android and IOS apps. Elegant and minimal wearable apps. Build and operate your IT solutions in an agile and simple way. Lets bring your projects to life, our team will help you develop or improve your product in the most effective way.",
+    "inTouch": "get in touch",
     "offers": [{
             "name": "MOCK UP",
             "question": "Do you want to show your idea?",
@@ -28,7 +29,7 @@
         },
         {
             "name": "MVP",
-            "question": "Or do you want you project to hit the market and get investors?",
+            "question": "Or do you want your project to hit the market and get investors?",
             "icon": "images/mvp-icon.png",
             "icon-alt": "mvp offer logo",
             "description": "Minimum product that allows to represent in a clear and fluid form, the product or service that you offer. ",
@@ -37,8 +38,20 @@
     ],
     "boxing": {
         "title": "Boxing offers",
-        "description": "Perhaps you already know what you are looking for your project. ",
-        "claim": "Pick one and reach the top!",
+        "lines": [
+            {
+                "line": "Perhaps you already know what you are looking for your project. "
+            },
+            {
+                "line": "Here we show different offers of digital products and services. "
+            },
+            {
+                "line": "Every offer can be changed in order your needs and goals."
+            },
+            {
+                "line": "Pick one and reach the top!"
+            }
+        ],
         "offers": [{
                 "name": "MOCK UP",
                 "class": "square",
@@ -78,5 +91,6 @@
             "icon": "images/clients/synerq-logo.png",
             "alt": "synerq logo"
         }
-    ]
+    ],
+    "want": "Want it"
 }

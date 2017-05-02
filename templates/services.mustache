@@ -13,7 +13,7 @@
 
     <p>{{ description }}
     </p>
-    <a href="contact.html" class="get-in-touch link-secondary white">+get in touch!</a>
+    <a href="contact.html" class="get-in-touch link-secondary white">+ {{ inTouch }}!</a>
 </section>
 
 <div id="mobile-nav-hide"></div>
@@ -60,13 +60,10 @@
             <div class="offer-phrase-tablet">
                 <h1>{{ boxing.title }}</h1>
                 <p>
-                    {{ boxing.description }}<br class="break"><br class="break"> Here we show different offers of digital
-                    products and services. <br class="break"><br class="break"> Every offer can be changed in order your
-                    needs and goals.<br class="break">
-                    <br> {{ boxing.claim }}
-                    <br>
-                    <br>
-                    <a href="/contact.html" class="link">+ Get in touch!</a>
+                    {{#boxing.lines}}
+                        {{ line }}<br class="break"><br class="break">
+                    {{/boxing.lines}}
+                    <a href="/contact.html" class="link">+ {{ inTouch }}!</a>
                 </p>
             </div>
 
@@ -77,7 +74,7 @@
                     <h3>{{ name }}</h3>
 
                     <div class="description">
-                        <a href="/contact.html">+ I want it!</a>
+                        <a href="/contact.html">+ {{ want }}!</a>
                         <p>{{ description }}</p>
                     </div>
                 </div>
@@ -125,7 +122,7 @@
 
 </div>
 
-<script async src="js/Parallax.js"></script>
+<script src="js/Parallax.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="vendor/unslider-master/dist/js/unslider-min.js"></script>
 <script src="http://stephband.info/jquery.event.move/js/jquery.event.move.js"></script>

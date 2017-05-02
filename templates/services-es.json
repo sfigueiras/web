@@ -1,63 +1,76 @@
 {
      "stylesheet": "services",
-     "title": "Plan to suit your project needs",
-     "description": "Cool and cross browser web apps. Shiny and efficient Android and IOS apps. Elegant and minimal wearable apps. Build and operate your IT solutions in an agile and simple way. Lets bring your projects to life, our team will help you develop or improve your product in the most effective way.",
+     "title": "Planifiquemos las necesidades de su/tu proyecto",
+     "description": "Aplicaciones basadas en tecnologias de punta, elegantes y mínimas. Aplicaciones Android y IOS memorable y eficientes. Construya y opere sus soluciones de IT de una manera ágil y simple. Hagamos que sus proyectos cobren vida, nuestro equipo le ayudará a desarrollar o mejorar su producto/servicio de la manera más eficaz.",
+     "inTouch": "Contactanos",
      "offers": [
          {
-            "name": "MOCK UP",
-            "question": "Do you want to show your idea?",
+            "name": "MAQUETA",
+            "question": "¿Querés mostrar tu idea?",
             "icon": "images/mockup-icon.png",
-            "icon-alt": "mockup offer logo",
-            "description": "Graphic representation of the initial idea that does not include dynamic content. ",
-            "descriptionCont": "The best possible model of your product, to provide at least part of the functionality of a system and enable testing on users. We are much more than a software company, and we care about your users. They will be the ones that will make your idea a hit! Mock-ups are a very important part in the process of designing a digital product, to make it the most profitable and efficient as possible."
+            "icon-alt": "icono de maqueta",
+            "description": "Representación gráfica de la idea inicial que no incluye contenido dinámico. ",
+            "descriptionCont": "El mejor modelo posible de su producto, con minimo comportamiento para que pueda validarlo con los usuarios. Somos mucho más que una empresa de software, y nos preocupamos por sus usuarios. Ellos serán los que harán de su idea un éxito! Las maquetas son una parte muy importante en el proceso de diseño de un producto digital, para que sea lo más rentable y eficiente posible."
 
         },
         {
-            "name": "PROTOTYPE",
-            "question": "Do you want to give a try to your idea?",
+            "name": "PROTOTIPO",
+            "question": "¿Querés comprobar si tu idea funciona?",
             "icon": "images/fprototype-icon.png",
-            "icon-alt": "prototype offer logo",
-            "description": "Basic and fundamental behavior of the project",
-            "descriptionCont": ", excluding generation of dynamic content and server-side/cloud storage. The basic and most efficient model of the system that would give life to your product. The first step into developing a digital service, that allows the firsts iterations to build the more stable version possible. Prototyping has several benefits, as the developers and designers can get valuable feedback from the users and yourself!"
+            "icon-alt": "icono de prototipo",
+            "description": "Comportamiento fundamental del proyecto. ",
+            "descriptionCont": "Una nueva iteración de la maqueta, incluyendo el comportamiento más avanzado y la funcionalidad para comenzar a dar vida a su idea."
         },
         {
             "name": "MVP",
-            "question": "Or do you want you project to hit the market and get investors?",
+            "question": "¿O querés llevar tu proyecto al mercado y/o conseguir inversores?",
             "icon": "images/mvp-icon.png",
-            "icon-alt": "mvp offer logo",
-            "description": "Minimum product that allows to represent in a clear and fluid form, the product or service that you offer. ",
-            "descriptionCont": "Our team love to build top-notch products, relying on science and technology, continuously improving the technology content of products delivererd, for customers and companies to create a higher market value."
+            "icon-alt": "icono de MVP",
+            "description": "Versión inicial que le permite ofrecer de forma clara y fluida el producto o servicio digital que ofrece bien construido y escalable desde el primer momento. ",
+            "descriptionCont": "Nuestro equipo ama construir productos de primera calidad, basados en la ciencia y la tecnología, mejorando continuamente el contenido de la tecnología de los productos/servicios entregados, para que clientes y las empresas puedan crear mayor valor de mercado. "
         }
      ],
      "boxing": {
-         "title": "Boxing offers",
-         "description": "Perhaps you already know what you are looking for your project. ",
-         "claim": "Pick one and reach the top!",
-         "offers": [
+         "title": "Ofertas",
+         "lines": [
             {
-                "name": "MOCK UP",
-                "class": "square",
-                "description": "HTML5 with CSS3 responsive to visualize idea and general theme both in web and mobile."
+                "line": "Sabe lo que está buscando ..."
             },
             {
-                "name": "F. PROTOTYPE",
+                "line": "Aquí puede ver diferentes ofertas para construir productos y servicios digitales."
+            },
+            {
+                "line": "Cada oferta se puede adaptar en funcion de sus necesidades y metas."
+            },
+            {
+                "line": "Elija uno y alcancemos a la cima!"
+            }
+        ],
+         "offers": [
+            {
+                "name": "MAQUETA",
+                "class": "square",
+                "description": "HTML5 con CSS3 sensible a visualizar la idea y el tema general, tanto en la web como móvil."
+            },
+            {
+                "name": "PROTOTIPO",
                 "class": "square lighter",
-                "description": "Web in HTML5 with CSS3 responsive and Javascript to test the concept both web and mobile."
+                "description": "Web en HTML5 con CSS3 sensible y Javascript para probar el concepto web y móvil."
             },
             {
                 "name": "MVP LITE",
                 "class": "square lighter",
-                "description": "Manage systems that include discharge, drops and modifications.Standard functionalities in this type of applications and transactional interfaces.Backend + Mobile Android or Web."
+                "description": "Manejo de sistemas que incluyen descarga, caídas y modificaciones. Funcionalidades estándar en este tipo de aplicaciones y interfaces transaccionales. Backend + Mobile Android o Web."
             },
             {
                 "name": "MVP ADVANCED",
                 "class": "square",
-                "description": "Real-time applications. State-of-the-art technology and/or experience  (ex VR, IoT, Web, Bluetooth)  Contributions of R&D of ubykuo labs. Integration with existing services. Public APIs development."
+                "description": "Tecnología y/o experiencia de vanguardia (ex VR, IoT, PWA's, Tiempo Real) Contribuciones de I+D de los laboratorios ubykuo. Integración con los servicios existentes."
             }
         ]
      },
      "trust": {
-         "title": "They trust us",
+         "title": "Nuestros clientes",
          "quote": "Acá va a ir alguna cita respecto a la experiencia de trabajo de algún cliente",
          "client": "Cliente Roberto Planta"
      },
@@ -70,5 +83,6 @@
             "icon": "images/clients/synerq-logo.png",
             "alt": "synerq logo" 
         }
-    ]
+    ],
+    "want": "Lo quiero"
 }

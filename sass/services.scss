@@ -14,7 +14,7 @@ body, html {
     padding: 110px 50px 0 50px;
 
     p {
-      max-width: 70vw;
+      padding: 0 5vw;
     }
     
     .get-in-touch {
@@ -67,9 +67,8 @@ body, html {
     }
 }
 
+$carousel-height: 320px;
 .boxing-offers {
-    $carousel-height: 320px;
-    
     @extend .section;
     @include align-items(center);
     height: $carousel-height + 200px;
@@ -81,7 +80,13 @@ body, html {
         color: $primary;
     }
     
-    .subparagraph { display: none; }
+    .subparagraph { 
+      display: none; 
+      
+      .offer-phrase-tablet {
+        p { text-align: left; }
+      }
+    }
 
     .boxing-offer {
       .body {
@@ -149,9 +154,6 @@ body, html {
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
-        -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
         -webkit-box-align: baseline;
         -webkit-align-items: baseline;
         -ms-flex-align: baseline;
@@ -194,43 +196,51 @@ body, html {
 .parallax-services {
   @extend .parallax;
   background-color: white;
-  top: initial;
+  top: 400px;
   background-image: url('../images/Parallax2.png');
 }
 
 @media (min-width: 641px) {
 
+  .unslider {
+    display: none;
+  }
 
-.clients {
-  position: relative;
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 30px;
-  clear: both;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-  -ms-flex-align: end;
-  align-items: flex-end;
-  text-align: center;
-}
+  .landing p {
+    padding: 0 10vw;
+  }
+
+
+  .clients {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 30px;
+    clear: both;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    text-align: center;
+  }
 
 /*******************************************************
 NAV COLOR CHANGE BREAKPOINT
-*******************************************************/
+***********/
 
 #intersection {
   position: absolute;
@@ -255,41 +265,6 @@ OFFERS
     background-color: transparent;
     margin: 20px 0;
     flex-wrap: wrap;
-    
-    // &:active, &:visited, &:hover {
-    //   background-color: #EDEDED;
-
-    //   .content {
-    //     .heading .title-tablet {
-    //       opacity: 0;
-    //     }
-        
-    //     .description .question-tablet, {
-    //       opacity: 0;
-    //     }
-    //   }
-      
-    //   .overlapped-heading {
-    //     background-color: #306;
-    //     color: #38E090;
-    //     position: absolute;
-    //     left: 20px;
-    //     right: 20px;
-    //     display: flex;
-    //     align-items: center;
-        
-    //     h1 {
-    //       flex: 0.9;
-    //     }
-        
-    //     a {
-    //       flex: 1;
-    //       font-size: 1.2em;
-    //       color: white;
-    //       text-align: left;
-    //     }
-    //   }
-    // }
 
     .content {
       display: flex;
@@ -322,6 +297,10 @@ OFFERS
     }
     
   }
+}
+
+.boxing-offers {
+  height: $carousel-height + 400px;
 }
 
 .description {
@@ -392,8 +371,15 @@ OFFERS
 .offer-phrase-tablet {
 
   p {
+    text-align: center !important;
     background-color: rgba(255,255,255, 0.4);
     .break { display: none; }
+  }
+  
+  .link {
+    display: block;
+    margin: 20px 0;
+    color: $primary;
   }
 }
 
@@ -418,11 +404,6 @@ BOXING OFFERS
       .offer-phrase-tablet {
         h1 {
           display: none;
-        }
-
-        p a {
-          margin-bottom: 20px;
-          display: inline-block;
         }
       }
       
@@ -467,6 +448,10 @@ THEY TRUST US
 }
 
 @media (min-width: 1024px) {
+
+  .landing p {
+    padding: 0;
+  }
 
 /*******************************************************
 NAV COLOR CHANGE BREAKPOINT

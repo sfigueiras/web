@@ -10,7 +10,7 @@
     
     <div class="claim">
       <hr class="left">
-      <h1 class="title">{{title}}.</h1>
+      <h1 class="title">{{title}}</h1>
       <hr class="left">
       <p class="slogan">{{claim}}</p>
     </div>
@@ -45,7 +45,7 @@
         <a class="more-info link-secondary" href="services.html">+ {{ moreInfo }}</a>
       </div>
 
-      <hr style="margin-top: 80px"><h1>BOXING OFFERS</h1>
+      <hr style="margin-top: 80px"><h1>{{ boxing }}</h1>
     </article>
 
     <section class="offers">
@@ -95,15 +95,15 @@
         <hr>
         <div class="content">
           <h1>{{ contact.header }}</h1>
-          <p class="contact-phrase">We are waiting for your nice words :) <br><br> Don't doubt, just ask whatever you have in mind
+          <p class="contact-phrase">{{ contact.phrase }} <br><br> {{ contact.assure }}
           </p>
         </div>
 
         <div class="form-container">
           <form class="form" id="f_contact" action="/web/contact.php" method="post">
-            <input type="text" name="company_name" placeholder="{{ placeholder.company }}" required>
-            <input type="email" name="email_address" placeholder="{{ placeholder.email }}" required>
-            <textarea name="message" placeholder="{{ placeholder.message }}" required></textarea>
+            <input type="text" name="company_name" placeholder="{{contact.company}}" required>
+            <input type="email" name="email_address" placeholder="{{ contact.email }}" required>
+            <textarea name="message" placeholder="{{ contact.message }}" required></textarea>
 
             <br>
 
@@ -123,7 +123,7 @@
           <hr>
           <div class="content">
             <h1>{{ join.header }}</h1>
-            <p>Let's build cool stuff together</p>
+            <p>{{ together }}</p>
           </div>
 
           <div class="form-container">
@@ -131,7 +131,7 @@
               <div class="custom-file-input">
                 <input type="file" name="adjunto" id="file">
                 <div class="wrapper">
-                  <label for="file" class="file-input">{{ upload }} <i class="icon fa fa-arrow-up " aria-hidden="true"></i></label>
+                  <label for="file" class="file-input">{{join.placeholder}} <i class="icon fa fa-arrow-up " aria-hidden="true"></i></label>
                 </div>
               </div>
 
@@ -147,8 +147,8 @@
         <div class="follow">
           <br>
           <hr class="left">
-          <h1>Follow us</h1>
-          <p>We promise not to share cat videos...</p>
+          <h1>{{ follow }}</h1>
+          <p>{{ followPhrase }}</p>
         </div>
       </section>
     </div>

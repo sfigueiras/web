@@ -4,6 +4,23 @@
         "lang": "es"
     },
     "home": "/index-es.html",
+    "targets": [
+        {
+            "first": "¿Estás ",
+            "important": "comenzando un proyecto o una empresa? ",
+            "second": "Nos encantaría asesorarte y construir pensando en forma integral desde el primer producto/servicio digital"
+        },
+        {
+            "first": "¿Necesita ",
+            "important": "optimizar",
+            "second": " y/o llevar a la nube sus aplicaciones heredadas"
+        },
+        {
+            "first": "O le gustaría ",
+            "important": "probar una de nuestras ofertas cerradas (debajo)",
+            "second": " para comenzar a trabajar con su proyecto"
+        }
+    ],
     "services": {
         "content": "SERVICIOS",
         "link": "/services-es.html"
@@ -15,17 +32,26 @@
     "contact": {
         "content": "CONTACTANOS",
         "header": "Contactanos",
-        "link": "/contact-es.html"
+        "phrase": "Quedamos a la espera de sus problemas y/o necesidades",
+        "assure": "No lo dudes, pregunta que contestaremos a la brevead",
+        "link": "/contact-es.html",
+        "company": "Nombre de tu compañía",
+        "email": "Email",
+        "message": "¿Qué podemos hacer por tí?"
     },
     "join": {
         "content": "SUMATE",
         "header": "Sumate",
-        "link": "/join-es.html"
+        "link": "/join-es.html",
+        "placeholder": "Subí tu CV!"
     },
     "send": "Enviar",
     "languageLink": "/",
-    "languageLinkContent": "SEE IN ENGLISH",
-    "newProjectLinkContent": "EMPEZÁ UN PROYECTO",
+    "languageLinkContent": "ENGLISH VERSION",
+    "newProjectLinkContent": "¿COMENZAMOS UN PROYECTO?",
     "newProjectLink": "/contact-es.html",
-    "social": "Seguinos"
+    "social": "Seguinos",
+    "follow": "SEGUINOS",
+    "followPhrase": "Prometemos no subir videos de gatos...",
+    "coffee": "¿Tomamos un café?"
 }

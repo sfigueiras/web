@@ -107,13 +107,21 @@ CUSTOM FILE INPUT
 
 .file-input {
   padding: 10px 0 10px 10px;
-  border: 2px solid #DADADA;
+  border: 2px solid #abaaaa;
   cursor: pointer;
   border-radius: 5px;
-  color: #DADADA;
+  color: #abaaaa;
   min-width: 85%;
   display: inline-block;
   text-align: left;
+  transition: all .3s;
+
+  &:hover {
+    border-color: #8c8c8c;
+    color: #8c8c8c;
+    transform: scale(1.05);
+  }
+
   .icon {
     float: right;
     font-size: 1.3em;
@@ -378,7 +386,7 @@ TABLET
 *******************************************************/
 
 @media (min-width: 641px) {
-  .content {
+  .offer.custom .content {
     width: 80%;
   }
 
