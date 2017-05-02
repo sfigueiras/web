@@ -4,7 +4,8 @@
         "phpmailer/phpmailer": "^5.2",
         "symfony/http-foundation": "^3.2",
         "symfony/var-dumper": "^3.2",
-        "swiftmailer/swiftmailer": "^5.4"
+        "swiftmailer/swiftmailer": "^5.4",
+        "google/recaptcha": "^1.1"
     },
     "authors": [
         {

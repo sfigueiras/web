@@ -9,4 +9,7 @@ define('SMTP_PORT', '25');
 define('SMTP_SECURITY', null);
 define('SMTP_USER', ''); //Gmail user@gmail.com
 define('SMTP_PASS', ''); //Gmail password
+
+define('GOOGLE_RECAPTCHA_SECRET_KEY', '');
+define('GOOGLE_RECAPTCHA_KEY', '');
 */

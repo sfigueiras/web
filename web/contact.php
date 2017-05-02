@@ -18,5 +18,8 @@ use Symfony\Component\HttpFoundation\Request;
 $request = Request::createFromGlobals();
 
 $contact = new Contact();
-$response = $contact->handle($request);
-header("Location: /");
+if($contact->handle($request)){
+    header("Location: /");
+}else{
+    header("Location: /?error");
+}
