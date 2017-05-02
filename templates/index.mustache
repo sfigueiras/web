@@ -100,15 +100,17 @@
         </div>
 
         <div class="form-container">
-          <form class="form" action="/web/contact.php" method="post">
-            <input type="text" name="company_name" placeholder="Your company name" required>
-            <input type="email" name="email_address" placeholder="Your email adress" required>
-            <textarea name="message" placeholder="What can we do for you?" required></textarea>
+          <form class="form" id="f_contact" action="/web/contact.php" method="post">
+            <input type="text" name="company_name" placeholder="{{ placeholder.company }}" required>
+            <input type="email" name="email_address" placeholder="{{ placeholder.email }}" required>
+            <textarea name="message" placeholder="{{ placeholder.message }}" required></textarea>
 
             <br>
 
             <div class="center">
-              <button type="submit" class="button-secondary">{{ send }}</button>
+                <button type="submit" id="r_contact" class="button-terciary">
+                    {{ send }}
+                </button>
             </div>
           </form>
         </div>
@@ -125,17 +127,19 @@
           </div>
 
           <div class="form-container">
-            <form class="form" action="/webformmailer.php" method="post">
+            <form class="form" id="f_joinus" action="/web/contact.php" method="post" enctype="multipart/form-data">
               <div class="custom-file-input">
-                <input type="file" name="file" id="file">
+                <input type="file" name="adjunto" id="file">
                 <div class="wrapper">
-                  <label for="file" class="file-input">Upload your CV! <i class="icon fa fa-arrow-up " aria-hidden="true"></i></label>
+                  <label for="file" class="file-input">{{ upload }} <i class="icon fa fa-arrow-up " aria-hidden="true"></i></label>
                 </div>
               </div>
 
               <br>
               <div class="center">
-                <a class="button-secondary" href="index.html">{{ send }}</a>
+                <button type="submit" id="r_joinus" class="button-secondary">
+                    {{ send }}
+                </button>
               </div>
             </form>
           </div>
@@ -153,10 +157,12 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
     crossorigin="anonymous"></script>
-  
+
+
   <script src="vendor/itemslide/itemslide.min.js"></script>
   <script src="js/Parallax.js"></script>
-  
+
   <script src="js/landing.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=myCallBack&render=explicit" async defer></script>
 </main>
 {{> _footer }}

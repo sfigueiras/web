@@ -24,3 +24,26 @@ if (mq.matches) {
     element.parentElement.parentElement.classList.toggle('extended')
   }
 }
+
+
+var myCallBack = function(){
+
+  var cbJoinUs = function(){
+    document.getElementById('f_joinus').submit();
+  }
+
+  var cbContact = function(){
+    document.getElementById('f_contact').submit();
+  }
+
+  grecaptcha.render('r_contact', {
+    'sitekey' : '6LdUlB8UAAAAAIluAGKDFauY9hWJgjpwA7qFtjAf',
+    'badge' : 'inline',
+    'callback' : cbContact
+  });
+  grecaptcha.render('r_joinus', {
+    'sitekey' : '6LdUlB8UAAAAAIluAGKDFauY9hWJgjpwA7qFtjAf',
+    'badge' : 'inline',
+    'callback' : cbJoinUs
+  });
+}

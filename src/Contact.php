@@ -35,11 +35,10 @@ class Contact
         $mje = \Swift_Message::newInstance(MAILER_SUBJECT)
             ->setFrom(array(MAILER_TO_MAIL => MAILER_TO_NAME))
             ->setTo(array(MAILER_TO_MAIL => MAILER_TO_NAME))
-            ->addReplyTo(array($emailAddress, $companyName))
             ->setBody("Company name: {$companyName}\nEmail: {$emailAddress}\nMessage: {$message}");
 
         if ($adjunto) {
-            $mje->attach(\Swift_Attachment::fromPath($adjunto->getPath()));
+            $mje->attach(\Swift_Attachment::fromPath($adjunto->getRealPath())->setFilename($adjunto->getClientOriginalName()));
         }
 
         return $mje;
@@ -51,20 +50,19 @@ class Contact
      */
     public function handle(Request $request)
     {
-        $companyName = $request->request->get('company_name');
-        $emailAddress = $request->request->get('email_address');
-        $message = $request->request->get('message');
+        $companyName = $request->request->get('company_name','No Name');
+        $emailAddress = $request->request->get('email_address', 'No Email');
+        $message = $request->request->get('message', 'No Message');
         $adjunto = $request->files->get('adjunto');
         $gResponse = $request->request->get('g-recaptcha-response');
 
         $g = new ReCaptcha(GOOGLE_RECAPTCHA_SECRET_KEY);
         $resp = $g->verify($gResponse, $request->getClientIp());
 
-        if ($resp->isSuccess()) {
-            $this->getMailer()->send($this->getMessage($companyName, $emailAddress, $message, $adjunto));
-            return true;
-        } else {
+        if (!$resp->isSuccess())
             return false;
-        }
+
+        $cant = $this->getMailer()->send($this->getMessage($companyName, $emailAddress, $message, $adjunto));
+        return $cant > 0;
     }
 }

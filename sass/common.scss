@@ -54,7 +54,6 @@ hr {
   }
 }
 
-
 /*******************************************************
 FORMS
 *******************************************************/
@@ -97,6 +96,10 @@ textarea {
   min-height: 100px;
 }
 
+.grecaptcha-badge {
+  display: none;
+  margin: 0 auto 20px auto;
+}
 
 /********************************************************
 CUSTOM FILE INPUT
@@ -127,7 +130,6 @@ input[type="file"] {
   z-index: -1;
 }
 
-
 /********************************************************
 CUSTOM CHECKBOX INPUT
 ********************************************************/
@@ -145,7 +147,7 @@ input[type=checkbox].css-checkbox {
   border: 0;
 }
 
-input[type=checkbox].css-checkbox+label.css-label {
+input[type=checkbox].css-checkbox + label.css-label {
   padding-left: 33px;
   height: 28px;
   display: inline-block;
@@ -157,7 +159,7 @@ input[type=checkbox].css-checkbox+label.css-label {
   cursor: pointer;
 }
 
-input[type=checkbox].css-checkbox:checked+label.css-label {
+input[type=checkbox].css-checkbox:checked + label.css-label {
   background-position: 0 -28px;
 }
 
@@ -192,7 +194,6 @@ label.css-label {
   /* Internet Explorer 10-11 */
   color: white;
 }
-
 
 /*******************************************************
 ICONS
@@ -235,6 +236,7 @@ path {
 .parallax-surface {
   background-color: transparent;
 }
+
 .parallax {
   background-image: url('../images/Parallax1.png');
   background-attachment: fixed;
@@ -248,7 +250,6 @@ path {
   top: 460px;
   z-index: -10;
 }
-
 
 /******************************************************
 NAVIGATION
@@ -297,7 +298,6 @@ COMMON COMPONENTS
   }
 }
 
-
 /*******************************************************
 HELPERS
 *******************************************************/
@@ -305,7 +305,6 @@ HELPERS
 .center {
   text-align: center;
 }
-
 
 /*******************************************************
 FOOTER
@@ -319,7 +318,9 @@ FOOTER
   background-position: top;
   display: flex;
   padding: 20px 20px; // width: 100%;
-  * { fill: $grey-icon; }
+  * {
+    fill: $grey-icon;
+  }
 
   svg {
     margin: 2.5px;
@@ -350,7 +351,7 @@ footer .social {
   text-align: center;
 
   .follow {
-    margin-bottom: 5px;    
+    margin-bottom: 5px;
   }
 
   img:not(:last-child) {
@@ -372,8 +373,6 @@ footer .social {
   display: none;
 }
 
-
-
 /*******************************************************
 TABLET 
 *******************************************************/
@@ -390,7 +389,7 @@ TABLET
       color: white;
       display: block;
       flex: 1.5;
-      
+
       .coffee {
         color: #9933ff;
       }
@@ -446,7 +445,7 @@ TABLET
 
 @media (min-width: 1024px) {
   .targets {
-    
+
     .target {
       flex: 1;
       padding: 15px;

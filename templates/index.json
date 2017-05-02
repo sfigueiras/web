@@ -7,6 +7,12 @@
     "swipe": "Swipe down!",
     "moreInfo": "More info!",
     "learn": "Learn more",
+    "upload": "Upload your CV!",
+    "placeholder" : {
+        "company" : "Your company name",
+        "email" : "Your email address",
+        "message" : "What can we do for you?"
+    },
     "offers": [
         {
             "name": "MOCK UP",
