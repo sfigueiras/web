@@ -16,7 +16,7 @@ body, html {
     p {
       max-width: 70vw;
     }
-
+    
     .get-in-touch {
         margin: 50px 0 70px;
         color: $primary-text;
@@ -102,32 +102,6 @@ body, html {
       }
     }
 
-
-    // #scrolling { /* Carousel Frame */
-    //   overflow: hidden;
-    //   height: 240px;
-    //   width: 90%;
-      
-    //   ul {
-    //     opacity: 0;
-    //     transition: opacity .3s;
-    //     margin: 0;
-    //     padding: 0;
-    //     width: 90vw;
-    //     list-style-type: none;
-    //     position: absolute;
-    //     -webkit-transform-style: preserve-3d;
-    //     -ms-transform-style: preserve-3d;
-    //     transform-style: preserve-3d;
-    //     height: $carousel-height;
-
-    //     li {
-    //         float: left;
-    //     }
-    //   }
-    // }
-
-
     .slider {
         margin-top: 100px; 
         padding: 20px 0;
@@ -198,11 +172,9 @@ body, html {
             padding: 5px;
 
             img {
-              max-height: 75px;
-              max-width: 170px;
               min-width: 80px;
               opacity: 0.80;
-              width: 100px;
+              width: 180px;
             }
         }
     }
@@ -558,7 +530,10 @@ NAV COLOR CHANGE BREAKPOINT
           display: block;
         }
 
-        p { padding-right: 40px; }
+        p { 
+          padding-right: 40px; 
+          a { color: $primary }
+        }
       }
 
       .boxing-offers-tablet {
