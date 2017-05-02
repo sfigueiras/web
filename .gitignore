@@ -1,7 +1,7 @@
 node_modules/
 public/
-vendor
+vendor/
 firebase-debug.log
-
+src/config.php
 key.pem
 cert.pem
