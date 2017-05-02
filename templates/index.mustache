@@ -31,10 +31,21 @@
     
     <article class="offer custom">
       <div class="content">
-        <h1>{{ custom }} </h1>
+        <h1 style="display: inline-block">{{ custom }}</h1>
+
+        <ul class="targets">
+        {{#targets}}
+            <li class="target">
+                <p>{{first}} <b>{{important}}</b>{{second}}</p>
+            </li>
+        {{/targets}}
+        </ul>
+        
         <a class="button-secondary" href="/contact.html">{{ want }}</a>
         <a class="more-info link-secondary" href="services.html">+ {{ moreInfo }}</a>
       </div>
+
+      <hr style="margin-top: 80px"><h1>BOXING OFFERS</h1>
     </article>
 
     <section class="offers">
@@ -46,7 +57,7 @@
             <h1>{{name}}</h1>
             <hr class="left">
             <div class="text-container">
-              <p>{{description}}</p>
+              <p><b>{{ outstanding }}</b>{{description}}</p>
             </div>
             <img  onclick="toggleOfferDescription(this)" class="arrow" src="images/arrow-dark-purple.png" alt="show less arrow">
             <a class="learn-more" href="services.html">+{{ learn }}</a>

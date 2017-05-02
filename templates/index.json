@@ -2,7 +2,7 @@
     "stylesheet": "landing",
     "title": "Reach the top",
     "claim": "WE CAN HELP YOU MAKE IT HAPPEN",
-    "custom": "Let's plan to suite tour project's needs",
+    "custom": "Let's plan to suite your project's needs",
     "want": "I want it",
     "swipe": "Swipe down!",
     "moreInfo": "More info!",
@@ -11,17 +11,20 @@
         {
             "name": "MOCK UP",
             "icon": "images/mockup-icon.png",
-            "description": "Graphic representation of the initial idea that does not include dynamic content. The best possible model of your product, to provide at least part of the functionality of a system and enable testing on users."
+            "outstanding": "Visual representation of the initial idea,",
+            "description": " only the minumum behaviour to enable you to test your idea with users as soon as posible."
         },
         {
             "name": "F. PROTOTYPE",
             "icon": "images/fprototype-icon.png",
-            "description": "Basic and fundamental behavior of the project, excluding generation of dynamic content and server-side/cloud storage. The basic and most efficient model of the system that would give life to your product."
+            "outstanding": "A further iteration of the mockup,",
+            "description": " including more advanced behaviour and functionality to start given life to your idea."
         },
         {
             "name": "MVP",
             "icon": "images/mvp-icon.png",
-            "description": "Minimum product that allows to represent in a clear and fluid form, the product or service that you offer. It´s a well-built and scalable digital product or service; the first prototype for your business to be anywhere, anytime."
+            "outstanding": "Minimum product that allows you to offer in a clear and fluid form, the product or service that you offer.",
+            "description": " It´s a well-built and scalable digital product or service; the first prototype for your business to be anywhere, anytime."
         }
     ]
 }

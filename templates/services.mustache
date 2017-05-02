@@ -2,6 +2,15 @@
 <section class="landing center">
 
     <h1>{{ title }}</h1>
+    
+    <ul class="targets">
+        {{#targets}}
+            <li class="target">
+                <p>{{first}} <b>{{important}}</b>{{second}}</p>
+            </li>
+        {{/targets}}
+    </ul>
+
     <p>{{ description }}
     </p>
     <a href="contact.html" class="get-in-touch link-secondary white">+get in touch!</a>
@@ -118,7 +127,6 @@
 
 <script async src="js/Parallax.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<!--script src="vendor/itemslide/itemslide.min.js"></script-->
 <script src="vendor/unslider-master/dist/js/unslider-min.js"></script>
 <script src="http://stephband.info/jquery.event.move/js/jquery.event.move.js"></script>
 <script src="http://stephband.info/jquery.event.swipe/js/jquery.event.swipe.js"></script>
@@ -139,35 +147,6 @@
         document.addEventListener('DOMContentLoaded', parallax.onScroll.bind(parallax), true);
     } else {
         var carousel, currentItem;
-
-        // document.addEventListener('DOMContentLoaded', function() {
-        //     carousel = $("#scrolling ul");
-        //     carousel.itemslide({
-        //         parent_width: true,
-        //         disable_clicktoslide: true,
-        //         one_item: true
-        //     });
-            
-        //     currentItem = getItemByIndex(carousel.getActiveIndex());
-        //     // currentItem.classList.toggle('selected');
-
-        //     carousel.css({ opacity: 1 });
-
-        //     carousel.on('changeActiveIndex', function(e) {
-                
-        //         if (carousel.getActiveIndex() !== parseInt(currentItem.dataset.index)) {
-        //             currentItem.classList.toggle('selected');
-        //             currentItem = getItemByIndex(carousel.getActiveIndex());
-        //             currentItem.classList.toggle('selected');            
-        //         } 
-
-
-        //     });
-
-        //     function getItemByIndex(index) {
-        //         return document.getElementById('index-' + index);
-        //     }
-        // }, false);
 
         jQuery(document).ready(function($) {
 			var slider = $('#scrolling').unslider({
