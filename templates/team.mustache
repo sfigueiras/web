@@ -35,7 +35,7 @@
 </div>
 
 <div class="advisory-board">
-    <h1 class="title">Advisory board</h1>
+    <h1 class="title">{{ board }}</h1>
     {{#advisors}}
     <div class="board-member">
         <img class="member-picture board" src="{{ picture }}" alt="santiago figueiras picture">
@@ -65,35 +65,18 @@
 </div>
 
 <section class="how-we-work">
-    <h1>How we work</h1>
+    <h1>{{ how }}</h1>
 
     <div class="values">
-        <div class="value">
-            <img src="images/square-green.png" alt="green square">
-            <h3>We make your projects come true</h3>
+        {{#values}}
+            <div class="value">
+                <img src="{{ icon }}" alt="{{ alt }}">
+                <h3>{{ title }}</h3>
 
-            <p>We work as a team with our clients enhancing their digital projects with our experience in design, usability,
-                technologies and software.
-            </p>
-        </div>
-
-        <div class="value">
-            <img src="images/marker-green.png" alt="green marker">
-            <h3>Focus on user experience</h3>
-
-            <p>We analyze technology, market, and users behaviour, to design simple and intuitive interfaces that enhance business
-                objectives.
-            </p>
-        </div>
-
-        <div class="value">
-            <img src="images/circle-green.png" alt="green square">
-            <h3>Technology made simple</h3>
-
-            <p>We build apps with technology that optimize resources and usability, making it invisible for users and clients
-                as well.
-            </p>
-        </div>
+                <p>{{description}}
+                </p>
+            </div>
+        {{/values}}
     </div>
 </section>
 

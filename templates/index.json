@@ -16,19 +16,19 @@
     "offers": [
         {
             "name": "MOCK UP",
-            "icon": "images/mockup-icon.png",
+            "icon": "images/icons/mockup-icon.png",
             "outstanding": "Visual representation of the initial idea,",
             "description": " only the minumum behaviour to enable you to test your idea with users as soon as posible."
         },
         {
             "name": "F. PROTOTYPE",
-            "icon": "images/fprototype-icon.png",
+            "icon": "images/icons/fprototype-icon.png",
             "outstanding": "A further iteration of the mockup,",
             "description": " including more advanced behaviour and functionality to start given life to your idea."
         },
         {
             "name": "MVP",
-            "icon": "images/mvp-icon.png",
+            "icon": "images/icons/mvp-icon.png",
             "outstanding": " Initial version that allows you to offer in a clear and fluid form the product or service that you offer",
             "description": ", well-built and scalable; the first prototype for your business to be anywhere, anytime."
         }

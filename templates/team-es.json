@@ -1,83 +1,103 @@
 {
-    "stylesheet": "team",
-    "title": "It's time we meet",
-    "core": [
-        {
-            "name": "SANTIAGO FIGUEIRAS",
-            "role": "COFOUNDER | DEVELOPMENT DIRECTOR",
-            "bio": {
-                "bold": "Specialist in developing sustainable, scalable and quality solutions."
-            },
-            "picture": "images/team/santi.jpg", 
-            "social": {
-                "facebook": "",
-                "instagram": "",
-                "linkedin": ""
-            }
-        },
-        {
-            "name": "SEBASTIAN GALLARDO",
-            "role": "BACKEND ERUDITE",
-            "bio": {
-                "bold": "Expert in higly scalable object oriented design and cloud oriented solutions"
-            },
-            "picture": "images/team/seba-cropped.jpg",
-            "social": {
-                "facebook": "",
-                "instagram": "",
-                "linkedin": ""
-            }
-        },
-        {
-            "name": "VALENTIN MARI",
-            "role": "ONE MAN ARMY",
-            "bio": {
-                "bold": "Give him a problem he'll give you the solution, backend, frontend, devops, you name it."
-            },
-            "picture": "images/team/valen.jpg",
-            "social": {
-                "facebook": "",
-                "instagram": "",
-                "linkedin": ""
-            }
-        }
-    ],
-    "advisors": [
-        {
-            "name": "Juan José Figueiras",
-            "profile": "INNOVATION MENTOR",
-            "bio": "Developing customer amazing relationship and memorable stories, driving to scale",
-            "country": "ARGENTINA",
-            "picture": "images/team/juanjo.jpg"
-        },
-        {
-            "name": "Adrián Mastronardi",
-            "profile": "DIGITAL BUSINESS",
-            "bio": "Digital Business Director and Mentor",
-            "country": "ARGENTINA",
-            "picture": "images/team/adrian.jpg"
-        },
-        {
-            "name": "Emilio Panighetti",
-            "profile": "TECHNICAL ADVISOR",
-            "bio": "Techinal Guru. Senior Sofware Engineer",
-            "country": "USA",
-            "picture": "images/team/emilio.jpg"
-        },
-        {
-            "name": "Juan Gasca",
-            "profile": "DESIGN & INNOVATION",
-            "bio": "Business Innovation Guru. Business Advisor. Mentor",
-            "country": "SPAIN",
-            "picture": "images/team/juan.jpg"
-        },
-        {
-            "name": "Pascual Aparicio",
-            "profile": "EUROPE BUSINESS DEVELOPER",
-            "bio": "Madrid International LAB Manager. Greater New York City Area",
-            "country": "SPAIN",
-            "picture": "images/team/pascual.jpg"
-        }
-    ]
+  "stylesheet": "team",
+  "title": "Tiempo de presentarnos",
+  "caption": "Pasión y experiencia en la construcción de tus productos y servicios digitales",
+  "core": [{
+      "name": "SANTIAGO FIGUEIRAS",
+      "role": "COFUNDADOR & CTO",
+      "bio": {
+        "bold": "Especialista en el desarrollo de soluciones sostenibles, escalables y de calidad."
+      },
+      "picture": "images/team/santi.jpg",
+      "social": {
+        "facebook": "",
+        "instagram": "",
+        "linkedin": ""
+      }
+    },
+    {
+      "name": "SEBASTIAN GALLARDO",
+      "role": "ERUDITO DEL BACKEND",
+      "bio": {
+        "bold": "Experto en diseño orientado a objetos altamente escalable y soluciones orientadas a la nube."
+      },
+      "picture": "images/team/seba-cropped.jpg",
+      "social": {
+        "facebook": "",
+        "instagram": "",
+        "linkedin": ""
+      }
+    },
+    {
+      "name": "VALENTIN MARI",
+      "role": "NAVAJA SUIZA",
+      "bio": {
+        "bold": "Para cada problema una solución, backend, frontend, devops, lo que sea."
+      },
+      "picture": "images/team/valen.jpg",
+      "social": {
+        "facebook": "",
+        "instagram": "",
+        "linkedin": ""
+      }
+    }
+  ],
+  "board": "Consejo Asesor",
+  "advisors": [{
+      "name": "Juan José Figueiras",
+      "profile": "MENTOR DE INNOVACIÓN",
+      "bio": "Ayudándonos a construir relaciónes increíbles e historias memorables con nuestros clientes ",
+      "country": "ARGENTINA",
+      "picture": "images/team/juanjo.jpg"
+    },
+    {
+      "name": "Adrián Mastronardi",
+      "profile": "NEGOCIOS DIGITALES",
+      "bio": "Director de Negocios Digitales / Mentor",
+      "country": "ARGENTINA",
+      "picture": "images/team/adrian.jpg"
+    },
+    {
+      "name": "Emilio Panighetti",
+      "profile": "ASESOR TÉCNICO",
+      "bio": "Ingeniero Senior de Software. Gurú Técnico",
+      "country": "USA",
+      "picture": "images/team/emilio.jpg"
+    },
+    {
+      "name": "Juan Gasca",
+      "profile": "DISEÑO E INNOVACIÓN",
+      "bio": "Gurú en Diseño e Innovación. Asesor de Negocios. Mentor",
+      "country": "ESPAÑA",
+      "picture": "images/team/juan.jpg"
+    },
+    {
+      "name": "Pascual Aparicio",
+      "profile": "DESARROLLO DE OPORTUNIDADES EN EUROPA",
+      "bio": "Madrid International LAB Manager. Nueva York y alrededores, Estados Unidos",
+      "country": "ESPAÑA",
+      "picture": "images/team/pascual.jpg"
+    }
+  ],
+  "how": "Como lo hacemos",
+  "values": [
+    {
+      "icon": "images/icons/square-green.png",
+      "alt": "rombo hueco con bordes verdes",
+      "title": "Hacemos que tus proyectos se conviertan en realidad",
+      "description": "Trabajamos en equipo con nuestros clientes, mejorando sus proyectos digitales con nuestra experiencia en diseño, usabilidad, tecnologías y software."
+    },
+    {
+      "icon": "images/icons/marker-green.png",
+      "alt": "marcador de mapa verde",
+      "title": "Foco en la experiencia del usuario",
+      "description": "Analizamos la tecnología, el mercado y el comportamiento de los usuarios para diseñar interfaces sencillas e intuitivas que mejoren los potencian los objetivos de negocio."
+    },
+    {
+      "icon": "images/icons/circle-green.png",
+      "alt": "circulo con borde verde",
+      "title": "Hacemos simple a la tecnología",
+      "description": "Construimos aplicaciones con tecnología que optimiza los recursos y la usabilidad, haciéndola invisible para los usuarios y clientes."
+    }
+  ]
 }
-
