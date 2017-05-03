@@ -28,36 +28,36 @@
             </g>
         </svg>
 
-        <h1 class="phrase">Would you like to develope cool thing with us?</h1>
+        <h1 class="phrase">{{ question }}</h1>
 
         <form>
             <div class="custom-file-input">
                 <input type="file" name="file" id="file">
                 <div class="wrapper">
-                    <label for="file" class="file-input">Upload your CV! <i class="icon fa fa-arrow-up " aria-hidden="true"></i></label>
+                    <label for="file" class="file-input">{{ join.placeholder }} <i class="icon fa fa-arrow-up " aria-hidden="true"></i></label>
                 </div>
             </div>
 
-            <button class="button-secondary">Send</button>
+            <button class="button-secondary">{{ send }}</button>
         </form>
     </div>
 
     <div class="tablet-form">
-        <h1>Would you like to develop cool stuff with us?</h1>
+        <h1>{{ question }}</h1>
         <hr class="left">
 
-        <p>Let us see your skills <br> We’ll keep in touch</p>
+        <p>{{ comment }} <br> {{ keep }}</p>
 
         <div class="custom-file-input">
             <input type="file" name="file" id="file">
             <div class="wrapper">
-                <label for="file" class="file-input">Upload your CV! <i class="icon fa fa-arrow-up " aria-hidden="true"></i></label>
+                <label for="file" class="file-input">{{ join.placeholder }} <i class="icon fa fa-arrow-up " aria-hidden="true"></i></label>
             </div>
         </div>
 
         <br>
 
-        <a class="button-secondary" href="index.html">Send</a>
+        <a class="button-secondary" href="index.html">{{ send }}</a>
     </div>
 </div>
 

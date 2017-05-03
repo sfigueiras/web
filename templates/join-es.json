@@ -1,3 +1,6 @@
 {
-     "stylesheet": "join"
+     "stylesheet": "join",
+     "question": "¿Te gustaría desarrollar cosas interesantes con nosotros?",
+     "comment": "Comentanos tus capacidades/experiencia",
+     "keep": "Nos mantendremos en contacto"
 }
