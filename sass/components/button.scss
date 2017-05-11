@@ -29,7 +29,6 @@
 
 .button-terciary {
   @extend .button;
-  font-size: 1.1em;
   background-color: transparent;
 
   &:hover, &:focus, &:active {

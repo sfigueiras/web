@@ -4,7 +4,7 @@
 
   <div id="landing" class="landing">
     <video poster="images/background-landing-estatico-compressed.png" id="bgvid" playsinline autoplay muted loop>
-        <source src="videos/landing.mp4" type="video/mp4">
+        <source id="video" src="videos/landing.mp4" type="video/mp4">
         <!--<source src="videos/landing.webm" type="video/webm">-->
     </video>
     
@@ -15,7 +15,7 @@
       <p class="slogan">{{claim}}</p>
     </div>
 
-    <div class="swipe-down">
+    <div id="swipe-down" class="swipe-down">
       <p>{{ swipe }}</p>
       <img class="arrow down" src="images/arrow-green.png" alt="swipe down arrow">
     </div>
@@ -29,7 +29,7 @@
     
     <!-- Offers -->
     
-    <article class="offer custom">
+    <article id="swipe-to" class="offer custom">
       <div class="content">
         <h1 style="display: inline-block">{{ custom }}</h1>
 
@@ -74,7 +74,7 @@
     </section>
 
     <!-- Etiam -->
-    <section class="work">
+    <!--section class="work">
       <div id="scrolling">
         <ul>
           <li>
@@ -87,7 +87,7 @@
             <img src="images/etiam-3.webp" onerror="this.onerror=null; this.src='images/etiam-1.jpg'" alt="etiam picture">
           </li>
       </ul>
-    </section>
+    </section-->
 
     <div class="forms">
       <!-- Contact us !-->
@@ -154,12 +154,12 @@
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  <!--script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script-->
 
 
-  <script src="vendor/itemslide/itemslide.min.js"></script>
+  <!--script src="vendor/itemslide/itemslide.min.js"></script-->
   <script src="js/Parallax.js"></script>
 
   <script src="js/landing.js"></script>
