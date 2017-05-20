@@ -15,12 +15,12 @@ if (mq.matches) {
   document.addEventListener("DOMContentLoaded", parallax.onScroll.bind(parallax), false);
   
   // Disabled temporarily
-  // document.addEventListener("DOMContentLoaded", function() {
-  //   var carousel = $("#scrolling ul");
-  //   carousel.itemslide();
+  window.onload = function() {
+    var carousel = $("#scrolling ul");
+    carousel.itemslide();
 
-  //   carousel.css({ opacity: 1 });
-  // }, false);
+    carousel.css({ opacity: 1 });
+  };
 
 } else {
   function toggleOfferDescription(element) {
