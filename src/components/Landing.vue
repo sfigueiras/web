@@ -1,8 +1,178 @@
 <template>
   <section id="landing">
-    <div>
+    <div class="container">
       <h1>The right blend of experience hard work, and fun.</h1>
-      <button @click="onClick">tell us your story</button>
+      <button>
+        tell us your story
+        <img src="~@/assets/images/arrow-right-dark.svg" alt="grey arrow right">
+      </button>
+
+      <div>
+        <img class="guy" src="~@/assets/images/recurso-40-3-x.png" alt="ubykuo developer">
+
+        <div class="animation">
+
+          <div class="unicornio">
+            <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 182.46 201.3" height="180px">
+              <defs>
+                <svg:style>
+                  .cls-1 {
+                  fill: #38e586;
+                  }
+
+                  .cls-1,
+                  .cls-5,
+                  .cls-6 {
+                  stroke: #483696;
+                  stroke-miterlimit: 10;
+                  }
+
+                  .cls-2 {
+                  fill: #f7d6f0;
+                  }
+
+                  .cls-3 {
+                  fill: #fcee21;
+                  }
+
+                  .cls-4 {
+                  fill: #fff;
+                  }
+
+                  .cls-5 {
+                  fill: none;
+                  }
+
+                  .cls-6,
+                  .cls-8 {
+                  fill: #3eff9a;
+                  }
+
+                  .cls-7 {
+                  fill: #36367c;
+                  opacity: 0.2;
+                  }
+
+                  .cls-9 {
+                  fill: #755ff3;
+                  }
+
+                  .cls-10 {
+                  fill: #483696;
+                  }
+
+                </svg:style>
+              </defs>
+              <title>unicornio</title>
+              <path class="cls-1" d="M64.21,170.4a62.25,62.25,0,0,1-4.61,9A55.38,55.38,0,0,1,47,181c-5.5,0-11.5-1-15-5-3.34-3.72-2.55-11.58-.55-19.36.68-2.65,1.5-5.28,2.34-7.74C36.24,141.7,38.94,136,38.94,136s23.34.54,27.75,13.09C69.08,155.88,66.8,164.2,64.21,170.4Z"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-2" d="M175.4,112.82l-4.55,2.87c-1.31-3.9-2.71-10.35-10.29-13.14-8.81-3.24-13.91,3.3-16.22,7.67l-1.51-.78s.1-.28.3-.75c1.29-3,6.84-13.89,18.13-9.64A24.43,24.43,0,0,1,175.4,112.82Z"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-3" d="M141.05,108.68s4.64-17.26,19.51-12.88a30.45,30.45,0,0,1,18.19,14.9l-3.35,2.12A24.43,24.43,0,0,0,161.26,99c-11.29-4.25-16.84,6.64-18.13,9.64Z"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-2" d="M153.79,93.58c18.34-2.51,27.36,15.61,27.36,15.61l-2.4,1.51a30.45,30.45,0,0,0-18.19-14.9c-14.87-4.38-19.51,12.88-19.51,12.88l-.94-.1C140.74,102.27,143.71,95,153.79,93.58Z"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-3" d="M144.34,110.22c2.31-4.37,7.41-10.91,16.22-7.67,7.58,2.79,9,9.24,10.29,13.14l-3.91,2.47s-.89-10.64-9.08-12.28c-14.31-2.86-13.53,13-13.53,13l-3.68-.69a30.14,30.14,0,0,1-.59-4.32l2.77-.22a22.69,22.69,0,0,1,1.16-2.79Z"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-4" d="M144,110.91a22.69,22.69,0,0,0-1.16,2.79l-2.77.22a32,32,0,0,1,.05-5.34l.94.1h2.08c-.2.47-.3.75-.3.75l1.51.78Z"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-5" d="M140.11,108.58c.63-6.31,3.6-13.62,13.68-15,18.34-2.51,27.36,15.61,27.36,15.61l-2.4,1.51-3.35,2.12-4.55,2.87-3.91,2.47s-.89-10.64-9.08-12.28c-14.31-2.86-13.53,13-13.53,13"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-5" d="M170.85,115.69c-1.31-3.9-2.71-10.35-10.29-13.14-8.81-3.24-13.91,3.3-16.22,7.67"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-5" d="M175.4,112.82A24.43,24.43,0,0,0,161.26,99c-11.29-4.25-16.84,6.64-18.13,9.64"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-5" d="M178.75,110.7a30.45,30.45,0,0,0-18.19-14.9c-14.87-4.38-19.51,12.88-19.51,12.88"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-6" d="M81.69,95.9c37.78-1.46,76.66,14.08,76.61,23.35-.06,11.44.55,28.59-41.18,49.28l-.74.37A60.79,60.79,0,0,1,103,173.66C66.89,182,33,154.76,29.92,141.6A18.06,18.06,0,0,0,28.68,138"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-7" d="M117.12,168.53l-.74.37A60.79,60.79,0,0,1,103,173.66l-5.44-24.58S108,154.35,117.12,168.53Z"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-1" d="M75.68,155.81c-2.15,8-9.47,39.1,1.72,42.85s26.28,1.61,30.15-5.89-.09-38.64-5.86-43.69S75.68,155.81,75.68,155.81Z"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-6" d="M28.68,138S21,95.22,42,71.8" transform="translate(0.66 0.33)" />
+              <polyline class="cls-8" points="38.12 79.91 34.22 102.24 29.34 134.31 30.35 140 67.19 128.61 80.23 101.34 60.6 74.06" />
+              <path class="cls-6" d="M86.36,119.25s3.61-23.42-4.66-45-13.7-41.91-47-33.9S-1.16,63.78.07,71.8s37.59,21,54.85,7.12"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-3" d="M47.69,36.14c.62,2.8.86,4.75.46,5.25-2.18,2.76-8.48,4-10.5,2a3.49,3.49,0,0,1-.51-1.53A25,25,0,0,0,47.69,36.14Z"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-9" d="M46,29.64c.69,2.42,1.28,4.65,1.7,6.5a25,25,0,0,1-10.55,5.74,61.64,61.64,0,0,1-.69-6.64A25.39,25.39,0,0,0,46,29.64Z"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-3" d="M44.22,23.8c.64,2,1.23,4,1.77,5.84a25.39,25.39,0,0,1-9.54,5.6c-.13-2-.24-4.22-.33-6.59A25,25,0,0,0,44.22,23.8Z"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-9" d="M42.38,18.07C43,20,43.63,21.9,44.22,23.8a25,25,0,0,1-8.1,4.85C36,26.5,36,24.25,35.91,22A25.34,25.34,0,0,0,42.38,18.07Z"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-3" d="M40.93,13.75c.48,1.4,1,2.85,1.45,4.32A25.34,25.34,0,0,1,35.91,22c0-1.93-.09-3.87-.12-5.75A24.43,24.43,0,0,0,40.93,13.75Z"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-9" d="M39.11,8.53c.58,1.62,1.19,3.38,1.82,5.22a24.43,24.43,0,0,1-5.14,2.49c0-2.19-.07-4.3-.09-6.24A23.86,23.86,0,0,0,39.11,8.53Z"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-3" d="M36,.29c.61,1.42,1.75,4.44,3.09,8.24A23.86,23.86,0,0,1,35.7,10c-.06-4.41-.07-8-.08-9.63A.21.21,0,0,1,36,.29Z"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-5" d="M39.11,8.53C37.77,4.73,36.63,1.71,36,.29a.21.21,0,0,0-.4.08c0,1.66,0,5.22.08,9.63,0,1.94.05,4,.09,6.24,0,1.88.07,3.82.12,5.75.06,2.26.13,4.51.21,6.66.09,2.37.2,4.6.33,6.59a61.64,61.64,0,0,0,.69,6.64,3.49,3.49,0,0,0,.51,1.53c2,2,8.32.74,10.5-2,.4-.5.16-2.45-.46-5.25-.42-1.85-1-4.08-1.7-6.5-.54-1.85-1.13-3.83-1.77-5.84S43,20,42.38,18.07c-.48-1.47-1-2.92-1.45-4.32C40.3,11.91,39.69,10.15,39.11,8.53Z"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-5" d="M47.69,36.14a25,25,0,0,1-10.55,5.74" transform="translate(0.66 0.33)" />
+              <path class="cls-5" d="M36.45,35.24A25.39,25.39,0,0,0,46,29.64" transform="translate(0.66 0.33)" />
+              <path class="cls-5" d="M36.12,28.65a25,25,0,0,0,8.1-4.85" transform="translate(0.66 0.33)" />
+              <path class="cls-5" d="M42.38,18.07A25.34,25.34,0,0,1,35.91,22" transform="translate(0.66 0.33)" />
+              <path class="cls-5" d="M40.93,13.75a24.43,24.43,0,0,1-5.14,2.49" transform="translate(0.66 0.33)" />
+              <path class="cls-5" d="M39.11,8.53A23.86,23.86,0,0,1,35.7,10" transform="translate(0.66 0.33)" />
+              <path class="cls-1" d="M137.29,149.08c-1.08,5.05-8.23,32.08-1.87,34.47s18.84,2,21.35-6,4.89-28.22-1.87-36.17S137.29,149.08,137.29,149.08Z"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-10" d="M43,56.23a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z" transform="translate(0.66 0.33)" />
+              <path class="cls-10" d="M24.17,50.47a1.5,1.5,0,0,0,0-3,1.5,1.5,0,0,0,0,3Z" transform="translate(0.66 0.33)" />
+              <path class="cls-7" d="M64.21,170.4a62.25,62.25,0,0,1-4.61,9A55.38,55.38,0,0,1,47,181c-6.93-8.26-12.49-18.23-15.59-24.34.68-2.65,1.5-5.28,2.34-7.74C39.38,156.41,50.44,165.13,64.21,170.4Z"
+                transform="translate(0.66 0.33)" />
+              <path class="cls-7" d="M49.25,82.31a120,120,0,0,1-13.1,18.54c-2.47,2.9-5.26,5.91-8.4,8.94.13-1.57.31-3.17.53-4.79.07-.52.15-1,.23-1.57s.16-1.06.26-1.59q.42-2.53,1-5.09c.11-.43.21-.86.32-1.29.37-1.45.78-2.89,1.24-4.33q.24-.77.51-1.53c.14-.4.28-.8.43-1.2q.38-1,.78-2L33.64,85a43.54,43.54,0,0,0,5.73-.25A34.2,34.2,0,0,0,49.25,82.31Z"
+                transform="translate(0.66 0.33)" />
+            </svg>
+          </div>
+          <div class="soga">
+            <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px" y="0px" viewBox="0 0 52 246" style="enable-background:new 0 0 52 246;" xml:space="preserve"
+              height="200px">
+              <svg:style type="text/css">
+                .st100{fill:none;stroke:#483696;stroke-miterlimit:10;}
+              </svg:style>
+              <path class="st100" d="M0,246.4c0,0,63-146,50.1-246.4" />
+            </svg>
+          </div>
+          <div class="maceta">
+            <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px" y="0px" viewBox="0 0 114 160" style="enable-background:new 0 0 114 160;" xml:space="preserve"
+              height="150px">
+              <svg:style type="text/css">
+                .st0{fill:#3EFF9A;stroke:#38E586;stroke-miterlimit:10;}
+                .st1{fill:#9E8FF7;stroke:#38E586;stroke-miterlimit:10;}
+                .st2{opacity:0.2;fill:none;stroke:#483696;stroke-miterlimit:10;}
+                .st3{fill:#9E8FF7;stroke:#36367C;stroke-miterlimit:10;}
+              </svg:style>
+              <g>
+                <path class="st0" d="M44.6,125.6c-8-5.4-13.1-10.4-22.1-13.9c-4.8-1.9-10-3.9-11.3-9.8c-1.4-6.5,2.5-9.2,8.2-11
+				c4.5-1.4,9.6-0.8,14,0.5c1.2,0.4,6.5,3.8,7.8,3.3c5.5-2.2-11.8-11-13.7-11.5c-6.6-1.7-16.7-1.5-21.1-7.8c-5-7.2,0.8-19.6,7.8-23.4
+				c11.3-6.1,16.6,5.8,26,6.1c1.5,0-6.8-9.9-6.6-9.7c-4.5-5.4-9.1-11.1-11.8-17.6C17,19.2,20.3,9.1,31.6,2.8c11.1-6.2,23.1-3.6,30,7.2
+				c4.6,7.2,5.8,15.7,6.2,24c0.2,4-2.2,18.1,0.5,21.4c-1-1.2,12.1-22.2,19.6-5.6c3.7,8.2-0.7,10-6.4,14.2c-4.6,3.4-7.7,3.8-1.3,3.4
+				c6.4-0.4,12.1-6.8,19.4-5.9c7.1,0.9,11.5,6,13.4,12.7c1.7,6,1,12.3-3.3,17c-5.5,6.1-17.8,3.5-22,8.6c1.8-2.2,16.4,6.6,14.5,12.6
+				c-2.7,8.5-18.8,4.6-23.3,13.1" />
+                <path class="st1" d="M109.5,91.4c-5.5,6.1-17.8,3.5-22,8.6c1.8-2.2,16.4,6.6,14.5,12.6c-2.7,8.5-18.8,4.6-23.3,13.1H44.6
+				c-8-5.4-13.1-10.4-22.1-13.9c-4.8-1.9-10-3.9-11.3-9.8c-1.4-6.5,2.5-9.2,8.2-11c4.5-1.4,9.6-0.8,14,0.6c1.2,0.4,6.5,3.8,7.8,3.3
+				c5.5-2.2-11.8-11-13.7-11.5c-6.6-1.7-16.7-1.5-21.1-7.8c-5-7.2,0.8-19.6,7.8-23.4c11.3-6.1,16.6,5.8,26,6.1
+				c1.5,0.1-6.8-9.9-6.6-9.7c-4.5-5.4-9.1-11.1-11.8-17.6C17,19.2,20.3,9.1,31.6,2.8c7.6-4.2,15.6-4.4,22.1-0.6c3,1.8,5.7,4.3,7.9,7.8
+				c4.6,7.2,5.8,15.7,6.2,24c0.2,4-2.2,18.2,0.4,21.4c-1-1.2,12.1-22.2,19.6-5.6c3.7,8.2-0.7,10-6.4,14.2c-4.6,3.4-7.7,3.8-1.3,3.4
+				c6.4-0.3,12.1-6.8,19.4-5.9c7.1,0.9,11.5,6,13.4,12.7C114.6,80.4,113.8,86.6,109.5,91.4z" />
+                <path class="st2" d="M64,116.9c0,0-3.6-61.9-20.8-95.7" />
+                <g>
+                  <polygon class="st3" points="88.8,159.6 39.2,159.6 32,125.6 95.9,125.6 		" />
+                  <polygon class="st3" points="97.6,129.3 30.3,129.3 29.2,122 98.7,122 		" />
+                </g>
+              </g>
+            </svg>
+
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 </template>
@@ -20,4 +190,86 @@
     background-color: $purple-uby;
     color: white;
   }
+
+  .container {
+    padding-top: 25%;
+  }
+
+  button {
+    width: 194px;
+    height: 37px;
+    color: $black-uby;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $pale-mauve-uby;
+  }
+
+  .guy {
+    position: absolute;
+    right: 50px;
+    bottom: 75px;
+    height: 40%;
+  }
+
+  .soga {
+    position: absolute;
+    bottom: 36px;
+    left: calc(50% - 50px);
+    bottom: 35px;
+    transform-origin: bottom left;
+    transform: rotate(-10deg);
+    animation: balancear2 4s ease-in-out infinite;
+  }
+
+  .unicornio {
+    position: absolute;
+    bottom: 187px;
+    left: 24px;
+    z-index: 1;
+    animation: balancear 4s ease-in-out infinite;
+  }
+
+  .animation {
+    position: absolute;
+    right: 15px;
+    bottom: 70px;
+  }
+
+  @keyframes balancear {
+    0% {
+      left: -10%;
+      transform: rotate(-10deg)
+    }
+
+    50% {
+      left: calc(120% - 150px);
+      transform: rotate(10deg);
+    }
+
+    100% {
+      left: -10%;
+      transform: rotate(-10deg);
+    }
+  }
+
+  @keyframes balancear2 {
+    0% {
+      left: calc(50% + 5px);
+      transform-origin: bottom center;
+      transform: rotate(5deg);
+    }
+
+    50% {
+      left: calc(50% + 10px);
+      transform-origin: bottom center;
+      transform: rotate(-5deg);
+    }
+
+    100% {
+      left: calc(50% + 5px);
+      transform-origin: bottom center;
+      transform: rotate(5deg);
+    }
+  }
+
 </style>

@@ -47,4 +47,17 @@
   #app {
     height: 100%;
   }
+
+  button {
+    border: none;
+    border-radius: $border-radius;
+
+    .primary {
+      background-color: $purple-uby;
+    }
+
+    .secondary {
+      background-color: #fff;
+    }
+  }
 </style>
