@@ -1,7 +1,9 @@
 <template>
   <section id="landing">
-    <h1>The right blend of experience hard work, and fun.</h1>
-    <button @click="onClick">tell us your story</button>
+    <div>
+      <h1>The right blend of experience hard work, and fun.</h1>
+      <button @click="onClick">tell us your story</button>
+    </div>
   </section>
 </template>
 

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="194" height="37" viewBox="0 0 194 37">
+    <g fill="none" fill-rule="evenodd">
+        <rect width="194" height="37" fill="#F7D6F0" rx="4"/>
+        <text fill="#333" font-family="Gilroy-Regular" font-size="18" letter-spacing="-.17" transform="translate(16 6)">
+            <tspan x="0" y="14">tell us your story</tspan>
+        </text>
+        <g stroke="#333">
+            <path d="M172 13.343L177.657 19 172 24.657M177 18.5h-19"/>
+        </g>
+    </g>
+</svg>
