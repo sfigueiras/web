@@ -12,7 +12,10 @@
   },
   "dependencies": {
     "blueprint-css": "^3.0.0-beta.0",
-    "vue": "^2.5.2"
+    "bootstrap-sass-grid": "^4.0.1",
+    "vue": "^2.5.2",
+    "vue-carousel": "^0.16.1",
+    "vue-resource": "^1.5.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.5",

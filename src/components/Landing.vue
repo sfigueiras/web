@@ -16,9 +16,6 @@
 
   section {
     background-color: $purple-uby;
-    min-height: 100%;
-    width: 100%;
-    display: absolute;
     color: white;
   }
 </style>

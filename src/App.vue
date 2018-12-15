@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <landing></landing>
+    <join></join>
   </div>
 </template>
 
 <script>
   import Landing from '@/components/Landing'
+  import Join from './components/Join'
 
   export default {
     name: 'app',
     components: {
-      Landing
+      Landing,
+      Join
     }
   }
 </script>
@@ -24,7 +27,7 @@
   }
 
   @font-face {
-    font-family: Gilroy-Regultar;
+    font-family: Gilroy-Regular;
     src: url('~/assets/fonts/Gilroy-Regular.woff');
   }
 
@@ -39,6 +42,11 @@
   html, body {
     height: 100%;
     margin: 0px;
+  }
+
+  section {
+    min-height: 100%;
+    width: 100%;
   }
 
   #app {
