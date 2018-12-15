@@ -1,13 +1,15 @@
 <template>
   <section id="landing">
     <div class="container">
-      <h1>The right blend of experience hard work, and fun.</h1>
-      <button>
-        tell us your story
-        <img src="~@/assets/images/arrow-right-dark.svg" alt="grey arrow right">
-      </button>
-
       <div>
+        <h1>The right blend of experience hard work, and fun.</h1>
+        <button>
+          tell us your story
+          <img src="~@/assets/images/arrow-right-dark.svg" alt="grey arrow right">
+        </button>
+      </div>
+
+      <div class="elements">
         <img class="guy" src="~@/assets/images/recurso-40-3-x.png" alt="ubykuo developer">
 
         <div class="animation">
@@ -191,13 +193,19 @@
     color: white;
   }
 
+  h1 {
+    font-size: 32px;
+    margin: 0;
+  }
+
   .container {
-    padding-top: 25%;
+    padding: 25% 34px 0 34px;
   }
 
   button {
     width: 194px;
     height: 37px;
+    margin-top: 35px;
     color: $black-uby;
     display: flex;
     justify-content: space-evenly;
@@ -272,4 +280,19 @@
     }
   }
 
+
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 54px;
+      width: 502px;
+    }
+
+    .container {
+      padding: 252px 125px;
+    }
+
+    .elements {
+
+    }
+  }
 </style>
