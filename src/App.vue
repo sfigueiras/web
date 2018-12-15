@@ -23,17 +23,25 @@
     src: url('~/assets/fonts/Gilroy-Bold.woff');
   }
 
+  @font-face {
+    font-family: Gilroy-Regultar;
+    src: url('~/assets/fonts/Gilroy-Regular.woff');
+  }
+
   * {
+    font-family: Gilroy-Regular, 'sans-serif';
+  }
+
+  h1, h2, h3, h4, h5 {
     font-family: Gilroy-Bold, 'sans-serif';
   }
 
-  html {
+  html, body {
     height: 100%;
-  }
-  body {
-    position: relative;
-    min-height: 100%;
-    margin: 0;
+    margin: 0px;
   }
 
+  #app {
+    height: 100%;
+  }
 </style>
