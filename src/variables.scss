@@ -1,0 +1,58 @@
+/*******************************************************
+COLORS
+*******************************************************/
+
+$primary: #330066;
+$secondary: #38E090;
+$terciary-text: #9933ff;
+$primary-text: white;
+$secondary-text: black;
+$grey: #EDEDED;
+$grey-darker: #BEBEBE;
+$black: #3C3C3B;
+$grey-icon: #D0D2D3;
+
+/***********************************
+VARIABLES
+***********************************/
+
+$primary-font: 'Raleway', sans-serif;
+$secondary-font: 'Roboto Slab', serif;
+
+/***********************************
+BUTTONS
+***********************************/
+
+$button-min-width: 140px;
+$button-transition-time: .1s;
+
+$icon-width: 30px;
+
+$overlay-border: 15px;
+
+/***********************************
+NAVIGATION
+***********************************/
+
+$nav-color: $primary;
+
+/***********************************
+SHADOWS
+***********************************/
+
+$shadow-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+$shadow-1-hover: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+/***********************************
+SPACING
+***********************************/
+
+$title-padding: 20px;
+$section-padding-vertical: 30px;
+$section-padding-horizontal: 40px;
+
+/***********************************
+FONTS
+***********************************/
+
+$title-font-size: 40px;

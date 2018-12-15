@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ubykuo | Desarrollo de software</title>
+  <meta name="description"
+        content="No pierdas más tiempo y dinero contrata un equipo de desarrollo de software que te resuelva cualquier problema">
+  <meta author="Santiago Figueiras">
+  <meta property="og:title" content="ubykuo | IT Consultants" />
+  <meta property="og:description" 
+  content="Don't loose more time and money, just hire a team that solves any problem" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ubykuo.com" />
+  <meta property="og:image" content="/static/img/opengraph/team.jpg" />
+  <link rel="icon" type="image/png" sizes="16x16"
+        href="/static/img/icons/favicon-16x16.png">
+  <!--[if IE]>
+  <link rel="shortcut icon" href="/static/img/icons/favicon-16x16.png">
+  <![endif]-->
+  <!-- Add to home screen for Android and modern mobile browsers -->
+  <link rel="manifest" href="/static/manifest.json">
+  <meta name="theme-color" content="#330066">
+
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="ubykuo">
+  <!-- Add to home screen for Windows -->
+  <meta name="msapplication-TileImage"
+        content="/static/img/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+  <% for (var chunk of webpack.chunks) {
+  for (var file of chunk.files) {
+  if (file.match(/\.(js|css)$/)) { %>
+  <link rel="<%= chunk.initial?'preload':'prefetch' %>"
+        href="<%= htmlWebpackPlugin.files.publicPath + file %>"
+        as="<%= file.match(/\.css$/)?'style':'script' %>">
+  <% }}} %>
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return
+      n = f.fbq = function () {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      }
+      if (!f._fbq) f._fbq = n
+      n.push = n
+      n.loaded = !0
+      n.version = '2.0'
+      n.queue = []
+      t = b.createElement(e)
+      t.async = !0
+      t.src = v
+      s = b.getElementsByTagName(e)[0]
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js')
+    fbq('init', '2407684362101')
+    fbq('track', 'PageView')
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+                 src="https://www.facebook.com/tr?id=124395168228288&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+
+  <!-- Adwords Global tag -->
+  <script async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-828693501"></script>
+  <script>
+    window.dataLayer = window.dataLayer || []
+
+    function gtag () {dataLayer.push(arguments)}
+
+    gtag('js', new Date())
+
+    gtag('config', 'AW-828693501')
+  </script>
+  <!-- End Adwords  Global tag -->
+</head>
+<body>
+<noscript>
+  El sitio necesita Javascript para funcionar.
+</noscript>
+
+<div id="app"></div>
+<!-- Todo: only include in production -->
+<%= htmlWebpackPlugin.options.serviceWorkerLoader %>
+<!-- built files will be auto injected -->
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://www.ubykuo.com",
+    "name": "ubykuo",
+    "logo": "https://ubykuo.com/images/ubykuo-200.png",
+    "sameAs": [
+      "https://www.facebook.com/ubykuo/",
+      "https://www.instagram.com/ubykuo/",
+      "https://www.linkedin.com/company-beta/5155661/",
+      "https://twitter.com/ubykuo",
+      "https://medium.com/@ubykuo",
+      "https://github.com/ubykuo"
+    ]
+  }
+
+
+
+</script>
+
+<script>
+  var google_conversion_id = 828693501
+  var google_conversion_label = '5TJbCM3yoHkQ_beTiwM'
+  var google_remarketing_only = false
+</script>
+<script type="text/javascript" id="ads-conversion"></script>
+
+<!-- Adwords Remarketing tag -->
+<script type="text/javascript" async>
+  /* <![CDATA[ */
+  var google_conversion_id = 828693501;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+</script>
+<script type="text/javascript"
+        src="//www.googleadservices.com/pagead/conversion.js" async>
+</script>
+<noscript>
+  <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/828693501/?guid=ON&amp;script=0"/>
+  </div>
+</noscript>
+<!-- End Adwords Remarketing tag -->
+
+
+<!-- Linkedin tag -->
+<script type="text/javascript" id="linkedin-conversion"></script>
+<script type="text/javascript">
+  _linkedin_data_partner_id = '88906';
+</script>
+<script type="text/javascript">
+  (function () {
+    var s = document.getElementsByTagName('script')[0]
+    var b = document.createElement('script')
+    b.type = 'text/javascript'
+    b.async = true
+    b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js'
+    s.parentNode.insertBefore(b, s)
+  })()
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none;" alt=""
+       src="https://dc.ads.linkedin.com/collect/?pid=88906&fmt=gif"/>
+</noscript>
+<!-- End Linkedin tag-->
+
+</body>
+</html>

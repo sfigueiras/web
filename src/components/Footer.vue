@@ -1,0 +1,332 @@
+<template>
+  <footer class="page-footer">
+    <div class="adresses">
+      <p class="coffee">{{$t('coffee')}}</p>
+
+      <div class="countries">
+        <div class="country">
+          <h3>Argentina, Buenos Aires</h3>
+          Esmeralda 950 CABA<br><a class="phone"
+                                   href="tel:+541151284568">+541151284568
+        </a><br>
+        </div>
+
+        <div class="country">
+          <h3>España, Madrid</h3>
+          Paseo de la Castellana 43<br><a
+          class="phone" href="tel:+34919011269">+34919011269  </a><br>
+        </div>
+
+        <div class="country">
+          <h3>United States, California</h3>
+          75 E Santa Clara Street San José CA-95113<br><a
+          class="phone" href="tel:+18883087068">+18883087068</a><br>
+        </div>
+      </div>
+    </div>
+    <div class="social">
+      <div class="options">
+        <a href="#">{{$t('startProject')}}</a>
+        <a href="#"
+           v-on:click.prevent="changeLanguage">{{$t('languageSelection')}}</a>
+      </div>
+      <p class="follow">{{$t('followUs')}}</p>
+
+      <a target="_blank" rel="noopener" href="https://www.facebook.com/ubykuo/">
+        <svg class="item social-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+    x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+          <g id="XMLID_234_">
+            <g id="XMLID_39_">
+              <path id="XMLID_41_" class="path" d="M22.8,0H7.2C3.2,0,0,3.2,0,7.2v15.5c0,4,3.2,7.2,7.2,7.2h15.5c4,0,7.2-3.2,7.2-7.2V7.2
+              C30,3.2,26.8,0,22.8,0 M14.5,27.3H7.2c-2.5,0-4.5-2-4.5-4.5V7.2c0-2.5,2-4.5,4.5-4.5h15.5c2.5,0,4.5,2,4.5,4.5v15.5
+              c0,2.5-2,4.5-4.5,4.5h-4.1" />
+              <path id="XMLID_40_" class="path" d="M19.8,10.8h3V7.7h-3c-2.7,0-4.9,2.2-4.9,4.9v3.5h-3.4v3.1h3.4v8.1H18v-8.1h4l0.5-3.1H18v-3.5
+              C18,11.6,18.8,10.8,19.8,10.8" />
+            </g>
+          </g>
+        </svg>
+      </a>
+
+      <a target="_blank" rel="noopener"
+         href="https://www.instagram.com/ubykuo/">
+        <svg class="item social-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+  x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+          <g id="XMLID_205_">
+            <g id="XMLID_88_">
+              <path id="XMLID_96_" class="path" d="M21.7,0H8.3C3.7,0,0,3.7,0,8.3v13.4C0,26.3,3.7,30,8.3,30h13.4c4.6,0,8.3-3.7,8.3-8.3V8.3
+              C30,3.7,26.3,0,21.7,0L21.7,0z M27.3,21.7c0,3.1-2.5,5.6-5.6,5.6H8.3c-3.1,0-5.6-2.5-5.6-5.6V8.3c0-3.1,2.5-5.6,5.6-5.6h13.4
+              c3.1,0,5.6,2.5,5.6,5.6V21.7z M27.3,21.7" />
+              <path id="XMLID_92_" class="path" d="M15,7.3c-4.3,0-7.7,3.5-7.7,7.7c0,4.3,3.5,7.7,7.7,7.7c4.3,0,7.7-3.5,7.7-7.7
+              C22.7,10.7,19.3,7.3,15,7.3L15,7.3z M15,20.1c-2.8,0-5.1-2.3-5.1-5.1c0-2.8,2.3-5.1,5.1-5.1s5.1,2.3,5.1,5.1
+              C20.1,17.8,17.8,20.1,15,20.1L15,20.1z M15,20.1" />
+              <path id="XMLID_89_" class="path" d="M23.1,5c-0.5,0-1,0.2-1.4,0.6c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.5,0.2,1,0.6,1.4
+              c0.4,0.4,0.9,0.6,1.4,0.6c0.5,0,1-0.2,1.4-0.6C24.8,8,25,7.5,25,7c0-0.5-0.2-1-0.6-1.4C24.1,5.2,23.6,5,23.1,5L23.1,5z M23.1,5"
+              />
+            </g>
+          </g>
+        </svg>
+      </a>
+
+      <a target="_blank" rel="noopener"
+         href="https://www.linkedin.com/company-beta/5155661/">
+        <svg class="item social-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+  x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+          <g id="XMLID_192_">
+            <g id="XMLID_95_">
+              <g id="XMLID_96_">
+                <path id="XMLID_104_" class="path" d="M21.7,0H8.3C3.7,0,0,3.7,0,8.3v13.4C0,26.3,3.7,30,8.3,30h13.4c4.6,0,8.3-3.7,8.3-8.3V8.3
+                C30,3.7,26.3,0,21.7,0L21.7,0z M27.3,21.7c0,3.1-2.5,5.6-5.6,5.6H8.3c-3.1,0-5.6-2.5-5.6-5.6V8.3c0-3.1,2.5-5.6,5.6-5.6h13.4
+                c3.1,0,5.6,2.5,5.6,5.6V21.7z M27.3,21.7" />
+                <path id="XMLID_102_" class="path" d="M15,20.1" />
+                <path id="XMLID_100_" class="path" d="M23.1,5" />
+                <path id="XMLID_99_" class="path" d="M11.1,22.2c0,0.3-0.2,0.5-0.5,0.5H8.3c-0.3,0-0.5-0.2-0.5-0.5v-9.3c0-0.3,0.2-0.5,0.5-0.5
+                h2.2c0.3,0,0.5,0.2,0.5,0.5V22.2z" />
+                <path id="XMLID_98_" class="path" d="M9.4,11.5c-1.2,0-2.1-0.9-2.1-2.1c0-1.2,0.9-2.1,2.1-2.1c1.2,0,2.1,0.9,2.1,2.1
+                C11.5,10.5,10.6,11.5,9.4,11.5L9.4,11.5z" />
+                <path id="XMLID_97_" class="path" d="M22.7,22.3c0,0.3-0.2,0.5-0.5,0.5h-2.4c-0.3,0-0.5-0.2-0.5-0.5v-4.4c0-0.7,0.2-2.9-1.7-2.9
+                c-1.5,0-1.8,1.5-1.8,2.2v5c0,0.3-0.2,0.5-0.5,0.5H13c-0.3,0-0.5-0.2-0.5-0.5v-9.4c0-0.3,0.2-0.5,0.5-0.5h2.3
+                c0.3,0,0.5,0.2,0.5,0.5v0.8c0.5-0.8,1.4-1.4,3.1-1.4c3.8,0,3.8,3.6,3.8,5.5V22.3z" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </a>
+      <a target="_blank" rel="noopener" href="https://twitter.com/ubykuo">
+        <svg class="item social-icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+          <path class="path" d="M9.8,28.1c-1.9,0-3.5-0.2-5.1-0.8c-1.3-0.4-2.5-1-3.8-1.7c-0.2-0.1-0.4-0.3-0.6-0.5c-0.3-0.4-0.4-1-0.2-1.4
+          C0.4,23.3,0.9,23,1.4,23c1.8,0.1,3.4-0.1,4.9-0.7c-1.5-0.8-2.6-2.1-3.3-3.9c-0.1-0.4-0.1-0.8,0.1-1.1c-1.3-1.3-2.1-3-2.2-5
+          c0-0.5,0.2-0.9,0.6-1.2c0,0,0.1,0,0.1-0.1C0.8,9.1,0.8,7,1.8,4.6C2,4.2,2.4,4,2.8,3.9c0.4-0.1,0.9,0,1.2,0.3l1.4,1.4
+          c2.3,2.3,5,3.6,8.2,4.1c0-3.2,2.5-6.1,5.7-6.7c2.3-0.4,4.4,0.2,6,1.7c0,0,0,0,0,0c0.4,0.2,2,0.3,3.4,0.3c0.4,0,0.9,0.2,1.2,0.7
+          C30.1,6,30.1,6.6,29.8,7c-0.9,1.3-1.8,2.8-2.2,3.4c0,1.2-0.1,2.5-0.4,3.8c-1.1,4.8-3.6,8.5-7.5,11.1c-2.2,1.5-4.6,2.4-7.2,2.7
+          C11.6,28.1,10.7,28.1,9.8,28.1 M6.2,25.1c1.8,0.4,3.7,0.5,6,0.3c2.2-0.2,4.2-1,6-2.2c3.3-2.3,5.4-5.4,6.4-9.5
+          c0.3-1.2,0.3-2.4,0.4-3.6c0-0.3,0-0.5,1.3-2.5c-1.4-0.1-2.4-0.5-2.9-1c-1.1-1-2.3-1.3-3.8-1c-2,0.4-3.6,2.2-3.5,4.2c0,0.3,0,0.7,0,1
+          v0.4c0,0.7-0.6,1.3-1.3,1.3c0,0-0.1,0-0.2,0c-4.3-0.3-7.9-2-10.9-4.8c-0.2,1.6,0.5,2.9,1.9,4.2c0.4,0.4,0.6,1,0.4,1.5
+          c-0.2,0.5-0.8,0.9-1.3,0.8c-0.2,0-0.4,0-0.6-0.1c0.5,1.2,1.5,2,3.1,2.5C7.6,16.8,8,17.3,8,17.9c0,0.6-0.4,1.1-1,1.2
+          c-0.2,0-0.3,0.1-0.4,0.1c0.8,0.8,1.8,1.3,3.2,1.4c0.5,0.1,1,0.4,1.1,1c0.1,0.5,0,1.1-0.5,1.4C9.1,23.9,7.7,24.6,6.2,25.1" />
+        </svg>
+      </a>
+
+      <a target="_blank" rel="noopener" href="https://medium.com/@ubykuo">
+        <svg class="item social-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+    x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+          <path class="path" d="M30,7.6c-0.2-0.6-0.6-1.1-1.1-1.4l-7.4-4c-1-0.5-2.3-0.2-2.9,0.8L14,10.5l-2.2-3.3c-0.2-0.3-0.4-0.5-0.8-0.7
+          L2.8,2.4C2.3,2.1,1.7,2,1.1,2.3C0.4,2.6,0,3.3,0,4v18c0,0.7,0.4,1.4,1,1.7L9.3,28c0.3,0.1,0.6,0.2,0.9,0.2c0.3,0,0.7-0.1,1-0.3
+          c0.6-0.4,0.9-1,0.9-1.6v-6.1l7.5,3.7l7.6,3.9c0.3,0.1,0.6,0.2,0.9,0.2c0.3,0,0.7-0.1,1-0.3c0.6-0.3,0.9-1,0.9-1.6l0-16.8
+          c0-0.2,0-0.4,0.1-0.7C30.1,8.3,30.1,7.9,30,7.6 M9.6,25.3l-7.1-3.6V5l7.1,3.6V25.3z M12.1,17.4v-5.2l4.7,7.5L12.1,17.4z M27.5,25.1
+          l-5.6-2.9l5.6-9.1L27.5,25.1z M20.1,20.3l-4.7-7.5l5.1-8.2l6.9,3.7L20.1,20.3z" />
+        </svg>
+      </a>
+
+      <a target="_blank" rel="noopener" href="https://github.com/ubykuo">
+        <svg class="item social-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+  x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+          <g>
+            <path class="path" d="M15,0C6.7,0,0,6.7,0,15c0,8.3,6.7,15,15,15c8.3,0,15-6.7,15-15C30,6.7,23.3,0,15,0L15,0z M25.8,20.6
+            c-1.4,2.7-3.8,4.7-6.6,5.8l0,0c-0.1-1.2-0.2-2.6-0.2-3.2c0-0.5-0.1-1.6-1.2-2.3c4.3-0.4,6.4-2.8,6.5-5.9c0.1-1.8-0.6-3.4-1.9-4.7
+            c0.1-1.4,0-3-0.1-3.7c-1-0.3-3.3,0.9-3.9,1.4c-1.3-0.5-4.6-0.7-6.6,0c-1.4-1-3-1.6-3.9-1.4c-0.8,1.8-0.3,3.5-0.1,3.7
+            c-1,1-2.5,2.1-2.1,4.6c0.6,3.6,3.2,5.6,7.3,6c-0.9,0.2-1,0.8-1.1,1.1c-2.7,1.1-3.5-0.7-3.9-1.2c-1.2-1.4-2.2-1-2.3-1
+            c-0.1,0-0.1,0.1-0.1,0.2c0.1,0.3,0.7,0.6,0.7,0.6c0.9,0.6,1.2,1.8,1.4,2.1c1.2,2,4.1,1.2,4.1,1.2c0,0.2,0,1.7,0,2.8
+            c-5.2-1.4-9-6.1-9-11.7C2.8,8.3,8.3,2.8,15,2.8S27.2,8.3,27.2,15C27.2,17,26.7,18.9,25.8,20.6 M19.2,26.4" />
+          </g>
+        </svg>
+      </a>
+    </div>
+    <!--div class="slogan">
+      <p>everytime, everywhere</p>
+      <img class="arrow down" src="/static/img/icons/arrow-green.png"
+           alt="swipe down arrow">
+    </div-->
+  </footer>
+</template>
+
+<script>
+  export default {
+    name: 'v-footer',
+    methods: {
+      changeLanguage: function () {
+        this.$i18n.locale === 'en' ? this.$i18n.locale = 'es' : this.$i18n.locale = 'en'
+      }
+    }
+  }
+</script>
+
+<style lang="scss" scoped>
+  @import '~@/variables.scss';
+
+  .page-footer {
+    background: url("/static/img/backgrounds/background-decoration-purple-light.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px 20px;
+
+    * {
+      fill: #D0D2D3;
+    }
+
+    svg {
+      margin: 2.5px;
+    }
+  }
+
+  .slogan {
+    -ms-flex: 1.4;
+    flex: 1.4;
+    color: #38E090;
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    img {
+      margin-left: 10px;
+    }
+  }
+
+  .slogan p,
+  .social p {
+    font-size: 1.5em;
+  }
+
+  .social {
+    -ms-flex: 1.1;
+    flex: 1.1;
+    color: #EDEDED;
+    text-align: center;
+
+    img:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+  .follow {
+    margin-bottom: 5px;
+  }
+
+  .options {
+    display: none;
+  }
+
+  .options a {
+    color: #EDEDED;
+    font-weight: bold;
+    display: block;
+    margin: 10px;
+  }
+
+  .adresses {
+    color: white;
+    display: block;
+    -ms-flex: 1.5;
+    flex: 1.5;
+  }
+
+  .social-icon {
+    width: 30px
+  }
+
+  .item {
+    top: 0;
+    transition: transform linear .2s;
+
+    &:hover:not(.navigation-icon) {
+      transform: scale(1.3);
+      fill: white;
+    }
+  }
+
+  .countries {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 1;
+    flex: 1;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .country {
+    flex: 1 0 45%;
+    margin-right: 15px;
+    color: white;
+
+    h3 {
+      color: $secondary;
+      margin: 10px 0;
+    }
+  }
+
+  .phone {
+    display: inline-block;
+    color: #38E090;
+    padding: 10px 0;
+  }
+
+  /*******************************************************
+  TABLET
+  *******************************************************/
+  @media (min-width: 641px) {
+    .content {
+      width: 80%;
+    }
+    .page-footer {
+      font-size: 1.1em;
+      padding-bottom: 40px;
+    }
+
+    .coffee {
+      color: #9933ff;
+    }
+    .adresses p {
+      margin-top: 10px;
+    }
+
+    .slogan {
+      -ms-flex: 1.8;
+      flex: 1.8;
+      margin: 0;
+    }
+    .slogan p {
+      margin: 0;
+    }
+    .social {
+      text-align: center;
+      font-size: initial;
+      padding-top: 20px;
+    }
+    .social p {
+      font-size: 1em;
+    }
+    .options {
+      display: block !important;
+    }
+    .options p {
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
+    }
+    .options:first-child {
+      margin-top: 20px;
+    }
+    .follow {
+      display: none;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .slogan {
+      display: none;
+    }
+  }
+
+  @media (max-width: 461px) {
+    .social {
+      align-self: center;
+    }
+  }
+</style>
