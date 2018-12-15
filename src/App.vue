@@ -19,20 +19,11 @@
 </script>
 
 <style lang="scss">
-  @import '~@/assets/scss/_variables';
-
-  @font-face {
-    font-family: Gilroy-Bold;
-    src: url('~/assets/fonts/Gilroy-Bold.woff');
-  }
-
-  @font-face {
-    font-family: Gilroy-Regular;
-    src: url('~/assets/fonts/Gilroy-Regular.woff');
-  }
+  @import '/assets/scss/_fonts';
+  @import '/assets/scss/_variables';
 
   * {
-    font-family: Gilroy-Regular, 'sans-serif';
+    font-family: Gilroy, Arial, 'sans-serif';
   }
 
   h1, h2, h3, h4, h5 {
