@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="297" height="163" viewBox="0 0 297 163">
+    <defs>
+        <filter id="a" width="102.4%" height="104.3%" x="-1.2%" y="-2.2%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation=".5"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <rect id="c" width="295" height="161" rx="4"/>
+        <filter id="b" width="101%" height="101.9%" x="-.5%" y="-.9%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation=".5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" filter="url(#a)" transform="translate(1 1)">
+        <use fill="#000" filter="url(#b)" xlink:href="#c"/>
+        <use fill="#FFF" xlink:href="#c"/>
+        <g transform="translate(25 101)">
+            <rect width="117" height="27" x=".5" y=".5" fill="#755FF3" stroke="#755FF3" stroke-opacity=".2" rx="4"/>
+            <text fill="#FFF" font-family="Gilroy-Regular" font-size="14" letter-spacing=".02">
+                <tspan x="36.686" y="16.56">Apply</tspan>
+            </text>
+        </g>
+        <g transform="translate(153 101)">
+            <rect width="117" height="27" x=".5" y=".5" stroke="#755FF3" stroke-opacity=".2" rx="4"/>
+            <text fill="#755FF3" font-family="Gilroy-Regular" font-size="14" letter-spacing=".02">
+                <tspan x="19.881" y="16.56">Read more</tspan>
+            </text>
+        </g>
+        <g fill="#595875">
+            <text font-family="Gilroy-SemiBold" font-size="20" font-weight="500" letter-spacing="-.3" transform="translate(25 30)">
+                <tspan x="0" y="15">DevOps Engineer</tspan>
+            </text>
+            <text font-family="Gilroy-Regular" font-size="14" letter-spacing="-.21" transform="translate(25 30)">
+                <tspan x="0" y="36">La plata, Buenos Aires, Argentin</tspan> <tspan x="194.586" y="36">a</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="273" height="85" viewBox="0 0 273 85">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FFF" d="M168 0h105v85H168z"/>
+        <g stroke="#333" stroke-width="2">
+            <path d="M215.594 36l6.895 6.75-6.895 6.75M222 42.75h-24.544"/>
+        </g>
+        <g fill="#FFF" font-size="18" letter-spacing="-.1">
+            <text font-family="Gilroy-Bold" font-weight="bold" transform="translate(-1 25)">
+                <tspan x="94" y="14">Fanell</tspan> <tspan x="143.746" y="14">i</tspan>
+            </text>
+            <text font-family="Gilroy-Regular" transform="translate(-1 25)">
+                <tspan x="0" y="14">Next cas</tspan> <tspan x="71.488" y="14">e</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

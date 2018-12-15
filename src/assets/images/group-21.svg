@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="735" height="235" viewBox="0 0 735 235">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FFF" d="M173 0h562v235H173zM0 0h172v235H0z"/>
+        <text fill="#333" font-family="Gilroy-SemiBold" font-size="18" font-weight="500" letter-spacing="-.17" transform="translate(39 187)">
+            <tspan x=".5" y="14">read more</tspan>
+        </text>
+        <text fill="#CACACA" font-family="Gilroy-SemiBold" font-size="18" font-weight="500" letter-spacing="-.17">
+            <tspan x="525.234" y="197">www.beathey.com</tspan>
+        </text>
+        <path fill="#F7D6F0" d="M525 231h210v4H525z"/>
+    </g>
+</svg>
