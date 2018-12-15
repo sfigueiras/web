@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <landing></landing>
+    <landing class="full-height"></landing>
     <join></join>
+    <contact></contact>
     <foot></foot>
   </div>
 </template>
@@ -10,10 +11,12 @@
   import Landing from './components/Landing'
   import Join from './components/Join'
   import Foot from './components/Foot'
+  import Contact from './components/Contact'
 
   export default {
     name: 'app',
     components: {
+      Contact,
       Landing,
       Join,
       Foot
@@ -25,23 +28,20 @@
   @import '/assets/scss/_fonts';
   @import '/assets/scss/_variables';
 
-  * {
-    font-family: Gilroy, Arial, 'sans-serif';
-    color: $type-uby;
-  }
-
   h1, h2, h3, h4, h5 {
-    font-family: Gilroy-Bold, 'sans-serif';
+    font-family: Gilroy, 'sans-serif';
+    font-weight: bold;
   }
 
   html, body {
     height: 100%;
     margin: 0;
+    font-family: Gilroy, Arial, 'sans-serif';
+    color: $type-uby;
   }
 
-  section {
+  section.full-height {
     min-height: 100%;
-    width: 100%;
   }
 
   #app {
