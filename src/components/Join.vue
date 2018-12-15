@@ -5,15 +5,18 @@
     <p>Take a look at our open positions and apply to join this super team.</p>
     <a href="https://join.ubykuo.com"><b>{{ offers.length }} open positions</b></a>
 
-    <ul v-for="department in departments">
-      <li>{{ department }}</li>
+    <h6>Tags</h6>
+    <ul v-for="department in departments" class="departments">
+      <li><span class="tag">{{ department }}</span></li>
     </ul>
 
     <carousel :per-page="1" ref="carousel">
       <slide v-for="offer in offers" :key="offer.id">
-        <h3>{{ offer.title }}</h3>
-        <p>{{ offer.city }}, {{ offer.country }}</p>
-        <a :href="offer.careers_url">Apply</a>
+        <div class="card">
+          <h3>{{ offer.title }}</h3>
+          <p>{{ offer.city }}, {{ offer.country }}</p>
+          <a :href="offer.careers_url">Apply</a>
+        </div>
       </slide>
     </carousel>
   </section>
@@ -51,5 +54,17 @@
 
   section {
     background-color: $grey-background;
+  }
+
+  .departments {
+
+  }
+
+  .tag {
+
+  }
+
+  .card {
+    background: #FFF;
   }
 </style>
