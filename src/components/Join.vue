@@ -95,6 +95,10 @@
     overflow: initial;
   }
 
+  /deep/ .VueCarousel-dot {
+    padding: 5px !important;
+  }
+
   /deep/ .VueCarousel-dot-button {
     background: #FFFFFF !important;
     border: 1px solid #ededf0;

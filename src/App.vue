@@ -2,6 +2,7 @@
   <div id="app">
     <navigation></navigation>
     <landing class="full-height"></landing>
+    <clients></clients>
     <join></join>
     <contact></contact>
     <foot></foot>
@@ -11,6 +12,7 @@
 <script>
   import Navigation from './components/Navigation'
   import Landing from './components/Landing'
+  import Clients from './components/Clients'
   import Join from './components/Join'
   import Foot from './components/Foot'
   import Contact from './components/Contact'
@@ -20,6 +22,7 @@
     components: {
       Navigation,
       Landing,
+      Clients,
       Join,
       Contact,
       Foot
