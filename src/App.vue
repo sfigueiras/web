@@ -33,7 +33,7 @@
 
   h1, h2, h3, h4, h5 {
     font-family: Gilroy, 'sans-serif';
-    font-weight: bold;
+    font-weight: normal;
   }
 
   html, body {
@@ -52,16 +52,58 @@
     height: 100%;
   }
 
-  button {
+  .button {
     border: none;
     border-radius: $border-radius;
+    display: inline-block;
+    padding: 6px 15px;
+    text-decoration: none;
+    position: relative;
+    font-size: 18px;
 
-    .primary {
-      background-color: $purple-uby;
+    &.arrow {
+      padding-right: 80px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 24px;
+        height: 24px;
+        right: 0;
+        transform: translateX(-12px);
+        background: url('~@/assets/images/arrow-right-dark.svg') center center no-repeat;
+      }
     }
 
-    .secondary {
+    &.primary {
+      background-color: $purple-uby;
+      color: #FFF;
+    }
+
+    &.secondary {
       background-color: #fff;
+      color: $purple-uby;
+      padding: 10px 40px;
+    }
+
+    &.transparent {
+      border: 1px solid #707170;
+      background: transparent;
+      color: #FFF;
+
+      &.arrow {
+        padding-right: 80px;
+
+        &::before {
+          position: absolute;
+          content: "";
+          width: 24px;
+          height: 24px;
+          right: 0;
+          transform: translateX(-12px);
+          background: url('~@/assets/images/arrow-right.svg') center center no-repeat;
+        }
+      }
     }
   }
 </style>

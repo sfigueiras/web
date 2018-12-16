@@ -9,7 +9,25 @@
           </p>
         </div>
         <div class="col-xs-12 col-sm-4">
-          form
+          <form>
+            <div>
+              <div>
+                <input placeholder="Name">
+              </div>
+              <span>we can call you John Doe if you leave it blank</span>
+            </div>
+            <div>
+              <div>
+                <input placeholder="email">
+                <span><button type="submit"></button></span>
+              </div>
+              <span>+54 11 5743 8238</span>
+            </div>
+            <div>
+              I want tobe contacted by phone
+            </div>
+            <button type="submit" class="button secondary">Contact me</button>
+          </form>
         </div>
       </div>
     </div>

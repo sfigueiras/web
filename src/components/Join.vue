@@ -5,7 +5,7 @@
       <h4>JOIN UBYKUO</h4>
       <h3>Get on board</h3>
       <p>Take a look at our open positions and apply to join this super team.</p>
-      <a href="https://join.ubykuo.com"><b>{{ offers.length }} open positions</b></a>
+      <a href="https://join.ubykuo.com" class="open-positions"><b>{{ offers.length }} open positions</b></a>
 
       <h6>Tags</h6>
       <ul v-for="department in departments" class="departments">
@@ -17,7 +17,7 @@
           <div class="card">
             <h3>{{ offer.title }}</h3>
             <p>{{ offer.city }}, {{ offer.country }}</p>
-            <a :href="offer.careers_url">Apply</a>
+            <a :href="offer.careers_url" class="button primary">Apply</a>
           </div>
         </slide>
       </carousel>
@@ -64,10 +64,46 @@
   }
 
   .tag {
+    background: #ededed;
+    border-radius: $border-radius;
+    padding: 5px 10px;
+  }
 
+  .button {
+    display: block;
+    text-align: center;
   }
 
   .card {
     background: #FFF;
+    padding: 20px;
+    margin: 0 10px;
+    border-radius: $border-radius;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1), 0 10px 25px 0 rgba(0, 0, 0, 0.14);
   }
+
+  .open-positions {
+    color: $pale-orange-uby;
+  }
+
+  /deep/ .VueCarousel-wrapper {
+    overflow: initial;
+  }
+
+  /deep/ .VueCarousel-dot-button {
+    background: #FFFFFF !important;
+    border: 1px solid #ededf0;
+  }
+
+  /deep/ .VueCarousel-dot--active button {
+    background: $purple-uby !important;
+  }
+
+  @media (min-width: 1024px) {
+    .button {
+      display: inline-block;
+      text-align: left;
+    }
+  }
+
 </style>

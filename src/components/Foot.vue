@@ -2,19 +2,19 @@
   <section id="footer">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-4 col-sm-push-8">
+        <div class="col-xs-12 col-sm-3 col-sm-push-9">
           <h2>social</h2>
           <div>
-            <icon :icon="{ prefix: 'fab', iconName: 'facebook' }" size="2x" class="icon"/>
-            <icon :icon="{ prefix: 'fab', iconName: 'twitter' }" size="2x" class="icon"/>
-            <icon :icon="{ prefix: 'fab', iconName: 'instagram' }" size="2x" class="icon"/>
-            <icon :icon="{ prefix: 'fab', iconName: 'github' }" size="2x" class="icon"/>
-            <icon :icon="{ prefix: 'fab', iconName: 'medium' }" size="2x" class="icon"/>
-            <icon :icon="{ prefix: 'fab', iconName: 'linkedin' }" size="2x" class="icon"/>
+            <icon :icon="{ prefix: 'fab', iconName: 'facebook' }" size="lg" class="icon"/>
+            <icon :icon="{ prefix: 'fab', iconName: 'twitter' }" size="lg" class="icon"/>
+            <icon :icon="{ prefix: 'fab', iconName: 'instagram' }" size="lg" class="icon"/>
+            <icon :icon="{ prefix: 'fab', iconName: 'github' }" size="lg" class="icon"/>
+            <icon :icon="{ prefix: 'fab', iconName: 'medium' }" size="lg" class="icon"/>
+            <icon :icon="{ prefix: 'fab', iconName: 'linkedin' }" size="lg" class="icon"/>
           </div>
           <p><a href="mailto:hello@ubykuo.com">hello@ubykuo.com</a></p>
         </div><!-- social -->
-        <div class="col-xs-12 col-sm-4 col-sm-pull-4">
+        <div class="col-xs-12 col-sm-4 col-sm-pull-3">
           <h2>ubykuo</h2>
           <p>
             <b>Argentina, Buenos Aires</b><br>
@@ -31,10 +31,10 @@
             <span>+19495229234</span>
           </p>
         </div><!-- ubykuo -->
-        <div class="col-xs-12 col-sm-4 col-sm-pull-4">
+        <div class="col-xs-12 col-sm-3 col-sm-pull-2">
           <h2>join ubykuo</h2>
           <p>We are looking for you, check our open positions.</p>
-          <a href="https://join.ubykuo.com">Careers Site</a>
+          <a href="https://join.ubykuo.com" class="button transparent arrow">Careers Site</a>
         </div><!-- join -->
       </div>
     </div>
@@ -57,11 +57,23 @@
   }
 
   .icon {
-    margin: 5px
+    margin-right: 15px;
   }
 
   h2 {
     font-size: 36px;
     color: #FFF;
   }
+
+  a {
+    color: #707170;
+    text-decoration: none;
+  }
+
+  @media (min-width: 1024px) {
+    section {
+      padding: 120px 0 40px 0;
+    }
+  }
+
 </style>
