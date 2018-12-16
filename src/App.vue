@@ -54,6 +54,13 @@
     font-size: 12px;
     color: #c6c6d0;
     font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0 0 5px 0;
+  }
+
+  h5 {
+    font-size: 20px;
+    font-weight: 500;
   }
 
   html, body {
@@ -62,6 +69,15 @@
     margin: 0;
     font-family: Gilroy, Arial, 'sans-serif';
     color: $type-uby;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  p.lead {
+    font-size: 20px;
+    margin: 10px 0;
   }
 
   section.full-height {
