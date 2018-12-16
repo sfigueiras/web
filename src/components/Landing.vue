@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="claim col-lg-6">
-          <h1>The right blend of experience hard work, and fun.</h1>
+          <p>The right blend of experience hard work, and fun.</p>
           <a class="button arrow" href="#">tell us your story</a>
         </div>
 
@@ -218,7 +218,7 @@
     color: white;
   }
 
-  h1 {
+  p {
     font-size: 32px;
     margin: 0;
   }
@@ -232,6 +232,7 @@
     border: 1px solid #ededf0;
     color: $black-uby;
     background-color: $pale-mauve-uby;
+    margin-top: 35px;
   }
 
   .guy {
@@ -310,7 +311,7 @@
       z-index: 1;
     }
 
-    h1 {
+    p {
       font-size: 54px;
       width: 502px;
     }
