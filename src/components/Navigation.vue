@@ -3,11 +3,13 @@
     <div class="left">
       <img src="~@/assets/images/solo-icon-colored.svg" alt="ubykuo logo on white">
       <div class="visible-md">
-          <a href="">Services</a>
-          <a href="">How we work</a>
-          <a href="">Projects</a>
-          <a href="">Our team</a>
-          <a href="">Contact us</a>
+        <div class="desktop-navigation">
+          <a href="">services</a>
+          <a href="">how we work</a>
+          <a href="">projects</a>
+          <a href="">our team</a>
+          <a href="">contact us</a>
+        </div>
       </div>
     </div>
 
@@ -54,13 +56,19 @@
     color: white;
   }
 
-  a {
-    text-decoration: none;
-    color: #fff;
-    opacity: 0.5;
-  }
-
   @media (min-width: 1024px) {
+    .desktop-navigation {
+      display: flex;
+      justify-content: space-evenly;
 
+      a {
+        text-decoration: none;
+        color: #fff;
+        opacity: 0.5;
+        display: block;
+        padding: 15px;
+        font-weight: bold;
+      }
+    }
   }
 </style>
