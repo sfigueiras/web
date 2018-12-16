@@ -4,14 +4,14 @@
       <div class="row">
         <div class="col-xs-12 col-sm-3 col-sm-push-9">
           <h2>social</h2>
-          <div>
+          <p>
             <icon :icon="{ prefix: 'fab', iconName: 'facebook' }" size="lg" class="icon"/>
             <icon :icon="{ prefix: 'fab', iconName: 'twitter' }" size="lg" class="icon"/>
             <icon :icon="{ prefix: 'fab', iconName: 'instagram' }" size="lg" class="icon"/>
             <icon :icon="{ prefix: 'fab', iconName: 'github' }" size="lg" class="icon"/>
             <icon :icon="{ prefix: 'fab', iconName: 'medium' }" size="lg" class="icon"/>
             <icon :icon="{ prefix: 'fab', iconName: 'linkedin' }" size="lg" class="icon"/>
-          </div>
+          </p>
           <p><a href="mailto:hello@ubykuo.com">hello@ubykuo.com</a></p>
         </div><!-- social -->
         <div class="col-xs-12 col-sm-4 col-sm-pull-3">
@@ -54,15 +54,11 @@
     background-color: $black-uby;
     color: #707170;
     font-size: 20px;
+    padding: 40px 10px;
   }
 
   .icon {
     margin-right: 15px;
-  }
-
-  h2 {
-    font-size: 36px;
-    color: #FFF;
   }
 
   a {

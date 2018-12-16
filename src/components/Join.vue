@@ -57,6 +57,7 @@
 
   section {
     background-color: $grey-background;
+    padding: 50px 10px 10px 10px;
   }
 
   .departments {
@@ -84,6 +85,10 @@
 
   .open-positions {
     color: $pale-orange-uby;
+  }
+
+  /deep/ .VueCarousel {
+    padding: 0;
   }
 
   /deep/ .VueCarousel-wrapper {

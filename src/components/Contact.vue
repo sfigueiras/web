@@ -26,7 +26,7 @@
             <div>
               I want tobe contacted by phone
             </div>
-            <button type="submit" class="button secondary">Contact me</button>
+            <a href="#" class="button secondary">Contact me</a>
           </form>
         </div>
       </div>
@@ -43,8 +43,22 @@
 <style lang="scss" scoped>
   @import '~@/assets/scss/_variables';
 
+  .button {
+    display: block;
+    text-align: center;
+  }
+
   section {
     background-color: $purple-uby;
     color: white;
+    padding: 40px 10px;
   }
+
+  @media (min-width: 1024px) {
+    .button {
+      display: inline-block;
+      text-align: left;
+    }
+  }
+
 </style>

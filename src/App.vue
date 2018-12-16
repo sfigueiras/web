@@ -34,10 +34,30 @@
   h1, h2, h3, h4, h5 {
     font-family: Gilroy, 'sans-serif';
     font-weight: normal;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 36px;
+    color: #FFF;
+    padding: 0 0 20px 0;
+  }
+
+  h3 {
+    font-size: 32px;
+    font-weight: bold;
+    padding: 0 0 20px 0;
+  }
+
+  h4 {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #c6c6d0;
+    font-weight: bold;
   }
 
   html, body {
-    overflow-x:hidden;
+    overflow-x: hidden;
     height: 100%;
     margin: 0;
     font-family: Gilroy, Arial, 'sans-serif';
