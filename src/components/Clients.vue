@@ -2,11 +2,11 @@
   <section id="clients">
     <p class="trusted">Trusted by top brands</p>
     <p class="top-brands">all over the world</p>
-    <div class="visible-md clients-desktop">
+    <div class="visible-md visible-lg clients-desktop">
       <img src="static/img/pixel.png" v-for="client in clients" :key="client" height="51"
         :style="{ 'background-image': `url(/static/img/${client})`}" />
     </div>
-    <carousel class="visible-xs" :per-page="1" ref="carousel">
+    <carousel class="visible-xs visible-sm" :per-page="1" ref="carousel">
         <slide v-for="client in clients" :key="client">
           <img src="static/img/pixel.png" height="51" :style="{ 'background-image': `url(/static/img/${client})`}" />
         </slide>

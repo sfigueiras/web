@@ -221,6 +221,7 @@
   p {
     font-size: 32px;
     margin: 0;
+    font-weight: bold;
   }
 
   .container {
@@ -305,10 +306,11 @@
     position: relative;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 691px) {
     .claim {
       position: absolute;
       z-index: 1;
+      top: 70%;
     }
 
     p {
@@ -318,6 +320,10 @@
 
     .guy {
       left: 387px;
+    }
+
+    .animation {
+      right: -50%;
     }
   }
 

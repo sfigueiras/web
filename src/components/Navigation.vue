@@ -2,7 +2,7 @@
   <div id="navigation">
     <div class="left">
       <img src="~@/assets/images/solo-icon-colored.svg" alt="ubykuo logo on white">
-      <div class="visible-md">
+      <div class="visible-md visible-lg">
         <div class="desktop-navigation">
           <a href="">services</a>
           <a href="">how we work</a>
@@ -14,8 +14,8 @@
     </div>
 
     <div class="right">
-      <icon class="visible-xs" icon="bars" size="2x" style="color: #fff" />
-      <h1 class="visible-md">ubykuo</h1>
+      <icon class="visible-xs visible-sm" icon="bars" size="2x" style="color: #fff" />
+      <h1 class="visible-md visible-lg">ubykuo</h1>
     </div>
   </div>
 </template>
@@ -56,7 +56,7 @@
     color: white;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 691px) {
     .desktop-navigation {
       display: flex;
       justify-content: space-evenly;
