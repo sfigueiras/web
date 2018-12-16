@@ -230,7 +230,6 @@
   }
 
   .button {
-    border: 1px solid #ededf0;
     color: $black-uby;
     background-color: $pale-mauve-uby;
     margin-top: 35px;
