@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <navigation></navigation>
     <landing class="full-height"></landing>
     <join></join>
     <contact></contact>
@@ -8,6 +9,7 @@
 </template>
 
 <script>
+  import Navigation from './components/Navigation'
   import Landing from './components/Landing'
   import Join from './components/Join'
   import Foot from './components/Foot'
@@ -16,9 +18,10 @@
   export default {
     name: 'app',
     components: {
-      Contact,
+      Navigation,
       Landing,
       Join,
+      Contact,
       Foot
     }
   }
@@ -34,6 +37,7 @@
   }
 
   html, body {
+    overflow-x:hidden;
     height: 100%;
     margin: 0;
     font-family: Gilroy, Arial, 'sans-serif';
