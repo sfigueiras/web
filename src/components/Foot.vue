@@ -52,7 +52,7 @@
 
   section {
     background-color: $black-uby;
-    color: $grey-background;
+    color: $grey-font;
     font-size: 20px;
     padding: 40px 10px;
   }

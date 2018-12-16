@@ -4,22 +4,26 @@
       <h4>JOIN UBYKUO</h4>
       <h3>Get on board</h3>
       <p class="lead">Take a look at our open positions and apply to join this super team.</p>
-      <a href="https://join.ubykuo.com" class="open-positions"><b>{{ offers.length }} open positions</b></a>
 
-      <h6 class="tags">Tags</h6>
-      <ul class="departments">
-        <li v-for="department in departments"><span class="tag">{{ department }}</span></li>
-      </ul>
+      <div v-if="offers.length">
+        <a href="https://join.ubykuo.com" class="open-positions"><b>{{ offers.length }} open positions</b></a>
 
-      <carousel :per-page="1" :perPageCustom="[[1024, 3]]" ref="carousel">
-        <slide v-for="offer in offers" :key="offer.id">
-          <div class="card">
-            <h5>{{ offer.title }}</h5>
-            <p>{{ offer.city }}, {{ offer.country }}</p>
-            <a :href="offer.careers_url" class="button primary">Apply</a>
-          </div>
-        </slide>
-      </carousel>
+        <h6 class="tags">Tags</h6>
+        <ul class="departments">
+          <li v-for="department in departments"><span class="tag">{{ department }}</span></li>
+        </ul>
+
+        <carousel :per-page="1" :perPageCustom="[[1024, 3]]" ref="carousel">
+          <slide v-for="offer in offers" :key="offer.id">
+            <div class="card">
+              <h5>{{ offer.title }}</h5>
+              <p>{{ offer.city }}, {{ offer.country }}</p>
+              <a :href="offer.careers_url" class="button primary">Apply</a>
+            </div>
+          </slide>
+        </carousel>
+      </div>
+      <p v-else class="loading">Cargando</p>
     </div>
   </section>
 </template>
@@ -34,11 +38,17 @@
       }
     },
     mounted () {
-      this.$http.get(this.url).then((response) => {
-        if (response.status === 200) {
-          this.offers = response.body.offers
-        }
-      })
+      // setTimeout(this.loadOffers, 5000)
+      this.loadOffers()
+    },
+    methods: {
+      loadOffers () {
+        this.$http.get(this.url).then((response) => {
+          if (response.status === 200) {
+            this.offers = response.body.offers
+          }
+        })
+      }
     },
     computed: {
       departments () {
@@ -57,6 +67,10 @@
   section {
     background-color: $grey-background;
     padding: 50px 10px 10px 10px;
+  }
+
+  .loading {
+    text-align: center;
   }
 
   ul {
