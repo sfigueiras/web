@@ -69,6 +69,11 @@
     font-weight: 500;
   }
 
+  h6 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
   html, body {
     overflow-x: hidden;
     height: 100%;
@@ -92,6 +97,10 @@
 
   #app {
     height: 100%;
+
+    > section {
+      overflow: hidden;
+    }
   }
 
   .button {

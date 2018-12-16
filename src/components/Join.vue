@@ -3,15 +3,17 @@
     <div class="container">
       <h4>JOIN UBYKUO</h4>
       <h3>Get on board</h3>
-      <p class="lead">Take a look at our open positions and apply to join this super team.</p>
+      <p class="lead">Take a look at our open positions and apply<br class="hidden-xs"> to join this super team.</p>
 
       <div v-if="offers.length">
-        <a href="https://join.ubykuo.com" class="open-positions"><b>{{ offers.length }} open positions</b></a>
+        <div class="clearfix filters">
+          <a href="https://join.ubykuo.com" class="open-positions"><b>{{ offers.length }} open positions</b></a>
 
-        <h6 class="tags">Tags</h6>
-        <ul class="departments">
-          <li v-for="department in departments"><span class="tag">{{ department }}</span></li>
-        </ul>
+          <ul class="departments">
+            <li v-for="department in departments"><span class="tag">{{ department }}</span></li>
+          </ul>
+          <h6 class="tags">Tags</h6>
+        </div>
 
         <carousel :per-page="1" :perPageCustom="[[1024, 3]]" ref="carousel">
           <slide v-for="offer in offers" :key="offer.id">
@@ -77,6 +79,8 @@
     list-style: none;
     padding: 0;
 
+    margin-top: 60px;
+
     &:after {
       content: "";
       display: table;
@@ -118,6 +122,7 @@
   .open-positions {
     color: $pale-orange-uby;
     text-decoration: none;
+    font-size: 16px;
   }
 
   /deep/ .VueCarousel {
@@ -148,8 +153,13 @@
       text-align: left;
     }
 
+    .filters {
+      margin: 40px 0 20px 0;
+    }
+
     ul {
       float: right;
+      margin: 5px 0;
     }
 
     .card {
@@ -157,6 +167,9 @@
     }
 
     .tags {
+      float: right;
+      padding: 0;
+      margin: 0 10px 0 0;
       display: inline-block;
     }
   }
