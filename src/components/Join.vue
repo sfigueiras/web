@@ -1,21 +1,20 @@
 <template>
   <section id="join">
     <div class="container">
-
       <h4>JOIN UBYKUO</h4>
       <h3>Get on board</h3>
-      <p>Take a look at our open positions and apply to join this super team.</p>
+      <p class="lead">Take a look at our open positions and apply to join this super team.</p>
       <a href="https://join.ubykuo.com" class="open-positions"><b>{{ offers.length }} open positions</b></a>
 
-      <h6>Tags</h6>
-      <ul v-for="department in departments" class="departments">
-        <li><span class="tag">{{ department }}</span></li>
+      <h6 class="tags">Tags</h6>
+      <ul class="departments">
+        <li v-for="department in departments"><span class="tag">{{ department }}</span></li>
       </ul>
 
-      <carousel :per-page="1" ref="carousel">
+      <carousel :per-page="1" :perPageCustom="[[1024, 3]]" ref="carousel">
         <slide v-for="offer in offers" :key="offer.id">
           <div class="card">
-            <h3>{{ offer.title }}</h3>
+            <h5>{{ offer.title }}</h5>
             <p>{{ offer.city }}, {{ offer.country }}</p>
             <a :href="offer.careers_url" class="button primary">Apply</a>
           </div>
@@ -60,14 +59,33 @@
     padding: 50px 10px 10px 10px;
   }
 
-  .departments {
+  ul {
+    list-style: none;
+    padding: 0;
 
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    li {
+      float: left;
+
+      &:not(:first-child) {
+        margin-left: 5px;
+      }
+    }
   }
 
   .tag {
     background: #ededed;
     border-radius: $border-radius;
     padding: 5px 10px;
+  }
+
+  .tags {
+    display: none;
   }
 
   .button {
@@ -85,10 +103,12 @@
 
   .open-positions {
     color: $pale-orange-uby;
+    text-decoration: none;
   }
 
   /deep/ .VueCarousel {
-    padding: 0;
+    padding: 10px 0;
+    margin: 0 -10px;
   }
 
   /deep/ .VueCarousel-wrapper {
@@ -112,6 +132,18 @@
     .button {
       display: inline-block;
       text-align: left;
+    }
+
+    ul {
+      float: right;
+    }
+
+    .card {
+      padding: 25px;
+    }
+
+    .tags {
+      display: inline-block;
     }
   }
 

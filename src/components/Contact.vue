@@ -5,7 +5,7 @@
         <div class="col-xs-12 col-sm-8">
           <p>
             Got an idea?<br>
-            <span class="text-lead">let us a contact, we call you</span>
+            <span>let us a contact,<br> we call you</span>
           </p>
         </div>
         <div class="col-xs-12 col-sm-4">
@@ -19,7 +19,6 @@
             <div>
               <div>
                 <input placeholder="email">
-                <span><button type="submit"></button></span>
               </div>
               <span>+54 11 5743 8238</span>
             </div>
@@ -48,13 +47,41 @@
     text-align: center;
   }
 
+  p {
+    font-size: 24px;
+
+    span {
+      font-size: 42px;
+      font-weight: 500;
+    }
+  }
+
   section {
     background-color: $purple-uby;
     color: white;
-    padding: 40px 10px;
+    padding: 50px 10px;
+  }
+
+  input {
+    border: solid #FFF;
+    border-width: 0 0 1px 0;
+    background: transparent;
+    width: 100%;
+    padding: 5px 0;
   }
 
   @media (min-width: 1024px) {
+    section {
+      padding: 150px 10px;
+    }
+
+    p {
+      font-size: 24px;
+
+      span {
+        font-size: 64px;
+      }
+    }
     .button {
       display: inline-block;
       text-align: left;
