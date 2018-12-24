@@ -5,6 +5,7 @@
     <clients></clients>
     <main-services></main-services>
     <how-we-work></how-we-work>
+    <team></team>
     <join></join>
     <contact></contact>
     <foot></foot>
@@ -19,6 +20,7 @@
   import Foot from './components/Foot'
   import Contact from './components/Contact'
   import HowWeWork from './components/HowWeWork'
+  import Team from './components/Team'
   import MainServices from './components/MainServices'
 
   export default {
@@ -26,6 +28,7 @@
     components: {
       MainServices,
       HowWeWork,
+      Team,
       Navigation,
       Landing,
       Clients,
