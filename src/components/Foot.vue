@@ -5,15 +5,27 @@
         <div class="col-xs-12 col-sm-3 col-sm-push-9">
           <h2>social</h2>
           <p>
-            <icon :icon="{ prefix: 'fab', iconName: 'facebook' }" size="lg" class="icon"/>
-            <icon :icon="{ prefix: 'fab', iconName: 'twitter' }" size="lg" class="icon"/>
-            <icon :icon="{ prefix: 'fab', iconName: 'instagram' }" size="lg" class="icon"/>
-            <icon :icon="{ prefix: 'fab', iconName: 'github' }" size="lg" class="icon"/>
-            <icon :icon="{ prefix: 'fab', iconName: 'medium' }" size="lg" class="icon"/>
-            <icon :icon="{ prefix: 'fab', iconName: 'linkedin' }" size="lg" class="icon"/>
+            <a href="https://facebook.com/ubykuo">
+              <icon :icon="{ prefix: 'fab', iconName: 'facebook' }" size="lg" class="icon"/>
+            </a>
+            <a href="https://twitter.com/ubykuo">
+              <icon :icon="{ prefix: 'fab', iconName: 'twitter' }" size="lg" class="icon"/>
+            </a>
+            <a href="https://instagram.com/ubykuo">
+              <icon :icon="{ prefix: 'fab', iconName: 'instagram' }" size="lg" class="icon"/>
+            </a>
+            <a href="https://github.com/ubykuo">
+              <icon :icon="{ prefix: 'fab', iconName: 'github' }" size="lg" class="icon"/>
+            </a>
+            <a href="https://medium.com/@ubykuo">
+              <icon :icon="{ prefix: 'fab', iconName: 'medium' }" size="lg" class="icon"/>
+            </a>
+            <a href="https://linkedin.com/company/ubykuo/">
+              <icon :icon="{ prefix: 'fab', iconName: 'linkedin' }" size="lg" class="icon"/>
+            </a>
           </p>
           <p><a href="mailto:hello@ubykuo.com">hello@ubykuo.com</a></p>
-        </div><!-- social -->
+        </div>
         <div class="col-xs-12 col-sm-4 col-sm-pull-3">
           <h2>ubykuo</h2>
           <p>
@@ -30,12 +42,12 @@
             <span>200 Spectrum Center Dr #300 CA-92618</span><br>
             <span>+19495229234</span>
           </p>
-        </div><!-- ubykuo -->
+        </div>
         <div class="col-xs-12 col-sm-3 col-sm-pull-2">
           <h2>join ubykuo</h2>
           <p>We are looking for you, check our open positions.</p>
           <a href="https://join.ubykuo.com" class="button transparent arrow">Careers Site</a>
-        </div><!-- join -->
+        </div>
       </div>
     </div>
   </section>
