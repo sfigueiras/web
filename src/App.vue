@@ -20,11 +20,8 @@
   import Foot from './components/Foot'
   import Contact from './components/Contact'
   import HowWeWork from './components/HowWeWork'
-<<<<<<< HEAD
   import Team from './components/Team'
-=======
   import MainServices from './components/MainServices'
->>>>>>> d4f098fbfa185226d3140aa49f0da8309e810039
 
   export default {
     name: 'app',
