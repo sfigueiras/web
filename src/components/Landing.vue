@@ -233,6 +233,8 @@
     color: $black-uby;
     background-color: $pale-mauve-uby;
     margin-top: 35px;
+    z-index: 2;
+    padding-right: 50px;
   }
 
   .guy {
@@ -310,7 +312,6 @@
     .claim {
       position: absolute;
       z-index: 1;
-      top: 70%;
     }
 
     p {
@@ -319,12 +320,17 @@
     }
 
     .guy {
-      left: 387px;
+      left: 40%;
     }
 
     .animation {
-      right: -50%;
+      right: -25;
     }
   }
 
+  @media (min-width: 1024px) {
+    .animation {
+      right: 0;
+    }
+  }
 </style>
