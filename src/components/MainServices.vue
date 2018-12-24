@@ -1,5 +1,5 @@
 <template>
-  <section id="join">
+  <section id="services">
     <div class="container">
       <h3>Our main services</h3>
       <p class="lead">go trought the code, get to the heart</p>

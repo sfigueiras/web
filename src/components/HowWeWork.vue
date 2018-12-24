@@ -1,5 +1,5 @@
 <template>
-  <section id="join">
+  <section id="how-we-work">
     <div class="background"></div>
     <div class="container">
       <h4>HOW WE WORK</h4>

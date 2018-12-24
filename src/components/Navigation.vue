@@ -1,23 +1,25 @@
 <template>
-  <div id="navigation" :class="{ 'not-visible': hideNav, visible: !hideNav }">
-    <div class="left">
-      <img src="~@/assets/images/solo-icon-colored.svg" alt="ubykuo logo on white">
-      <div class="visible-md visible-lg">
-        <div class="desktop-navigation">
-          <a href="">services</a>
-          <a href="">how we work</a>
-          <a href="">projects</a>
-          <a href="">our team</a>
-          <a href="">contact us</a>
+  <scrollactive class="navigation" :offset="80">
+    <div id="navigation" :class="{ 'not-visible': hideNav, visible: !hideNav }">
+      <div class="left">
+        <img src="~@/assets/images/solo-icon-colored.svg" alt="ubykuo logo on white">
+        <div class="visible-md visible-lg">
+          <div class="desktop-navigation">
+            <a href="#services" class="scrollactive-item">services</a>
+            <a href="#how-we-work" class="scrollactive-item">how we work</a>
+            <a href="#projects" class="scrollactive-item">projects</a>
+            <a href="#team" class="scrollactive-item">our team</a>
+            <a href="#contact" class="scrollactive-item">contact us</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="right">
-      <icon class="visible-xs visible-sm" icon="bars" size="2x" style="color: #fff" />
-      <h1 class="visible-md visible-lg">ubykuo</h1>
+      <div class="right">
+        <icon class="visible-xs visible-sm" icon="bars" size="2x" style="color: #fff" />
+        <h1 class="visible-md visible-lg">ubykuo</h1>
+      </div>
     </div>
-  </div>
+  </scrollactive>
 </template>
 
 <script>
@@ -32,10 +34,13 @@
     },
     methods: {
       handleScroll () {
-        if (window.scrollY > this.lastScroll) {
-          this.hideNav = true
-        } else if ((window.scrollY - this.lastScroll) < -this.SCROLL_DELTA) {
-          this.hideNav = false
+        debugger
+        if (window.matchMedia('(max-width: 1023px)').matches) {
+          if (window.scrollY > this.lastScroll) {
+            this.hideNav = true
+          } else if ((window.scrollY - this.lastScroll) < -this.SCROLL_DELTA) {
+            this.hideNav = false
+          }
         }
 
         this.lastScroll = window.scrollY
@@ -64,7 +69,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 32px;
-    z-index: 2;
+    z-index: 10;
     transition: top .2s;
 
     .left {
@@ -87,6 +92,10 @@
     font-family: Gilroy;
     font-weight: lighter;
     color: white;
+  }
+
+  .scrollactive-item.is-active {
+    opacity: 1 !important;
   }
 
   @media (min-width: 691px) {
