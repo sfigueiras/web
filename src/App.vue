@@ -4,6 +4,7 @@
     <landing class="full-height"></landing>
     <clients></clients>
     <how-we-work></how-we-work>
+    <team></team>
     <join></join>
     <contact></contact>
     <foot></foot>
@@ -18,11 +19,13 @@
   import Foot from './components/Foot'
   import Contact from './components/Contact'
   import HowWeWork from './components/HowWeWork'
+  import Team from './components/Team'
 
   export default {
     name: 'app',
     components: {
       HowWeWork,
+      Team,
       Navigation,
       Landing,
       Clients,
