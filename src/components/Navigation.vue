@@ -5,7 +5,7 @@
         visible: !hideNav
       }">
       <div class="left">
-        <img src="~@/assets/images/solo-icon-colored.svg" alt="ubykuo logo on white">
+        <img src="~@/assets/images/logo.svg" class="logo" alt="ubykuo logo on white">
         <div class="visible-md visible-lg">
           <div class="desktop-navigation">
             <a href="#services" class="scrollactive-item">services</a>
@@ -84,6 +84,33 @@
     padding: 32px;
     z-index: 10;
     transition: top .2s;
+
+    .logo {
+      width: 49px;
+      height: 35px;
+      fill: $purple-uby;
+      background: linear-gradient(45deg, #FFFFFF, $pale-yellow-uby, $sea-green-uby, $pale-mauve-uby, $pale-orange-uby);
+      background-size: 1000% 1000%;
+      -webkit-animation: ubykuo-logo 8s ease infinite;
+      -moz-animation: ubykuo-logo 8s ease infinite;
+      animation: ubykuo-logo 8s ease infinite;
+
+      @-webkit-keyframes ubykuo-logo {
+        0%{background-position:92% 0%}
+        50%{background-position:9% 100%}
+        100%{background-position:92% 0%}
+      }
+      @-moz-keyframes ubykuo-logo {
+        0%{background-position:92% 0%}
+        50%{background-position:9% 100%}
+        100%{background-position:92% 0%}
+      }
+      @keyframes ubykuo-logo {
+        0%{background-position:92% 0%}
+        50%{background-position:9% 100%}
+        100%{background-position:92% 0%}
+      }
+    }
 
     .left {
       display: flex;
