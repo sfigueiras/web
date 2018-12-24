@@ -261,7 +261,7 @@
   .animation {
     position: absolute;
     right: -15px;
-    bottom: -317px;
+    bottom: 144px;
   }
 
   @keyframes balancear {
@@ -303,6 +303,7 @@
 
   .elements {
     position: relative;
+    min-height: 461px;
   }
 
   @media (min-width: 691px) {

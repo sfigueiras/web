@@ -8,7 +8,9 @@ import {faFacebook, faTwitter, faInstagram, faGithub, faMedium, faLinkedin} from
 import {faBars, faCheck} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import 'bootstrap-sass-grid'
+import vuescroll from 'vue-scroll'
 
+Vue.use(vuescroll)
 Vue.use(VueResource)
 Vue.use(VueCarousel)
 

@@ -1,5 +1,5 @@
 <template>
-  <div id="navigation">
+  <div id="navigation" :class="{ 'not-visible': hideNav, visible: !hideNav }">
     <div class="left">
       <img src="~@/assets/images/solo-icon-colored.svg" alt="ubykuo logo on white">
       <div class="visible-md visible-lg">
@@ -22,7 +22,31 @@
 
 <script>
   export default {
-    name: 'Navigation'
+    name: 'Navigation',
+    data () {
+      return {
+        hideNav: false,
+        lastScroll: 0,
+        SCROLL_DELTA: 5
+      }
+    },
+    methods: {
+      handleScroll () {
+        if (window.scrollY > this.lastScroll) {
+          this.hideNav = true
+        } else if ((window.scrollY - this.lastScroll) < -this.SCROLL_DELTA) {
+          this.hideNav = false
+        }
+
+        this.lastScroll = window.scrollY
+      }
+    },
+    created () {
+      window.addEventListener('scroll', this.handleScroll)
+    },
+    destroyed () {
+      window.removeEventListener('scroll', this.handleScroll)
+    }
   }
 </script>
 
@@ -41,12 +65,21 @@
     justify-content: space-between;
     padding: 32px;
     z-index: 2;
+    transition: top .2s;
 
     .left {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+    }
+
+    &.not-visible {
+      top: -100px;
+    }
+
+    &.visible {
+      top: 0;
     }
   }
 

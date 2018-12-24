@@ -43,7 +43,11 @@
   @import '/assets/scss/_fonts';
   @import '/assets/scss/_variables';
 
-  h1, h2, h3, h4, h5 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
     font-family: Gilroy, 'sans-serif';
     font-weight: normal;
     margin: 0;
@@ -80,9 +84,13 @@
     font-weight: 500;
   }
 
-  html, body {
-    overflow-x: hidden;
+  body {
     height: 100%;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
     margin: 0;
     font-family: Gilroy, Arial, 'sans-serif';
     color: $type-uby;
@@ -104,7 +112,7 @@
   #app {
     height: 100%;
 
-    > section {
+    >section {
       overflow: hidden;
     }
   }
@@ -169,4 +177,5 @@
       font-size: 42px;
     }
   }
+
 </style>
