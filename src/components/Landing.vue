@@ -4,7 +4,7 @@
       <div class="row">
         <div class="claim col-lg-6">
           <p>The right blend of experience hard work, and fun.</p>
-          <a class="button arrow" href="#">tell us your story</a>
+          <a class="button arrow" href="#contact">tell us your story</a>
         </div>
 
       <div class="elements col-lg-6">

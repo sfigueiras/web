@@ -1,6 +1,9 @@
 <template>
   <scrollactive class="navigation" :offset="80">
-    <div id="navigation" :class="{ 'not-visible': hideNav, visible: !hideNav }">
+    <div id="navigation" :class="{
+        'not-visible': hideNav,
+        visible: !hideNav
+      }">
       <div class="left">
         <img src="~@/assets/images/solo-icon-colored.svg" alt="ubykuo logo on white">
         <div class="visible-md visible-lg">
@@ -15,9 +18,16 @@
       </div>
 
       <div class="right">
-        <icon class="visible-xs visible-sm" icon="bars" size="2x" style="color: #fff" />
+        <icon class="visible-xs visible-sm"
+          icon="bars" size="2x"
+          style="color: #fff"
+          @click="toggleMenu" />
         <h1 class="visible-md visible-lg">ubykuo</h1>
       </div>
+    </div>
+
+    <div class="overlay" :class="{ hidden: !showMobileNav }">
+
     </div>
   </scrollactive>
 </template>
@@ -29,12 +39,12 @@
       return {
         hideNav: false,
         lastScroll: 0,
-        SCROLL_DELTA: 5
+        SCROLL_DELTA: 5,
+        showMobileNav: false
       }
     },
     methods: {
       handleScroll () {
-        debugger
         if (window.matchMedia('(max-width: 1023px)').matches) {
           if (window.scrollY > this.lastScroll) {
             this.hideNav = true
@@ -44,6 +54,9 @@
         }
 
         this.lastScroll = window.scrollY
+      },
+      toggleMenu () {
+        this.showMobileNav = !this.showMobileNav
       }
     },
     created () {
@@ -96,6 +109,16 @@
 
   .scrollactive-item.is-active {
     opacity: 1 !important;
+  }
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: $purple-uby;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
   }
 
   @media (min-width: 691px) {
