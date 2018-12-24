@@ -59,10 +59,10 @@
 
   p {
     font-size: 24px;
+    font-weight: 500;
 
     span {
       font-size: 42px;
-      font-weight: 500;
     }
   }
 

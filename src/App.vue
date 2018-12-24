@@ -3,6 +3,7 @@
     <navigation></navigation>
     <landing class="full-height"></landing>
     <clients></clients>
+    <main-services></main-services>
     <how-we-work></how-we-work>
     <team></team>
     <join></join>
@@ -19,11 +20,16 @@
   import Foot from './components/Foot'
   import Contact from './components/Contact'
   import HowWeWork from './components/HowWeWork'
+<<<<<<< HEAD
   import Team from './components/Team'
+=======
+  import MainServices from './components/MainServices'
+>>>>>>> d4f098fbfa185226d3140aa49f0da8309e810039
 
   export default {
     name: 'app',
     components: {
+      MainServices,
       HowWeWork,
       Team,
       Navigation,
@@ -158,6 +164,12 @@
           background: url('~@/assets/images/arrow-right.svg') center center no-repeat;
         }
       }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h3 {
+      font-size: 42px;
     }
   }
 </style>
