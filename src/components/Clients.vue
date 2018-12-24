@@ -39,6 +39,7 @@
     background-color: $grey-background;
     text-align: center;
     padding-top: 50px;
+    padding-bottom: 78px;
   }
 
   img {
