@@ -10,7 +10,8 @@
 
       <ul class="culture">
         <li v-for="value in values" :key="value">
-          <icon icon="check" style="color: #3eff9a" />
+          <icon icon="check" style="color: #3eff9a" class="visible-xs visible-sm" />
+          <icon icon="check" style="color: #3eff9a" size="lg" class="visible-mg visible-lg" />
           <p>{{ value }}</p>
         </li>
       </ul>
