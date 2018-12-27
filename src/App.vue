@@ -4,6 +4,7 @@
     <landing class="full-height"></landing>
     <clients></clients>
     <main-services></main-services>
+    <projects class="full-height"></projects>
     <how-we-work></how-we-work>
     <team></team>
     <join></join>
@@ -22,12 +23,14 @@
   import HowWeWork from './components/HowWeWork'
   import Team from './components/Team'
   import MainServices from './components/MainServices'
+  import Projects from './components/Projects'
 
   export default {
     name: 'app',
     components: {
       MainServices,
       HowWeWork,
+      Projects,
       Team,
       Navigation,
       Landing,

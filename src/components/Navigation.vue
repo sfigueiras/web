@@ -1,5 +1,5 @@
 <template>
-  <scrollactive class="navigation" :offset="80">
+  <scrollactive class="navigation" :offset="offset">
     <div id="navigation" :class="{
         'not-visible': hideNav,
         visible: !hideNav
@@ -8,26 +8,57 @@
         <img src="~@/assets/images/logo.svg" class="logo" alt="ubykuo logo on white">
         <div class="visible-md visible-lg">
           <div class="desktop-navigation">
-            <a href="#services" class="scrollactive-item">services</a>
-            <a href="#how-we-work" class="scrollactive-item">how we work</a>
-            <a href="#projects" class="scrollactive-item">projects</a>
-            <a href="#team" class="scrollactive-item">our team</a>
-            <a href="#contact" class="scrollactive-item">contact us</a>
+            <a v-for="item in menu" :key="item.href" href="item.href" class="scrollactive-item">{{ item.content }}</a>
           </div>
         </div>
       </div>
 
       <div class="right">
-        <icon class="visible-xs visible-sm"
-          icon="bars" size="2x"
-          style="color: #fff"
-          @click="toggleMenu" />
+        <icon class="visible-xs visible-sm" icon="bars" size="2x" style="color: #fff" @click="toggleMenu" />
         <h1 class="visible-md visible-lg">ubykuo</h1>
       </div>
     </div>
 
     <div class="overlay" :class="{ hidden: !showMobileNav }">
+      <div class="options">
+        <img src="~@/assets/images/solo-icon-colored.svg" class="logo" alt="ubykuo logo on white">
+        <icon icon="times" size="2x" style="color: #fff" @click="toggleMenu" />
+      </div>
 
+      <div class="menu">
+        <ul>
+          <li v-for="item in menu" :key="item.href">
+            <a :href="item.href" @click="toggleMenu" class="scrollactive-item">{{ item.content }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <hr>
+
+      <div class="social">
+        <p class="question">Can't find what you need?</p>
+        <div class="icons">
+          <a href="https://facebook.com/ubykuo">
+            <icon :icon="{ prefix: 'fab', iconName: 'facebook' }" size="2x" class="icon" />
+          </a>
+          <a href="https://twitter.com/ubykuo">
+            <icon :icon="{ prefix: 'fab', iconName: 'twitter' }" size="2x" class="icon" />
+          </a>
+          <a href="https://instagram.com/ubykuo">
+            <icon :icon="{ prefix: 'fab', iconName: 'instagram' }" size="2x" class="icon" />
+          </a>
+          <a href="https://github.com/ubykuo">
+            <icon :icon="{ prefix: 'fab', iconName: 'github' }" size="2x" class="icon" />
+          </a>
+          <a href="https://medium.com/@ubykuo">
+            <icon :icon="{ prefix: 'fab', iconName: 'medium' }" size="2x" class="icon" />
+          </a>
+          <a href="https://linkedin.com/company/ubykuo/">
+            <icon :icon="{ prefix: 'fab', iconName: 'linkedin' }" size="2x" class="icon" />
+          </a>
+        </div>
+        <a class="email" href="mailto:hello@ubykuo.com">hello@ubykuo.com</a>
+      </div>
     </div>
   </scrollactive>
 </template>
@@ -40,10 +71,38 @@
         hideNav: false,
         lastScroll: 0,
         SCROLL_DELTA: 5,
-        showMobileNav: false
+        showMobileNav: false,
+        menu: [
+          {
+            href: '#services',
+            content: 'services'
+          },
+          {
+            href: '#projects',
+            content: 'projects'
+          },
+          {
+            href: '#how-we-work',
+            content: 'how we work'
+          },
+          {
+            href: '#team',
+            content: 'our team'
+          },
+          {
+            href: '#contact',
+            content: 'contact'
+          }
+        ],
+        offset: 80
       }
     },
+
     methods: {
+      setOffset () {
+        this.offset = window.matchMedia('(min-width: 1024px').matches ? 80 : 0
+      },
+
       handleScroll () {
         if (window.matchMedia('(max-width: 1023px)').matches) {
           if (window.scrollY > this.lastScroll) {
@@ -61,6 +120,8 @@
     },
     created () {
       window.addEventListener('scroll', this.handleScroll)
+
+      this.setOffset()
     },
     destroyed () {
       window.removeEventListener('scroll', this.handleScroll)
@@ -96,19 +157,45 @@
       animation: ubykuo-logo 8s ease infinite;
 
       @-webkit-keyframes ubykuo-logo {
-        0%{background-position:92% 0%}
-        50%{background-position:9% 100%}
-        100%{background-position:92% 0%}
+        0% {
+          background-position: 92% 0%
+        }
+
+        50% {
+          background-position: 9% 100%
+        }
+
+        100% {
+          background-position: 92% 0%
+        }
       }
+
       @-moz-keyframes ubykuo-logo {
-        0%{background-position:92% 0%}
-        50%{background-position:9% 100%}
-        100%{background-position:92% 0%}
+        0% {
+          background-position: 92% 0%
+        }
+
+        50% {
+          background-position: 9% 100%
+        }
+
+        100% {
+          background-position: 92% 0%
+        }
       }
+
       @keyframes ubykuo-logo {
-        0%{background-position:92% 0%}
-        50%{background-position:9% 100%}
-        100%{background-position:92% 0%}
+        0% {
+          background-position: 92% 0%
+        }
+
+        50% {
+          background-position: 9% 100%
+        }
+
+        100% {
+          background-position: 92% 0%
+        }
       }
     }
 
@@ -146,6 +233,69 @@
     top: 0;
     left: 0;
     z-index: 11;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .options {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      min-height: 20px;
+    }
+
+    .menu {
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin: 34px 0;
+
+          a {
+            font-size: 5vh;
+            color: $pale-mauve-uby;
+            text-decoration: none;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+
+    hr {
+      width: 100%;
+      opacity: 0.5;
+      border: 0.5px solid $pale-mauve-uby;
+    }
+
+    .social {
+      .question {
+        font-weight: bold;
+        color: #fff;
+        font-size: 20px;
+      }
+
+      .icons {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .icon {
+          color: #fff;
+          opacity: 0.3;
+        }
+      }
+
+      .email {
+        color: #fff;
+        opacity: 0.5;
+        text-decoration: none;
+        margin: 20px 0;
+        font-size: 20px;
+        display: block;
+      }
+    }
   }
 
   @media (min-width: 691px) {
@@ -163,4 +313,5 @@
       }
     }
   }
+
 </style>

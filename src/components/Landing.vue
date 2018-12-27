@@ -7,7 +7,7 @@
           <a class="button arrow" href="#contact">tell us your story</a>
         </div>
 
-      <div class="elements col-lg-6">
+      <div class="elements col-lg-6 col-lg-offset-6">
         <img class="guy" src="~@/assets/images/recurso-40-3-x.png" alt="ubykuo developer">
 
         <div class="animation">
@@ -329,6 +329,10 @@
   }
 
   @media (min-width: 1024px) {
+    .guy {
+      right: 5%;
+    }
+
     .animation {
       right: 0;
     }

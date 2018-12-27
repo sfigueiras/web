@@ -72,8 +72,8 @@
         const t = setTimeout(() => {
           this.transition = false
           clearTimeout(t)
+          this.index = this.index + 1
         }, 300)
-        this.index = this.index + 1
       },
       get (position) {
         return this.teams[(this.index + position) % this.teams.length]
