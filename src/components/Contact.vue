@@ -51,6 +51,12 @@
                                  type="submit" :disabled="isSaving">
               <span v-if="isSaving">Sending...</span><span v-else>Contact me</span>
             </invisible-recaptcha>
+            <br>
+            <br>
+            <small class="recaptcha">This site is protected by reCAPTCHA and the Google
+              <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+              <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+            </small>
           </form>
         </div>
       </div>
@@ -104,6 +110,10 @@
 <style lang="scss" scoped>
   @import '~@/assets/scss/_variables';
 
+  /deep/ .grecaptcha-badge {
+    display: none;
+  }
+
   .text-center {
     text-align: center;
   }
@@ -131,6 +141,10 @@
     background-color: $purple-uby;
     color: white;
     padding: 50px 10px;
+  }
+
+  .recaptcha a {
+    color: #FFF;
   }
 
   input {
