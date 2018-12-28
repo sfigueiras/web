@@ -86,6 +86,10 @@
             content: 'how we work'
           },
           {
+            href: '#join',
+            content: 'join ubykuo'
+          },
+          {
             href: '#contact',
             content: 'contact'
           }
