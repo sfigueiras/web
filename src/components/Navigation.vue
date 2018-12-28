@@ -7,7 +7,7 @@
       <div class="left">
         <img src="~@/assets/images/logo.svg" class="logo" alt="ubykuo logo on white">
         <div class="visible-md visible-lg">
-          <scrollactive class="desktop-navigation" :offset="offset">
+          <scrollactive class="desktop-navigation" offset="80">
             <a v-for="item in menu" :key="item.href" :href="item.href" class="scrollactive-item">{{ item.content }}</a>
           </scrollactive>
         </div>
@@ -93,8 +93,7 @@
             href: '#contact',
             content: 'contact'
           }
-        ],
-        offset: 80
+        ]
       }
     },
 
@@ -116,8 +115,6 @@
     },
     created () {
       window.addEventListener('scroll', this.handleScroll)
-
-      this.setOffset()
     },
     destroyed () {
       window.removeEventListener('scroll', this.handleScroll)
