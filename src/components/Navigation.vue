@@ -14,7 +14,7 @@
       </div>
 
       <div class="right">
-        <icon class="visible-xs visible-sm pointer" icon="bars" size="2x" style="color: #fff" @click="toggleMenu" />
+        <icon class="visible-xs visible-sm pointer" icon="bars" size="2x" style="color: #fff" @click="toggleMenu"/>
         <h1 class="visible-md visible-lg">ubykuo</h1>
       </div>
     </div>
@@ -22,7 +22,7 @@
     <div class="overlay" :class="{ visible: showMobileNav }">
       <div class="options">
         <img src="~@/assets/images/solo-icon-colored.svg" class="logo" alt="ubykuo logo on white">
-        <icon class="pointer" icon="times" size="2x" style="color: #fff" @click="toggleMenu" />
+        <icon class="pointer" icon="times" size="2x" style="color: #fff" @click="toggleMenu"/>
       </div>
 
       <scrollactive class="menu">
@@ -39,22 +39,22 @@
         <p class="question">Can't find what you need?</p>
         <div class="icons">
           <a href="https://facebook.com/ubykuo">
-            <icon :icon="{ prefix: 'fab', iconName: 'facebook' }" size="2x" class="icon" />
+            <icon :icon="{ prefix: 'fab', iconName: 'facebook' }" size="2x" class="icon"/>
           </a>
           <a href="https://twitter.com/ubykuo">
-            <icon :icon="{ prefix: 'fab', iconName: 'twitter' }" size="2x" class="icon" />
+            <icon :icon="{ prefix: 'fab', iconName: 'twitter' }" size="2x" class="icon"/>
           </a>
           <a href="https://instagram.com/ubykuo">
-            <icon :icon="{ prefix: 'fab', iconName: 'instagram' }" size="2x" class="icon" />
+            <icon :icon="{ prefix: 'fab', iconName: 'instagram' }" size="2x" class="icon"/>
           </a>
           <a href="https://github.com/ubykuo">
-            <icon :icon="{ prefix: 'fab', iconName: 'github' }" size="2x" class="icon" />
+            <icon :icon="{ prefix: 'fab', iconName: 'github' }" size="2x" class="icon"/>
           </a>
           <a href="https://medium.com/@ubykuo">
-            <icon :icon="{ prefix: 'fab', iconName: 'medium' }" size="2x" class="icon" />
+            <icon :icon="{ prefix: 'fab', iconName: 'medium' }" size="2x" class="icon"/>
           </a>
           <a href="https://linkedin.com/company/ubykuo/">
-            <icon :icon="{ prefix: 'fab', iconName: 'linkedin' }" size="2x" class="icon" />
+            <icon :icon="{ prefix: 'fab', iconName: 'linkedin' }" size="2x" class="icon"/>
           </a>
         </div>
         <a class="email" href="mailto:hello@ubykuo.com">hello@ubykuo.com</a>
@@ -143,51 +143,29 @@
       width: 49px;
       height: 35px;
       fill: $purple-uby;
-      background: linear-gradient(45deg, #FFFFFF, $pale-yellow-uby, $sea-green-uby, $pale-mauve-uby, $pale-orange-uby);
-      background-size: 1000% 1000%;
-      -webkit-animation: ubykuo-logo 8s ease infinite;
-      -moz-animation: ubykuo-logo 8s ease infinite;
-      animation: ubykuo-logo 8s ease infinite;
-
-      @-webkit-keyframes ubykuo-logo {
-        0% {
-          background-position: 92% 0%
-        }
-
-        50% {
-          background-position: 9% 100%
-        }
-
-        100% {
-          background-position: 92% 0%
-        }
-      }
-
-      @-moz-keyframes ubykuo-logo {
-        0% {
-          background-position: 92% 0%
-        }
-
-        50% {
-          background-position: 9% 100%
-        }
-
-        100% {
-          background-position: 92% 0%
-        }
-      }
+      background: #FFF;
+      background: radial-gradient(at bottom left, #FFF, #FFF, #FFF, #FFF, $pale-yellow-uby, $pale-yellow-uby, $pale-yellow-uby, $pale-yellow-uby, $sea-green-uby, $sea-green-uby,  $sea-green-uby, $sea-green-uby, $pale-mauve-uby, $pale-mauve-uby, $pale-mauve-uby, $pale-mauve-uby, $pale-orange-uby, $pale-orange-uby, $pale-orange-uby, $pale-orange-uby, $pale-yellow-uby, $pale-yellow-uby, $pale-yellow-uby, $pale-yellow-uby, #FFF, #FFF, #FFF, #FFF);
+      background-size: 1400% 1400%;
+      animation: ubykuo-logo 16s linear infinite;
 
       @keyframes ubykuo-logo {
         0% {
-          background-position: 92% 0%
+          background-position: 100% 0
         }
-
-        50% {
-          background-position: 9% 100%
+        20% {
+          background-position: 80% 20%
         }
-
+        40% {
+          background-position: 60% 40%
+        }
+        60% {
+          background-position: 40% 60%
+        }
+        80% {
+          background-position: 20% 80%
+        }
         100% {
-          background-position: 92% 0%
+          background-position: 0 100%
         }
       }
     }
