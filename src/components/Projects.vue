@@ -3,7 +3,6 @@
     <img class="background" :src="buildURL(current.background)" :alt="current.name">
     <div class="video-overlay">
       <div class="overlay"></div>
-      <!--youtube :video-id="current.videoId" ref="youtube" height="800" @playing="playing" :player-vars="playerVars" :fitParent="true"--></youtube>
     </div>
     <div class="description" :class="{ transition }">
       <h4 class="section-title">case studies</h4>
@@ -18,13 +17,13 @@
 
     <div class="navigation">
       <div class="read-more-container">
-        <div class="call-to-action">
+        <a class="call-to-action" target="_blank" :href="current.caseLink">
           <div class="text">
-            <span class="read-more">read more</span>
+            <span class="read-more">see more</span>
             <span class="prompt">let's see the magic</span>
           </div>
           <img src="~@/assets/images/arrow-right-dark.svg" alt="arrow right icon">
-        </div>
+        </a>
         <div class="link visible-md visible-lg">
           <div>
             <a :class="{transition}" :href="current.link">{{ current.link }}</a>
@@ -57,6 +56,7 @@
             description: 'Engage the challenge of a straight calendar and deliver an increible platform in two weeks. From ideation to code.',
             background: 'cases.jpg',
             link: 'beathey.com',
+            caseLink: 'https://www.youtube.com/watch?v=KcyroWrooUE&t=1s',
             videoId: 'KcyroWrooUE'
           },
           {
@@ -64,14 +64,8 @@
             description: 'Engage the challenge of a straight calendar and deliver an increible platform in two weeks. From ideation to code.',
             background: 'cases.jpg',
             link: 'gusystem.net',
+            caseLink: 'https://www.youtube.com/watch?v=9M0IFLk49TI',
             videoId: '9M0IFLk49TI'
-          },
-          {
-            name: 'Batogo',
-            description: 'Engage the challenge of a straight calendar and deliver an increible platform in two weeks. From ideation to code.',
-            background: 'cases.jpg',
-            link: 'buenosairestogo.com',
-            videoId: 'KcyroWrooUE'
           }
         ],
         index: 0,
@@ -148,7 +142,7 @@
 
   p {
     font-size: 18px;
-    max-width: 70%;
+    max-width: 90%;
   }
 
   .project-name, .project-description {
@@ -190,6 +184,12 @@
     position: absolute;
     top: 0;
     left: 0;
+    transition-property: left;
+    transition-duration: .3s;
+
+    &.transition {
+      left: -100;
+    }
   }
 
   .sidenav {
@@ -246,12 +246,15 @@
     background-color: #fff;
     display: flex;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: flex-start;
     padding-bottom: 30px;
+    text-decoration: none;
+    color: $black-uby;
 
     .text {
       .read-more {
         font-weight: bold;
+        padding-left: 20px;
       }
 
       .prompt {
@@ -299,6 +302,10 @@
       top: -50px;
     }
 
+    .description {
+      padding: 0 68px;
+    }
+
     .read-more-container {
       bottom: 0;
       height: 235px;
@@ -309,17 +316,18 @@
       position: absolute;
       transition: all .3s;
       justify-content: flex-start;
-      padding-left: 34px;
 
       .text {
         .read-more {
           transition: all .3s;
           position: absolute;
           bottom: 34px;
+          padding-left: 34px;
         }
 
         .prompt {
           transition: all .3s;
+          padding-left: 34px;
         }
       }
 
