@@ -1,8 +1,8 @@
 <template>
   <section id="projects">
     <picture v-for="(project, j) in projects" :key="project.name"
-      :style="{ left: `calc((${j} - ${getIndex()}) * 100%)` }"
-      class="background" :class="{ transition }">
+             :style="{ left: `calc((${j} - ${getIndex()}) * 100%)` }"
+             class="background" :class="{ transition }">
       <source
         type="image/webp"
         media="(max-width: 480px)"
@@ -35,7 +35,7 @@
 
     <div class="sidenav">
       <div class="dot" :class="{ 'current-project': current.name == project.name }"
-        v-for="(project, index) in projects" :key="project.name" @click="goTo(index)"></div>
+           v-for="(project, index) in projects" :key="project.name" @click="goTo(index)"></div>
     </div>
 
     <div class="navigation">
@@ -49,7 +49,7 @@
         </a>
         <div class="link visible-md visible-lg">
           <div>
-            <a :class="{transition}" :href="current.link">{{ current.link }}</a>
+            <a :class="{transition}" :href="current.link.href">{{ current.link.title }}</a>
             <hr/>
           </div>
         </div>
@@ -87,7 +87,10 @@
                 webp: 'case-beathey.webp'
               }
             },
-            link: 'beathey.com',
+            link: {
+              title: 'beathey.com',
+              href: 'https://beathey.com'
+            },
             caseLink: 'https://www.youtube.com/watch?v=KcyroWrooUE&t=1s',
             videoId: 'KcyroWrooUE'
           },
@@ -104,7 +107,10 @@
                 webp: 'case-fanelli.webp'
               }
             },
-            link: 'gusystem.net',
+            link: {
+              title: 'gusystem.net',
+              href: 'https://facebook.com/ceramicafanelli/'
+            },
             caseLink: 'https://www.youtube.com/watch?v=9M0IFLk49TI',
             videoId: '9M0IFLk49TI'
           }
@@ -188,7 +194,7 @@
     }
 
     &.transition {
-      .project-name, .section-title, .project-description  {
+      .project-name, .section-title, .project-description {
         transform: translateY(-60px);
         opacity: 0;
         transition-duration: .4s;
@@ -447,7 +453,7 @@
     }
   }
 
-   iframe {
+  iframe {
     position: absolute;
     transform: scale(2.5);
     right: 2%;
