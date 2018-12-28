@@ -6,7 +6,7 @@
     </div>
     <div class="container main-services">
       <div class="row">
-        <div class="col-xs-12 col-sm-3">
+        <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="card">
             <div class="card-content">
               <img src="~@/assets/images/services-robot.png" alt="factory goes digital">
@@ -15,7 +15,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-3">
+        <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="card">
             <div class="card-content">
               <img src="~@/assets/images/services-applab.png" alt="factory goes digital">
@@ -24,7 +24,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-3">
+        <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="card">
             <div class="card-content">
               <img src="~@/assets/images/services-gomobile.png" alt="factory goes digital">
@@ -33,7 +33,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-3">
+        <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="card">
             <div class="card-content">
               <img src="~@/assets/images/services-factorygoesdigital.png" alt="factory goes digital">
@@ -70,6 +70,7 @@
     padding: 220px 40px 45px 40px;
     height: 400px;
     position: relative;
+    margin-top: 20px;
 
     img {
       position: absolute;
@@ -85,7 +86,7 @@
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     .main-services {
       padding: 100px 0;
     }
