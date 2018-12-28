@@ -1,6 +1,17 @@
 <template>
   <section id="projects">
-    <img v-for="(project, j) in projects" :key="project.name" :style="{ left: `calc((${j} - ${getIndex()}) * 100%)` }" class="background" :class="{ transition }" :src="buildURL(current.background)" :alt="current.name">
+    <picture v-for="(project, j) in projects" :key="project.name"
+      :style="{ left: `calc((${j} - ${getIndex()}) * 100%)` }"
+      class="background" :class="{ transition }">
+      <source
+        type="image/webp"
+        :srcset="`${buildURL(current.background.mobile.webp)} 600w, ${buildURL(current.background.desktop.webp)} 1000w`"
+        :alt="current.name"/>
+      <img
+        type="image/jpg"
+        :srcset="`${buildURL(current.background.mobile.jpg)} 600w, ${buildURL(current.background.desktop.jpg)} 1000w`"
+        :alt="current.name"/>
+    </picture>
     <!--div class="video-overlay">
       <div class="overlay"></div>
     </div-->
@@ -54,7 +65,16 @@
           {
             name: 'BeatHey',
             description: 'Engage the challenge of a straight calendar and deliver an increible platform in two weeks. From ideation to code.',
-            background: 'cases.jpg',
+            background: {
+              mobile: {
+                jpg: 'case-mobile-beathey.jpg',
+                webp: 'case-mobile-beathey.webp'
+              },
+              desktop: {
+                jpg: 'case-beathey.jpg',
+                webp: 'case-beathey.webp'
+              }
+            },
             link: 'beathey.com',
             caseLink: 'https://www.youtube.com/watch?v=KcyroWrooUE&t=1s',
             videoId: 'KcyroWrooUE'
@@ -62,15 +82,16 @@
           {
             name: 'Fanelli',
             description: 'Engage the challenge of a straight calendar and deliver an increible platform in two weeks. From ideation to code.',
-            background: 'cases.jpg',
-            link: 'gusystem.net',
-            caseLink: 'https://www.youtube.com/watch?v=9M0IFLk49TI',
-            videoId: '9M0IFLk49TI'
-          },
-          {
-            name: 'BA To Go',
-            description: 'Engage the challenge of a straight calendar and deliver an increible platform in two weeks. From ideation to code.',
-            background: 'cases.jpg',
+            background: {
+              mobile: {
+                jpg: 'case-mobile-fanelli.jpg',
+                webp: 'case-mobile-fanelli.webp'
+              },
+              desktop: {
+                jpg: 'case-fanelli.jpg',
+                webp: 'case-fanelli.webp'
+              }
+            },
             link: 'gusystem.net',
             caseLink: 'https://www.youtube.com/watch?v=9M0IFLk49TI',
             videoId: '9M0IFLk49TI'
@@ -78,11 +99,6 @@
         ],
         index: 0,
         transition: false
-      }
-    },
-    created () {
-      if (window.matchMedia('(min-width: 1024px)').matches) {
-        this.playing = true
       }
     },
     computed: {
@@ -105,7 +121,7 @@
           clearTimeout(t)
           callback()
           this.transition = false
-        }, 500)
+        }, 400)
       },
       get (position) {
         return this.projects[position % this.projects.length]

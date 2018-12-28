@@ -7,7 +7,7 @@
       <div class="left">
         <img src="~@/assets/images/logo.svg" class="logo" alt="ubykuo logo on white">
         <div class="visible-md visible-lg">
-          <scrollactive class="desktop-navigation" offset="80">
+          <scrollactive class="desktop-navigation" :offset="80">
             <a v-for="item in menu" :key="item.href" :href="item.href" class="scrollactive-item">{{ item.content }}</a>
           </scrollactive>
         </div>
@@ -84,10 +84,6 @@
           {
             href: '#how-we-work',
             content: 'how we work'
-          },
-          {
-            href: '#team',
-            content: 'our team'
           },
           {
             href: '#contact',
