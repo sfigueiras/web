@@ -1,9 +1,9 @@
 <template>
   <section id="projects">
-    <img class="background" :src="buildURL(current.background)" :alt="current.name">
-    <div class="video-overlay">
+    <img v-for="(project, j) in projects" :key="project.name" :style="{ left: `calc((${j} - ${getIndex()}) * 100%)` }" class="background" :class="{ transition }" :src="buildURL(current.background)" :alt="current.name">
+    <!--div class="video-overlay">
       <div class="overlay"></div>
-    </div>
+    </div-->
     <div class="description" :class="{ transition }">
       <h4 class="section-title">case studies</h4>
       <h3 class="project-name">{{ current.name }}</h3>
@@ -66,20 +66,18 @@
             link: 'gusystem.net',
             caseLink: 'https://www.youtube.com/watch?v=9M0IFLk49TI',
             videoId: '9M0IFLk49TI'
+          },
+          {
+            name: 'BA To Go',
+            description: 'Engage the challenge of a straight calendar and deliver an increible platform in two weeks. From ideation to code.',
+            background: 'cases.jpg',
+            link: 'gusystem.net',
+            caseLink: 'https://www.youtube.com/watch?v=9M0IFLk49TI',
+            videoId: '9M0IFLk49TI'
           }
         ],
         index: 0,
-        playing: false,
-        transition: false,
-        playerVars: {
-          autoplay: 1,
-          loop: 1,
-          controls: 0,
-          disablekb: 1,
-          iv_load_policy: 3,
-          modestbranding: 1,
-          playsinline: 1
-        }
+        transition: false
       }
     },
     created () {
@@ -104,14 +102,19 @@
       beginTransition (callback) {
         this.transition = true
         const t = setTimeout(() => {
-          this.transition = false
           clearTimeout(t)
           callback()
+          this.transition = false
         }, 500)
       },
       get (position) {
         return this.projects[position % this.projects.length]
       },
+
+      getIndex () {
+        return this.index % this.projects.length
+      },
+
       goTo (index) {
         this.beginTransition(() => {
           this.index = index
@@ -158,7 +161,7 @@
 
     &.transition {
       .project-name, .section-title, .project-description  {
-        transform: translateY(-40px);
+        transform: translateY(-60px);
         opacity: 0;
         transition-duration: .4s;
       }
@@ -184,11 +187,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    transition-property: left;
-    transition-duration: .3s;
+    transition-property: left opacity;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
 
     &.transition {
-      left: -100;
+      left: -250px;
+      opacity: 0.8;
     }
   }
 
@@ -405,6 +410,7 @@
     .current {
       width: 25%;
       justify-content: flex-end;
+      background-color: transparent;
     }
   }
 
