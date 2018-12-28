@@ -9,17 +9,32 @@
           </p>
         </div>
         <div class="col-xs-12 col-sm-4">
-          <form autocomplete="off">
+          <div v-show="success">
+            <icon icon="check" size="3x" class="ok-icon"></icon>
+            <p class="text-center">
+              Thanks for reaching out to us!<br/>
+              <small>We'll be contacting you asap.</small>
+            </p>
+          </div>
+          <form autocomplete="off" @submit.prevent="onSubmit" v-show="!success">
             <div class="form-section">
-              <input type="text" placeholder="Name" name="name">
-              <span>we can call you John Doe if you leave it blank</span>
+              <input type="text" placeholder="name" v-model="contactForm.name" @input="$v.contactForm.name.$touch()"
+                     :class="{error: $v.contactForm.name.$invalid && $v.contactForm.name.$dirty  }"
+                     :disabled="isSaving">
+              <span v-if="!$v.contactForm.name.required && $v.contactForm.name.$dirty">Missing name</span>
+              <span v-else>we can call you John Doe if you leave it blank</span>
             </div>
             <div class="form-section">
-              <input type="email" placeholder="email" name="email">
-              <span>john@doe.com</span>
+              <input type="email" placeholder="email" v-model="contactForm.email" @input="$v.contactForm.email.$touch()"
+                     :class="{error: $v.contactForm.email.$invalid && $v.contactForm.email.$dirty }"
+                     :disabled="isSaving">
+              <span v-if="!$v.contactForm.email.required && $v.contactForm.email.$dirty">Missing email</span>
+              <span v-else-if="!$v.contactForm.email.email && $v.contactForm.email.$dirty">Invalid address</span>
+              <span v-else>john@doe.com</span>
             </div>
             <div class="form-section" v-if="phone">
-              <input type="phone" placeholder="phone" name="phone">
+              <input type="tel" placeholder="phone" v-model="contactForm.telephone"
+                     @input="$v.contactForm.telephone.$touch()" :disabled="isSaving">
               <span>+54 11 5743 8238</span>
             </div>
 
@@ -30,20 +45,57 @@
               </label>
               <span class="lead">I want to be contacted by phone</span>
             </div>
-            <a href="#" class="button secondary">Contact me</a>
+            <span v-show="error">Error sending message<br><br></span>
+            <invisible-recaptcha sitekey="6LdUlB8UAAAAAIluAGKDFauY9hWJgjpwA7qFtjAf"
+                                 class="button secondary" :callback="submit"
+                                 type="submit" :disabled="isSaving">
+              <span v-if="isSaving">Sending...</span><span v-else>Contact me</span>
+            </invisible-recaptcha>
           </form>
         </div>
       </div>
     </div>
   </section>
+
 </template>
 
 <script>
+  import {required, email} from 'vuelidate/lib/validators'
+  import ContactMessage from '../mixins/ContactMessage'
+  import InvisibleRecaptcha from 'vue-invisible-recaptcha'
+
   export default {
     name: 'Contact',
+    components: {InvisibleRecaptcha},
     data () {
       return {
-        phone: false
+        phone: false,
+        success: false,
+        error: false
+      }
+    },
+    mixins: [ContactMessage],
+    validations: {
+      contactForm: {
+        name: {
+          required
+        },
+        email: {
+          email,
+          required
+        },
+        telephone: {}
+      }
+    },
+    methods: {
+      onSuccess () {
+        this.success = true
+      },
+      onError () {
+        this.error = true
+      },
+      submit () {
+        this.onSubmit()
       }
     }
   }
@@ -51,6 +103,15 @@
 
 <style lang="scss" scoped>
   @import '~@/assets/scss/_variables';
+
+  .text-center {
+    text-align: center;
+  }
+
+  .ok-icon {
+    display: block;
+    margin: 30px auto;
+  }
 
   .button {
     display: block;
@@ -80,9 +141,13 @@
     font-size: 18px;
     padding: 15px 0;
     margin-bottom: 10px;
+
+    &.error {
+      border-bottom-color: #F00;
+    }
   }
 
-  form span {
+  form .form-section span {
     font-size: 12px;
     color: #bfbfbf;
   }
@@ -152,11 +217,11 @@
   }
 
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: $pale-orange-uby;
   }
 
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px $pale-orange-uby;
   }
 
   input:checked + .slider:before {
