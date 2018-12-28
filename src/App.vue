@@ -175,6 +175,10 @@
     }
   }
 
+  .pointer {
+    cursor: pointer;
+  }
+
   @media (min-width: 1024px) {
     h3 {
       font-size: 42px;

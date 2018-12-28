@@ -10,9 +10,7 @@ import {faBars, faCheck, faTimes} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import VueScrollActive from 'vue-scrollactive'
 import 'bootstrap-sass-grid'
-import VueYoutube from 'vue-youtube'
 
-Vue.use(VueYoutube)
 Vue.use(VueResource)
 Vue.use(VueCarousel)
 Vue.use(VueScrollActive)

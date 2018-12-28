@@ -7,7 +7,7 @@
           <a class="button arrow" href="#contact">tell us your story</a>
         </div>
 
-      <div class="elements col-lg-6 col-lg-offset-6">
+      <div class="elements">
         <img class="guy" src="~@/assets/images/recurso-40-3-x.png" alt="ubykuo developer">
 
         <div class="animation">
@@ -225,7 +225,7 @@
   }
 
   .container {
-    padding: 25% 34px 0 34px;
+    padding: 25vh 34px 0 34px;
     position: relative;
   }
 

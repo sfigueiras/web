@@ -1,5 +1,5 @@
 <template>
-  <scrollactive class="navigation" :offset="offset">
+  <div class="navigation">
     <div id="navigation" :class="{
         'not-visible': hideNav,
         visible: !hideNav
@@ -7,31 +7,31 @@
       <div class="left">
         <img src="~@/assets/images/logo.svg" class="logo" alt="ubykuo logo on white">
         <div class="visible-md visible-lg">
-          <div class="desktop-navigation">
-            <a v-for="item in menu" :key="item.href" href="item.href" class="scrollactive-item">{{ item.content }}</a>
-          </div>
+          <scrollactive class="desktop-navigation" :offset="offset">
+            <a v-for="item in menu" :key="item.href" :href="item.href" class="scrollactive-item">{{ item.content }}</a>
+          </scrollactive>
         </div>
       </div>
 
       <div class="right">
-        <icon class="visible-xs visible-sm" icon="bars" size="2x" style="color: #fff" @click="toggleMenu" />
+        <icon class="visible-xs visible-sm pointer" icon="bars" size="2x" style="color: #fff" @click="toggleMenu" />
         <h1 class="visible-md visible-lg">ubykuo</h1>
       </div>
     </div>
 
-    <div class="overlay" :class="{ hidden: !showMobileNav }">
+    <div class="overlay" :class="{ visible: showMobileNav }">
       <div class="options">
         <img src="~@/assets/images/solo-icon-colored.svg" class="logo" alt="ubykuo logo on white">
-        <icon icon="times" size="2x" style="color: #fff" @click="toggleMenu" />
+        <icon class="pointer" icon="times" size="2x" style="color: #fff" @click="toggleMenu" />
       </div>
 
-      <div class="menu">
+      <scrollactive class="menu">
         <ul>
           <li v-for="item in menu" :key="item.href">
             <a :href="item.href" @click="toggleMenu" class="scrollactive-item">{{ item.content }}</a>
           </li>
         </ul>
-      </div>
+      </scrollactive>
 
       <hr>
 
@@ -60,7 +60,7 @@
         <a class="email" href="mailto:hello@ubykuo.com">hello@ubykuo.com</a>
       </div>
     </div>
-  </scrollactive>
+  </div>
 </template>
 
 <script>
@@ -99,10 +99,6 @@
     },
 
     methods: {
-      setOffset () {
-        this.offset = window.matchMedia('(min-width: 1024px').matches ? 80 : 0
-      },
-
       handleScroll () {
         if (window.matchMedia('(max-width: 1023px)').matches) {
           if (window.scrollY > this.lastScroll) {
@@ -131,6 +127,10 @@
 
 <style lang="scss" scoped>
   @import "~@/assets/scss/_variables.scss";
+
+  .scrollactive-item.is-active {
+    opacity: 1 !important;
+  }
 
   #navigation {
     height: 80px;
@@ -221,10 +221,6 @@
     color: white;
   }
 
-  .scrollactive-item.is-active {
-    opacity: 1 !important;
-  }
-
   .overlay {
     height: 100%;
     width: 100%;
@@ -233,10 +229,19 @@
     top: 0;
     left: 0;
     z-index: 11;
-    padding: 32px;
+    padding: 22px 32px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition-property: visibility opacity;
+    transition-duration: .3s;
+    visibility: hidden;
+    opacity: 0;
+
+    &.visible {
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
 
     .options {
       display: flex;
@@ -258,6 +263,11 @@
             color: $pale-mauve-uby;
             text-decoration: none;
             text-transform: capitalize;
+            color: #fff;
+
+            &.is-active {
+              color: $pale-mauve-uby;
+            }
           }
         }
       }
