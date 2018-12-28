@@ -6,7 +6,7 @@
     <main-services></main-services>
     <projects class="full-height"></projects>
     <how-we-work></how-we-work>
-    <team></team>
+    <!--team></team-->
     <join></join>
     <contact></contact>
     <foot></foot>
