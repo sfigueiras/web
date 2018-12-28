@@ -4,6 +4,7 @@
   url('/static/fonts/gilroy-semibold.woff') format('woff'),
   url('/static/fonts/gilroy-regular.ttf') format('truetype');
   font-weight: 500;
+  font-display: auto;
   font-style: normal;
 }
 
@@ -13,6 +14,7 @@
   url('/static/fonts/gilroy-regular.woff') format('woff'),
   url('/static/fonts/gilroy-regular.ttf') format('truetype');
   font-weight: normal;
+  font-display: auto;
   font-style: normal;
 }
 
@@ -22,5 +24,6 @@
   url('/static/fonts/gilroy-bold.woff') format('woff'),
   url('/static/fonts/gilroy-bold.ttf') format('truetype');
   font-weight: bold;
+  font-display: auto;
   font-style: normal;
 }
