@@ -5,11 +5,23 @@
              class="background" :class="{ transition }">
       <source
         type="image/webp"
-        :srcset="`${buildURL(current.background.mobile.webp)} 600w, ${buildURL(current.background.desktop.webp)} 1000w`"
+        media="(max-width: 480px)"
+        :srcset="`${buildURL(current.background.mobile.webp)}`"
+        :alt="current.name"/>
+      <source
+        type="image/webp"
+        media="(min-width: 481px)"
+        :srcset="`${buildURL(current.background.desktop.webp)}`"
+        :alt="current.name"/>
+      <source
+        type="image/jpg"
+        media="(max-width: 480px)"
+        :srcset="`${buildURL(current.background.mobile.jpg)}`"
         :alt="current.name"/>
       <img
         type="image/jpg"
-        :srcset="`${buildURL(current.background.mobile.jpg)} 600w, ${buildURL(current.background.desktop.jpg)} 1000w`"
+        media="(min-width: 481px)"
+        :srcset="`${buildURL(current.background.desktop.jpg)}`"
         :alt="current.name"/>
     </picture>
     <!--div class="video-overlay">
@@ -217,6 +229,11 @@
       left: -250px;
       opacity: 0.8;
     }
+  }
+
+  picture img {
+    height: 100%;
+    width: 100%;
   }
 
   .sidenav {
