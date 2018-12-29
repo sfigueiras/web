@@ -87,7 +87,7 @@
           },
           {
             href: '#join',
-            content: 'join ubykuo'
+            content: 'join'
           },
           {
             href: '#contact',
