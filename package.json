@@ -24,7 +24,7 @@
     "vue": "^2.5.2",
     "vue-analytics": "^5.16.1",
     "vue-carousel": "^0.16.1",
-    "vue-invisible-recaptcha": "^0.2.1",
+    "vue-recaptcha": "^1.1.1",
     "vue-resource": "^1.5.1",
     "vue-scrollactive": "^0.8.0",
     "vuelidate": "^0.7.4",
