@@ -46,7 +46,7 @@
               <span class="lead">I want to be contacted by phone</span>
             </div>
             <span v-show="error">Error sending message<br><br></span>
-            <vue-recaptcha sitekey="6LdUlB8UAAAAAIluAGKDFauY9hWJgjpwA7qFtjAf">
+            <vue-recaptcha sitekey="6LdUlB8UAAAAAIluAGKDFauY9hWJgjpwA7qFtjAf" @verify="submit">
               <button class="button secondary" type="submit" :disabled="isSaving">
                 <span v-if="isSaving">Sending...</span><span v-else>Contact me</span>
               </button>
@@ -100,7 +100,7 @@
       onError () {
         this.error = true
       },
-      submit () {
+      submit (data) {
         this.onSubmit()
       }
     }
