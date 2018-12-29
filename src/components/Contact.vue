@@ -46,11 +46,11 @@
               <span class="lead">I want to be contacted by phone</span>
             </div>
             <span v-show="error">Error sending message<br><br></span>
-            <invisible-recaptcha sitekey="6LdUlB8UAAAAAIluAGKDFauY9hWJgjpwA7qFtjAf"
-                                 class="button secondary" :callback="submit"
-                                 type="submit" :disabled="isSaving">
-              <span v-if="isSaving">Sending...</span><span v-else>Contact me</span>
-            </invisible-recaptcha>
+            <vue-recaptcha sitekey="6LdUlB8UAAAAAIluAGKDFauY9hWJgjpwA7qFtjAf">
+              <button class="button secondary" type="submit" :disabled="isSaving">
+                <span v-if="isSaving">Sending...</span><span v-else>Contact me</span>
+              </button>
+            </vue-recaptcha>
             <br>
             <br>
             <small class="recaptcha">This site is protected by reCAPTCHA and the Google
@@ -68,11 +68,10 @@
 <script>
   import {required, email} from 'vuelidate/lib/validators'
   import ContactMessage from '../mixins/ContactMessage'
-  import InvisibleRecaptcha from 'vue-invisible-recaptcha'
+  import VueRecaptcha from 'vue-recaptcha'
 
   export default {
     name: 'Contact',
-    components: {InvisibleRecaptcha},
     data () {
       return {
         phone: false,
@@ -80,6 +79,7 @@
         error: false
       }
     },
+    components: {VueRecaptcha},
     mixins: [ContactMessage],
     validations: {
       contactForm: {
